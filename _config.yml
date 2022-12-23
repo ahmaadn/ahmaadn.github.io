@@ -1,0 +1,78 @@
+title: Ahmad Blog
+email: ahmadnursahid12345@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+sosial:
+  github      :
+  facebook    :
+  instagram   : 
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-archives
+
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archives
+    tag: archives
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Blog
+permalink: /blog/:year/:month/:title/
+
+
+# markdown: JdvpCodeTabsCommonMark
+# commonmark:
+#   options: [DEFAULT, SMART, FOOTNOTES]
+#   extensions: ["strikethrough", "autolink", "table", "tagfilter"]
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
+
+
+
+# Sitemap settings
+
+default:
+  - scope:
+      path: "assets/**/*.*"
+    values:
+      sitemap: false
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style

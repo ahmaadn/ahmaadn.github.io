@@ -1,0 +1,102 @@
+---
+layout: page
+---
+
+
+<div class="container">
+    <div class="wrapper">
+        <div class="header">
+        {% if page.title != 'Blog' and page.posts.size %}
+        <div class="subtitle">
+            <span class="highlight">{{ page.posts.size }}</span>
+            {% assign type_ = page.url | remove: '/tags/' | remove: '/'  %}
+            posts {% if page.title == type_ %} tags {% else %} categorized {% endif %} as:
+        </div>
+        {% endif %}
+        <h1>{{ page.title }}</h1>
+        </div>
+    
+        <div class="columns">
+            <div class="column">
+                <!-- Post -->
+                {% if page.posts %}
+                {%- assign _sorted_list = page.posts -%}
+                {% else %}
+                {%- assign _sorted_list = site.posts -%}
+                {% endif %}
+    
+                {%- assign _sorted_list = _sorted_list | sort: 'date' -%}
+                {%- assign _sorted_list = _sorted_list | reverse -%}
+    
+                {%- for _article in _sorted_list -%}
+    
+                <!-- Grup By Year -->
+                {% comment %} group by year {%  endcomment %}
+                {%- assign _currentdate = _article.date | date: '%Y' -%}
+
+                {%- if _currentdate != _date -%}
+                {%- unless forloop.first -%}</section>{%- endunless -%}
+                <section class="segment">
+                    <h2 class="year"> {{ _currentdate }} </h2>
+                    <div class="posts">
+                    {%- assign _date = _currentdate -%}
+                    {%- endif -%}
+
+                    {% assign index = forloop.index0 | plus: '1' %}
+                    {% assign next_post = _sorted_list[index]  %}
+                    {% assign last_post = false  %}    
+                    {% assign next_post_date = next_post.date | date: '%Y' -%}
+
+                    {% if next_post_date != _date  %}
+                    {% assign last_post = true  %}    
+                    {% endif %}
+
+                        <a class="post {% if forloop.last or last_post %} last-post {% endif %} is-flex is-justify-content-space-between" href="{{ _article.url | prepend: site.baseurl }}">
+                            <h3 class=""> {{  _article.title }}</h3>
+                            <span class="date has-text-grey is-align-self-center"> {{ _article.date | date: '%b %-d' }} </span>
+                        </a>
+    
+                    {%- if forloop.last -%}
+                    </div>
+                </section>{%- endif -%}
+                {% endfor %}
+            </div>
+            <div class="column is-one-third">
+                <div class="tag-list">
+                    <div class="container">
+                        <div class="tag-title"> Categories </div>
+                        <div class="category">
+                            <a class="is-flex is-justify-content-space-between" href="{{ '/blog/' | relative_url }}"> <span class="name">Show All</span> </a>
+    
+                            {% for category in site.categories %}
+                            <a class="is-flex is-justify-content-space-between" href="{{ '/categories/' | append: category[0] | relative_url }}">
+                                <span class="name">{{ category[0] }}</span>
+                                <sup>{{ category[1].size }}</sup>
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- Tags Cloud  -->
+                <div class="tag-list">
+                    <div class="container">
+                        <div class="tag-title">
+                            Tags
+                        </div>
+                        <div class="tags">
+                            <a class="tag"> Show All </a>
+    
+                            {% for tag in site.tags %}
+                            <a class="tag" href="{{ '/tags/' | append: tag[0] | relative_url }}">
+                                {{ tag[0] }}
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
