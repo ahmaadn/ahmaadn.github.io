@@ -42,7 +42,7 @@ exclude:
   - vendor/ruby/
 
 # Blog
-permalink: /blog/:year/:month/:title/
+permalink: /blog/:year/:month/:day/:title/
 
 
 # markdown: JdvpCodeTabsCommonMark

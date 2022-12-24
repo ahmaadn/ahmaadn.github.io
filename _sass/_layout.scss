@@ -1,0 +1,168 @@
+/* ----------- */
+/* Navbar */
+/* ----------- */
+
+.nav-wrapper {
+    border-bottom: 1px dotted var(--grey-color);
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .nav-wrapper {
+        margin: 0;
+        padding: 3rem 0;
+        border-bottom: none;
+    }
+}
+
+.nav-wrapper a.navbar-brand {
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: var(--grey-color-dark);
+    text-align: center;
+    font-weight: 700;
+    min-height: 3rem;
+    padding-left: 12px;
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+.navbar .navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar .navbar-menu {
+        display: flex;
+        justify-content: start;
+    }
+}
+
+.navbar-menu .navbar-item span {
+    font-size: 15px;
+    padding-bottom: 2px;
+    font-weight: 400;
+}
+
+.navbar-menu .navbar-item,
+.navbar-menu .navbar-item:focus,
+.navbar-menu .navbar-item:hover,
+.navbar-menu .navbar-item:active,
+.navbar-menu .navbar-item.is-active,
+.navbar-menu .navbar-item.is-active span {
+    background-color: transparent;
+}
+
+.navbar-menu .navbar-item:hover span,
+.navbar-menu .navbar-item.is-active span {
+    border-bottom: 1px dashed var(--blue-color);
+    margin-bottom: -1px;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar .navbar-menu {
+        padding: 0;
+        border-bottom: none;
+    }
+
+    .navbar-menu .navbar-item span {
+        font-size: 16px;
+    }
+}
+
+/* ----------- */
+/* nav-custom */
+/* untuk layout post  */
+/* ----------- */
+.nav-custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    color: var(--white-color);
+}
+
+.nav-custom.invert {
+    border: none;
+}
+
+.nav-custom.invert a.navbar-brand {
+    color: var(--white-color);
+}
+
+.nav-custom.invert .navbar-item span,
+.nav-custom.invert .navbar-item.icon {
+    color: var(--white-color);
+}
+
+/* ----------- */
+/* Intro heading */
+/* ----------- */
+.intro-heading {
+    background: no-repeat center center;
+    background-attachment: scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    margin-bottom: 0;
+}
+
+
+.intro-heading .hero-body {
+    padding: 6rem 1.5rem;
+    text-align: left;
+    margin-top: 3rem;
+}
+.intro-heading.invert .hero-body {
+    margin: 0;
+}
+
+
+@media screen and (min-width: 768px) {
+.intro-heading .hero-body {
+    text-align: center;
+}
+}
+
+.intro-heading .hero-body .date,
+.intro-heading .hero-body .post-title,
+.intro-heading .hero-body .post-subtitle {
+    color: var(--grey-color-dark);
+}
+.intro-heading.invert .hero-body .date,
+.intro-heading.invert .hero-body .post-title,
+.intro-heading.invert .hero-body .post-subtitle {
+    color: var(--white-color);
+}
+
+.intro-heading .hero-body h1 {
+    font-size: 3rem;
+}
+
+.intro-heading .hero-body h3 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+    .intro-heading .hero-body h3 {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+/* ----------- */
+/* Catalog */
+/* ----------- */
