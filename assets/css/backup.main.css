@@ -440,17 +440,7 @@ article nav.sticky-top {
   top: 0;
 }
 
-article .toc {
-  border: 1px solid var(--grey-900);
-  border-radius: 5px;
-  padding: 1rem;
-}
 
-article .toc h3 {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  font-weight: 500;
-}
 
 /* article .content {
   padding: 0 auto;

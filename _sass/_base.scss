@@ -3,26 +3,11 @@ html {
     min-height: 100%;
 }
 
-a,
-h1,
-h2,
-h3,
-h4,
-h4,
-h5,
-h6,
-span,
-p {
+a, h1, h2, h3, h4, h4, h5, h6, span, p {
     font-family: var(--font-family);
 }
 
-h1,
-h2,
-h3,
-h4,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h4, h5, h6 {
     color: var(--grey-color-dark);
     font-weight: bold;
 }
