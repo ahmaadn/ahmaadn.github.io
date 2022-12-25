@@ -24,14 +24,7 @@ h1 {
     margin: 0
 }
 
-@media screen and (min-width: 768px) {
-    h1 {
-        font-size: 3rem;
-    }
-}
-
-h2 {
-    border-bottom: 1px solid var(--grey-color-light);
+h2 {    
     font-family: var(--font-family);
     font-size: 1.7rem;
     font-weight: 700;
@@ -39,9 +32,25 @@ h2 {
     padding-bottom: 0.4rem;
 }
 
+p {
+    font-weight: 400;
+    color: var(--grey-color-dark);
+    font-size: 1rem;
+    line-height: 1.7;
+    font-family: var(--font-family);
+    margin-bottom: 1rem;
+}
+
 @media screen and (min-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
     h2 {
         font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
     }
 }
 
@@ -52,9 +61,11 @@ h2 {
     padding: 0 1rem;
 }
 
-.segment {
-    margin: 1.5rem 0;
-}
+
+
+// .segment {
+//     margin: 1.5rem 0;
+// }
 
 .title {
     color: var(--grey-900);
@@ -70,17 +81,39 @@ h2 {
     width: auto;
 }
 
+.date {
+    color: var(--grey-900);
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-style: italic;
+}
+
 
 @media screen and (min-width: 768px) {
     .container {
         padding: 0 2rem;
     }
 
-    .segment {
-        margin: 2rem 0;
-    }
+    // .segment {
+    //     margin: 2rem 0;
+    // }
 
     .title {
         font-size: 1.7rem;
     }
+
+    .date {
+        font-size: 15px;
+    }
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+.list-inline .list-inline-item {
+  display: inline-block;
+}
+.list-inline .list-inline-item:not(:last-child) {
+  margin-right: 0.5rem;
 }

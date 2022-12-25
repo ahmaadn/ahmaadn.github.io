@@ -1,0 +1,68 @@
+{%- if paginator.total_pages > 1 -%}
+<nav class="pagination">
+  <div class="pagination-container">
+    <!--previous page  -->
+    {% unless paginator.previous_page %}
+    <a class="pagination-number arrow is-disabled" aria-disabled>
+    {% else %}
+    <a class="pagination-number arrow" href="{{ paginator.previous_page_path | relative_url }}">
+    {% endunless %}
+      <svg width="18" height="18" id="left" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </a>
+
+    <ul class="list-inline">
+      <!-- Page 1 -->
+      {% unless paginator.first_page == paginator.page %}
+      {% if paginator.total_pages > 3 %}
+      <li class="list-inline-item is-hidden-mobile">
+        <a class="pagination-number" href="{{ paginator.first_page_path | relative_url }}">
+          {{ paginator.first_page }}
+        </a>
+      </li>
+      <li class="list-inline-item  is-hidden-mobile">
+        <span class="pagination-ellipsis">&hellip;</span>
+      </li>
+      {% endif %}
+      {% endunless %}
+  
+      <!-- Generate page -->
+      {%- if paginator.page_trail -%}
+      {% for trail in paginator.page_trail -%}
+      <li class="list-inline-item">
+        <a class="pagination-number {% if page.url == trail.path %}is-current{% endif %}" href="{{ trail.path | relative_url }}" title="{{ trail.title }}" >
+          {{ trail.num }}
+        </a>          
+      </li>
+      {% endfor -%}
+      {%- endif -%}
+  
+      <!-- Last Page -->
+      {% unless paginator.last_page == paginator.page %}
+      {% if paginator.total_pages > 3 %}
+      <li class="list-inline-item  is-hidden-mobile">
+        <span class="pagination-ellipsis">&hellip;</span>
+      </li>
+      <li class="list-inline-item  is-hidden-mobile">
+        <a class="pagination-number" href="{{ paginator.last_page_path | relative_url }}">
+          {{ paginator.last_page }}
+        </a>
+      </li>
+      {% endif %}
+      {% endunless %}
+    </ul>
+
+    <!-- Next Page -->
+    {% unless paginator.next_page %}
+    <a class="pagination-number arrow is-disabled" aria-disabled>
+    {% else %}
+    <a class="pagination-number arrow" href="{{ paginator.next_page_path | relative_url }}">
+    {% endunless %}
+      <svg width="18" height="18" id="right" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </a>
+  </div>
+</nav>
+{%- endif -%}

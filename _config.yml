@@ -17,6 +17,7 @@ sosial:
 plugins:
   - jekyll-feed
   - jekyll-archives
+  - jekyll-paginate-v2
 
 jekyll-archives:
   enabled:
@@ -44,6 +45,9 @@ exclude:
 # Blog
 permalink: /blog/:year/:month/:day/:title/
 
+# Pagination
+pagination:
+  enabled: true
 
 # markdown: JdvpCodeTabsCommonMark
 # commonmark:

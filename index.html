@@ -5,37 +5,39 @@ nav: false
 
 <div class="container">
     <div class="wrapper">
-        <div class="columns mb-6">
-            <div class="column">
-                <div class="segment">
-                    <h1>Hey, Nama saya Ahmad nur sahid</h1>
+        <div class="hero is-halfheight">
+            <div class="hero-body px-0">
+                <div>
+                    <h1 class="my-5">Hey, Nama saya Ahmad nur sahid</h1>
+                    <p class="mb-5"> 
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae at
+                        natus dicta tempora? Distinctio vero aut, eveniet perferendis
+                        maiores corporis.
+                    </p>
+                    <p class="date">
+                        Last updated: {{ "now" | date: '%B %d, %Y' }}. 
+                    </p>
+                    <a class="button is-rounded my-3" href="{{ '/blog/' | relative_url }}"> Blog </a>
                 </div>
-                <p class="mb-5"> 
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae at
-                    natus dicta tempora? Distinctio vero aut, eveniet perferendis
-                    maiores corporis.
-                </p>
-                <p class="has-text-weight-normal is-italic">
-                    Last updated: {{ "now" | date: '%B %d, %Y' }}. 
-                </p>
-            </div>
-            <div class="column is-hidden-mobile is-one-third">
-                <img src="/assets/img/home-bg.jpg" alt="image">
             </div>
         </div>
 
-        <div class="is-flex is-justify-content-space-between">
-            <div class="title">Latest Article</div>
-            <a href="/blog/" class="button is-rounded"> View All </a>
-        </div>
-
+        
         <div class="posts">
-            {% assign posts = site.posts | reverse %}
-            {% for post in posts limit: 5 %}
-            <a class="post {% if forloop.last %} last-post {% endif %} is-flex is-justify-content-space-between" href="{{ post.url | prepend: site.baseurl }}">
+            <div class="title">
+                Latest Article
+            </div>
+            {%- assign _sorted_list = site.posts -%}
+            {%- assign _sorted_list = _sorted_list | sort: 'date' -%}
+            {%- assign _sorted_list = _sorted_list | reverse -%}
+
+            {% for post in _sorted_list limit: 5 %}
+            <a class="post {% if forloop.last %} is-last {% endif %} is-flex is-justify-content-space-between" href="{{ post.url | prepend: site.baseurl }}">
                 <h3> {{ post.title }}</h3>
-                <span class="date has-text-grey is-align-self-center"> {{ post.date | date: '%B %-d, %Y' }} </span>
+                <span class="date has-text-grey is-hidden-mobile is-align-self-center"> {{ post.date | date: '%B %-d, %Y' }} </span>
+
             </a>
+
             {% endfor %}
         </div>
     </div>

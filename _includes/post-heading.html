@@ -22,6 +22,9 @@
         {{ page.subtitle }}
       </h3>
       {% endif %}
+      {% for tag in page.tags %}
+      <a class="button is-small is-responsive" href="{{ site.baseurl }}/tags/{{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
+      {% endfor %}
     </div>
   </section>
 </header>

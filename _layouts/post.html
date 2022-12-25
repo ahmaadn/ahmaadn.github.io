@@ -11,25 +11,29 @@ layout : default
                 <div class="column is-one-fifth-desktop">
                     {% include media-object.html %}
                     <div class="tags">
-                        {% for tag in page.tags %}
-                        <a class="tag is-primary is-light" href="{{ site.baseurl }}/tags/{{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
-                        {% endfor %}
                     </div>
                 </div>
-                <div class="column content post-container" id="main">
-                    {{ content }}
-                </div>
-                <div class="column is-one-fifth is-hidden-touch sidebar-container catalog-container">
-                    {% if page.catalog %}
-                    <nav class="sticky-top">
-                        <div class="side-catalog">
-                            <h4>
-                                <a class="catalog-toggle" href="#">CATALOG</a>
-                            </h4>
-                            <ul class="catalog-body"></ul>
+                <div class="column content">
+                    <div class="columns my-0">
+                        <div class="column post-container py-0">
+                            {{ content }}                            
                         </div>
-                    </nav>
-                    {% endif %}
+
+                        <div class="column is-one-fifth is-hidden-mobile sidebar-container catalog-container py-0">
+                            {% if page.catalog %}
+                            <nav class="sticky-top">
+                                <div class="side-catalog">
+                                    <h4>
+                                        <a class="catalog-toggle" href="#">CATALOG</a>
+                                    </h4>
+                                    <ul class="catalog-body"></ul>
+                                </div>
+                            </nav>
+                            {% endif %}
+                        </div>
+                        
+                    </div>
+
                 </div>
             </div>
         </div>

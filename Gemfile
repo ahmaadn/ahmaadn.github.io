@@ -6,7 +6,7 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   # gem "jdvp-codetabs-commonmark"
   gem "jekyll-archives"
-  # gem 'jekyll-paginate-v2'
+  gem 'jekyll-paginate-v2'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
