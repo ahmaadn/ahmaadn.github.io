@@ -15,9 +15,11 @@ sosial:
 
 # Build settings
 plugins:
+  - jemoji
   - jekyll-feed
   - jekyll-archives
   - jekyll-paginate-v2
+  # - jekyll-tabs
 
 jekyll-archives:
   enabled:
@@ -49,26 +51,21 @@ permalink: /blog/:year/:month/:day/:title/
 pagination:
   enabled: true
 
-# markdown: JdvpCodeTabsCommonMark
-# commonmark:
-#   options: [DEFAULT, SMART, FOOTNOTES]
-#   extensions: ["strikethrough", "autolink", "table", "tagfilter"]
+markdown: JdvpCodeTabsCommonMark
+commonmark:
+  options: [DEFAULT, FOOTNOTES]
+  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
 
-markdown: kramdown
-highlighter: rouge
-kramdown:
-  input: GFM
-  syntax_highlighter_opts:
-    css_class: 'highlight'
-    span:
-      line_numbers: false
-    block:
-      line_numbers: false
-      start_line: 1
-
-
-
-# Sitemap settings
+# markdown: kramdown
+# kramdown:
+#   input: GFM
+#   syntax_highlighter_opts:
+#     css_class: 'highlight'
+#     span:
+#       line_numbers: false
+#     block:
+#       line_numbers: false
+#       start_line: 1
 
 default:
   - scope:

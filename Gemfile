@@ -3,8 +3,11 @@ source "https://rubygems.org"
 gem "jekyll", "~> 4.3.1"
 
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
-  # gem "jdvp-codetabs-commonmark"
+  gem 'jemoji'
+  # gem 'jekyll-commonmark-ghpages'
+  gem "jdvp-codetabs-commonmark"
+  # gem "jekyll-tabs"
+  gem "jekyll-feed" #, "~> 0.12"
   gem "jekyll-archives"
   gem 'jekyll-paginate-v2'
 end

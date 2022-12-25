@@ -117,3 +117,40 @@ p {
 .list-inline .list-inline-item:not(:last-child) {
   margin-right: 0.5rem;
 }
+
+
+// Content
+
+ul.task-list {
+    list-style: none;
+    list-style-type: none;
+    margin-left: 1rem;
+    .task-list-item {
+       display: flex;
+       align-items: center;
+
+       .task-list-item-checkbox {
+        margin-right: 4px;
+       }
+
+   }
+}
+
+ul.code-tab-container {
+    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: 0 !important;
+    li {
+        margin: 0 !important;
+    }
+}
+
+ul.code-tab-switcher  {
+    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    li {
+        margin: 0;
+    }
+}

@@ -21,16 +21,113 @@ tags:
   - contoh
   - jekyll
 ---
-# hwllo
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur gravida purus et neque accumsan ultrices id a erat. Nunc turpis sem, gravida id nibh quis, sodales efficitur risus. Mauris a suscipit nisi. Aenean sed est sit amet mi sagittis elementum. In aliquam blandit nisl, nec elementum ex semper at. Vivamus dignissim diam sit amet risus volutpat viverra id quis dolor. In nec feugiat magna, a feugiat tortor. Quisque tincidunt odio non velit pellentesque euismod. Etiam consequat erat non felis pellentesque, a molestie lectus mollis. Integer venenatis nulla ut auctor porta. Suspendisse congue imperdiet ante, ac imperdiet ipsum cursus in. Duis blandit cursus purus, vitae consectetur nisl pellentesque ut. Etiam vitae velit mattis dolor consequat posuere id sed lacus. Donec ornare leo est, quis laoreet erat cursus et. Nullam tincidunt finibus nisl, at molestie enim dictum nec. In hac habitasse platea dictumst.
 
-## dadadad
-Pellentesque eu placerat neque, at sollicitudin mi. Donec in porta lectus. Maecenas fringilla massa enim, vitae dapibus augue volutpat cursus. Sed et porttitor lorem, sed dignissim augue. Nulla tincidunt dolor a lacus egestas, non accumsan ipsum fermentum. Cras justo lorem, pellentesque non fermentum vitae, malesuada non lorem. Etiam at ultricies risus. Duis varius in orci ut vestibulum. Suspendisse porttitor lobortis rutrum. Suspendisse libero tortor, sollicitudin eget bibendum vitae, tempor et massa.
+# Markdown Cheat Sheet
 
-Mauris quis semper arcu. Ut consequat dolor ut nunc varius, ac eleifend libero auctor. Maecenas sollicitudin vitae justo eleifend molestie. Nunc ac risus vel augue pharetra laoreet. Fusce vulputate volutpat auctor. Donec enim enim, fringilla eget fermentum ut, posuere vitae nunc. Pellentesque bibendum ac neque ut rhoncus. Proin auctor viverra pharetra.
+Thanks for visiting [The Markdown Guide](https://www.markdownguide.org)!
 
-# aadada
-Integer ullamcorper ipsum ac blandit vehicula. Suspendisse elit urna, vehicula nec turpis vel, ornare volutpat sem. Fusce sagittis congue dolor at ornare. Donec varius sapien vitae gravida maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl turpis, varius in metus ac, laoreet mollis libero. Vestibulum tempus vel est quis pellentesque. In eu sapien tempor magna consequat fermentum ut vitae ligula. Integer sem felis, suscipit nec ligula at, dignissim consectetur massa. Phasellus tincidunt nisi eget feugiat mattis. Aliquam tellus diam, tristique et tellus consequat, auctor tincidunt mauris. Etiam a commodo lectus. Etiam id tincidunt eros.
+This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements. It can’t cover every edge case, so if you need more information about any of these elements, refer to the reference guides for [basic syntax](https://www.markdownguide.org/basic-syntax) and [extended syntax](https://www.markdownguide.org/extended-syntax).
+## Basic Syntax
 
-# adadadd
-Praesent sagittis posuere massa, quis pharetra erat dictum sed. Fusce eget ex ac nisi rhoncus accumsan. In gravida maximus semper. Maecenas luctus lacus massa, vitae sodales velit rhoncus efficitur. Nam id eleifend nisl. Nulla sagittis sodales odio, commodo tristique metus iaculis id. Vestibulum nec ultrices dui.
+These are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements. **bold text** , *italicized text*
+
+> blockquote
+
+### Ordered List
+1. First item
+2. Second item
+3. Third item
+
+### Unordered List
+- First item
+- Second item
+- Third item
+
+`code`
+
+---
+
+### Link
+
+[Markdown Guide](https://www.markdownguide.org)
+
+### Image
+
+![alt text](https://www.markdownguide.org/assets/images/tux.png)
+
+## Extended Syntax
+
+These elements extend the basic syntax by adding additional features. Not all Markdown applications support these elements.
+
+### Table
+
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
+
+### Fenced Code Block
+
+```json
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
+```md Markdown Example codeCopyEnabled
+For example, this is a code block
+```
+```python
+print("hello world")
+```
+
+### Footnote
+
+Here's a sentence with a footnote. [^1]
+
+[^1]: This is the footnote.
+
+### Heading ID
+
+### My Great Heading {#custom-id}
+
+### Definition List
+
+term
+: definition
+
+### Strikethrough
+
+~~The world is flat.~~
+
+### Task List
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+
+### Emoji
+
+That is so funny! :joy:
+
+(See also [Copying and Pasting Emoji](https://www.markdownguide.org/extended-syntax/#copying-and-pasting-emoji))
+
+### Highlight
+
+I need to highlight these ==very important words==.
+
+### Subscript
+
+H~2~O
+
+### Superscript
+
+X^2

@@ -134,7 +134,7 @@
 		-moz-border-radius: 999em !important;
 		-ms-border-radius: 999em !important;
 		-o-border-radius: 999em !important;
-}
+	}
 }
 
 .intro-heading.invert {
@@ -152,6 +152,10 @@
 			h3 {
 				font-size: 20px;
 			}
+		}
+
+		.buttons {
+			justify-content: center;
 		}
 	}
 }
