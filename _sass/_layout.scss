@@ -621,3 +621,28 @@ h2.year {
   }
 }
 
+
+
+// Coba Coba
+
+.code_switcher_code_action_container {
+	position: absolute;
+	right: 6px;
+	top: 6px;
+	z-index: 1;
+}
+
+.code_switcher_copy_button {
+	background-size: 18px 18px;
+	border: none;
+	font-size: 18px;
+	min-width: 18px;
+	min-height: 18px;
+	height: 18px;
+	width: 18px;
+	background-color: #666666;
+	// -webkit-mask-image: url(icon_copy.svg);
+	// mask-image: url(icon_copy.svg);
+	// -webkit-mask-size: cover;
+	margin-right: 4px;
+  }

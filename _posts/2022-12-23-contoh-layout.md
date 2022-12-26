@@ -51,6 +51,20 @@ These are the elements outlined in John Gruber’s original design document. All
 - Second item
 - Third item
 
+1. First item
+  - sub item 1
+  - sub item 2
+  - sub item 3
+2. Second item
+  - sub item 1
+  - sub item 2
+  - sub item 3
+3. Third item
+  - sub item 1
+  - sub item 2
+  - sub item 3
+
+
 `code`
 
 ---
@@ -76,18 +90,43 @@ These elements extend the basic syntax by adding additional features. Not all Ma
 
 ### Fenced Code Block
 
+{% tabs log %}
+
+{% tab log php %}
+```php
+var_dump('hello');
+```
+{% endtab %}
+
+{% tab log js %}
+```javascript
+console.log('hello');
+```
+{% endtab %}
+
+{% tab log ruby %}
+```javascript
+pputs 'hello'
+```
+{% endtab %}
+
+{% endtabs %}
+
+### Second tabs
+
+
+```yaml
+hello:
+  - 'whatsup'
+  - 'hi'
+```
+
+other code
+
 ```json
 {
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
+    "hello": ["whatsup", "hi"]
 }
-```
-```md Markdown Example codeCopyEnabled
-For example, this is a code block
-```
-```python
-print("hello world")
 ```
 
 ### Footnote
