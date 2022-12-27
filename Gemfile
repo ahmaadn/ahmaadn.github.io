@@ -7,8 +7,6 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-archives"
   gem 'jekyll-paginate-v2'
-
-  # code tabs
   gem "jekyll-tabs"
 end
 

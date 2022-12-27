@@ -8,18 +8,16 @@ layout : default
     <div class="container">
         <div class="wrapper">
             <div class="columns is-desktop">
-                <div class="column is-one-fifth-desktop">
-                    {% include media-object.html %}
-                    <div class="tags">
-                    </div>
+                <div class="column is-2-desktop">
+                    {% include media-object.html  %}
                 </div>
-                <div class="column">
-                    <div class="columns my-0">
-                        <div class="column content post-container py-0">
-                            {{ content }}                            
+        
+                <div class="column is-10-desktop">
+                    <div class="columns mt-0">
+                        <div class="column pt-0 is-10-desktop is-9-tablet content post-container">
+                            {{ content }}
                         </div>
-
-                        <div class="column is-one-fifth is-hidden-mobile sidebar-container catalog-container py-0">
+                        <div class="column is-2-desktop is-3-tablet is-hidden-mobile sidebar-container catalog-container">
                             {% if page.catalog %}
                             <nav class="sticky-top">
                                 <div class="side-catalog">
@@ -31,11 +29,11 @@ layout : default
                             </nav>
                             {% endif %}
                         </div>
-                        
+        
                     </div>
-
                 </div>
-            </div>
+            </div> 
+
         </div>
     </div>
 </article>

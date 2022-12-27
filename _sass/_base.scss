@@ -12,11 +12,6 @@ h1, h2, h3, h4, h4, h5, h6 {
     font-weight: bold;
 }
 
-hr {
-    margin: 0;
-    padding: 0;
-}
-
 h1 {
     font-size: 2.2rem;
     font-weight: 700;
@@ -55,17 +50,37 @@ p {
 }
 
 
+code {
+    font-family: SFMono-Regular, Menlo, Monaco,Consolas, "Liberation Mono", "Courier New",monospace;;
+    color: var(--blue-color);
+    padding: 3px 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+
+    &.is-info {
+        color: hsl(204, 86%, 53%);
+    }
+    &.is-danger {
+        color: hsl(348, 100%, 61%);
+    }
+    &.is-warning {
+        color: hsl(48, 100%, 67%);
+    }
+    &.is-success {
+        color: hsl(141, 71%, 48%);
+    }
+}
+
+
 .container {
     margin-left: auto;
     margin-right: auto;
     padding: 0 1rem;
 }
 
-
-
-// .segment {
-//     margin: 1.5rem 0;
-// }
 
 .title {
     color: var(--grey-900);
@@ -119,7 +134,21 @@ p {
 }
 
 
+// ---------
 // Content
+// ---------
+.content li > ul {
+    margin-top: 0;
+}
+
+.content p {
+    font-size: 1rem;
+}
+
+.content a {
+    color: inherit;
+    border-bottom: 1px dotted var(--grey-2);
+}
 
 ul.task-list {
     list-style: none;
@@ -136,67 +165,13 @@ ul.task-list {
    }
 }
 
-// ul.code-tab-container {
-//     list-style: none;
-//     list-style-type: none;
-//     margin: 0;
-//     margin-bottom: 0 !important;
-//     li {
-//         margin: 0 !important;
-//     }
-// }
-
-// ul.code-tab-switcher  {
-//     list-style: none;
-//     list-style-type: none;
-//     margin: 0;
-//     li {
-//         margin: 0;
-//     }
-// }
-
-ul.tab {
-    list-style: none;
-    font-family: var(--font-family);
-    font-size: 20px;
-    font-weight: 400;
-    -webkit-text-size-adjust: 100%;
-    background: #fff;
-    border-radius: 8px 8px 0px 0px;
-    border: 1px solid #e8eaed;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    margin: 0 !important;
-
-    li {
-        margin: 0 !important;
-    }
-
-    a:hover {
-        text-decoration: none !important;
-    }
-
-}
-
-ul.tab-content {
-    list-style: none;
-    list-style-type: none;
-    margin: 0;
-    li {
-        margin: 0;
-    }
-}
-
-
+// -----------
+// Footnotes
+// -----------
 .footnotes {
-    font-style: italic;
-    color: var(--grey-color-light);
-
     ol {
         color: inherit;
     }
-    
     p {
         color: inherit;
         // font-weight: 500;
@@ -205,7 +180,6 @@ ul.tab-content {
     }
 }
 
-
 @media screen and (min-width: 768px) {
     .footnotes p {
         font-size: 1rem;
@@ -213,7 +187,9 @@ ul.tab-content {
 
 }
 
-
+// -----------
+// blockquote
+// -----------
 .content blockquote {
     border-left: 5px solid var(--blue-color);
     // margin: 1.5em 10px;
@@ -224,4 +200,11 @@ ul.tab-content {
     p {
         margin-bottom: 0;
     }
+}
+
+// ---------
+// Footer
+// ---------
+.footer {
+	padding: 3rem 1.5rem;
 }
