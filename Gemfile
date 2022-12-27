@@ -3,11 +3,13 @@ source "https://rubygems.org"
 gem "jekyll", "~> 4.3.1"
 
 group :jekyll_plugins do
-  gem 'jemoji'
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-archives"
   gem 'jekyll-paginate-v2'
   gem "jekyll-tabs"
+  gem 'jemoji'
+  gem 'unicode_utils'
+  gem 'webrick'
 end
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do

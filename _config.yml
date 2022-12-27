@@ -15,11 +15,11 @@ sosial:
 
 # Build settings
 plugins:
-  - jemoji
   - jekyll-feed
   - jekyll-archives
   - jekyll-paginate-v2
   - jekyll-tabs
+  - jemoji
 
 jekyll-archives:
   enabled:
