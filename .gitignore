@@ -8,3 +8,4 @@ Gemfile.lock
 .vercel
 
 _sass/bulma/*
+assets/js/bulma/*
