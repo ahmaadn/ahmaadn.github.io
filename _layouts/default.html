@@ -4,7 +4,12 @@
 <body>
 	<!-- Base Content -->
 	{% include nav2.html %}
-	{{ content }}
+	<!-- Search -->
+	{% include search.html %}
+
+	<div class="main">
+		{{ content }}
+	</div>
 	<!-- Footer -->
 	{% include footer.html %}
 	<!-- Script -->

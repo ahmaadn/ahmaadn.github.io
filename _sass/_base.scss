@@ -78,6 +78,17 @@ code {
     }
 }
 
+// .main {
+//     margin-top: 1.5rem;
+// }
+
+
+// @media screen and (min-width: 768px)  {
+//     .main {
+//         margin-top: 2rem;
+//     }
+    
+// }
 
 .container {
     margin-left: auto;
@@ -86,10 +97,11 @@ code {
 }
 
 
+
 .title {
     color: var(--grey-900);
     font-family: var(--font-family);
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 700;
     line-height: 1.1;
     margin: 0
@@ -118,7 +130,7 @@ code {
     // }
 
     .title {
-        font-size: 1.7rem;
+        font-size: 2rem;
     }
 
     .date {
