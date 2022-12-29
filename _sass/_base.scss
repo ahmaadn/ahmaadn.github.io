@@ -3,6 +3,10 @@ html {
     min-height: 100%;
 }
 
+body {
+    background-color: var(--global-bg-color);
+}
+
 a, h1, h2, h3, h4, h4, h5, h6, span, p {
     font-family: var(--font-family);
 }

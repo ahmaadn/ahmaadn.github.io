@@ -6,3 +6,5 @@ vendor
 Gemfile.lock
 
 .vercel
+
+_sass/bulma/*

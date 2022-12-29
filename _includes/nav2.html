@@ -1,0 +1,74 @@
+<div class="nav-wrapper">
+    <nav class="navbar is-spaced is-transparent" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="https://bulma.io">
+                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+                </a>
+
+                <!-- Search Icon -->
+                <a class="icon search is-hidden-desktop">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                </a>
+    
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="nav_blog">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+    
+            <div id="nav_blog" class="navbar-menu">
+                <div class="navbar-end">
+
+                    <div class="navbar-brand is-hidden-desktop is-flex is-justify-content-space-between is-align-content-center">
+                        <a class="navbar-item" href="https://bulma.io">
+                            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+                        </a>
+
+                        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="nav_blog">
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                        </a>
+                    </div>
+
+                    <div class="navbar-item sosial">
+                        <!-- Sosial -->
+                        <a class="icon">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <!-- Search Icon -->
+                        <a class="icon search is-hidden-touch">
+                            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                        </a>
+                        
+                    </div>
+    
+                    <!-- About -->
+                    <a class="navbar-item {% if page.title == 'About' %} is-active {% endif %}"
+                        href="{{ '/me/' | relative_url }}">
+                        <span>About</span>
+                    </a>
+    
+                    <!-- Blog -->
+                    <a class="navbar-item {% if page.title == 'Blog' %} is-active {% endif %}"
+                        href="{{ '/blog/' | relative_url }}">
+                        <span>Blog</span>
+                    </a>
+    
+                    <!-- Other -->
+                    {% for p in site.pages %} {% if p.nav %}
+                    <a class="navbar-item {% if page.title == p.title %} is-active {% endif %}"
+                        href="{{ p.url | relative_url }}">
+                        <span>{{ p.title }}</span>
+                    </a>
+                    {% endif %} {% endfor %}
+    
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
