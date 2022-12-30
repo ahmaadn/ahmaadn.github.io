@@ -2,18 +2,45 @@
 // Navbar
 // -----------
 .navbar {
-	color: var(--gray-6);
+	color: var(--global-text-color);
 	font-family: var(--font-family-navbar);
+
 	.navbar-burger {
 		margin-left: 0;
 		color: inherit;
+		&:hover {
+			background-color: transparent;
+		}
 	}
 	.icon {
 		color: inherit;
+		font-size: 1rem;
+		margin-left: auto;
+		padding: .3rem;
+
 		&:hover {
-			color: var(--global-theme-color);
+			color: var(--global-hover-color);
 		}
 	}
+
+	.navbar-item {
+		font-weight: 500;
+		
+		&:hover {
+			color: inherit;
+		}
+
+		&:has(img) {
+			font-size: 1.25rem;
+			padding: 0;
+		}
+	}
+
+	img {
+		max-height: 100%;
+		margin-right: 6px;
+	}
+
 }
 
 .navbar.is-spaced {
@@ -30,70 +57,49 @@
 	background-color: transparent;
 }
 
+.navbar.nav-custum.invert {
+	>.container > .navbar-brand {
+		.navbar-burger,
+		.icon {
+			color: var(--white);
+			
+		}
+		.icon:hover {
+			color: var(--global-hover-color);
+		}
 
-@media screen and (min-width: 1024px) {
-	.navbar.nav-custum.invert {
-		#nav_blog {
-			.navbar-item {
-				color: inherit;
-
-				&:hover {
-					color: var(--gray-1);
-					background-color: var(--white);
-				}
+		.navbar-item {
+			color: var(--white) !important;
+			img {
+				background-color: var(--white);
+				border-radius: 6px;
 			}
 		}
 	}
 }
 
-
-.navbar.nav-custum.invert {
-	color: var(--white);
-	
-	.navbar-item {
-		color: inherit;
-	}
-
-	.navbar-brand {
-		color: var(--white);
-		.navbar-item img {
+@media screen and (min-width: 1024px) {
+	.navbar.nav-custum {
+		#nav_blog  a.navbar-item:hover {
 			background-color: var(--white);
-			border-radius: 6px;
 		}
 	}
 
-	.icon {
-		color: var(--white);
-	}
-
-}
-
-.navbar-burger:hover {
-	background-color: transparent;
-}
-
-.navbar-brand {
-	color: var(--gray-10);
-	.icon {
-		margin-left: auto;
-		width: 3.25rem;
-	}
-	.navbar-item {
-		font-size: 1.25rem;
-		&:hover {
-			color: var(--gray-10);
-		}
-		img {
-			margin-right: 6px;
+	.navbar.nav-custum.invert {
+		#nav_blog {
+			.navbar-item {
+				color: var(--white);
+			}
 		}
 	}
 }
 
 #nav_blog {
 	.navbar-start {
-		margin-left: 12px;
+		margin-left: 1rem;
 	}
-	.navbar-item {
+
+	a.navbar-item {
 		color: var(--global-text-color);
 		font-size: 1rem;
 
@@ -108,19 +114,6 @@
 	}
 }
 
-.navbar-item {
-	font-weight: 500;
-	&:has(img) {
-		padding: 0;
-		img { 
-			max-height: 100%;
-		}
-	}
-	.icon {
-		font-size: 1rem;
-		padding: .3rem;
-	}
-}
 
 @media screen and (max-width: 1023px) {
 	#nav_blog {
@@ -133,8 +126,6 @@
 
 		border-radius: 6px;
 		text-align: right; 
-
-		color: var(--global-text-color);
 
 		.navbar-brand .navbar-item img {
 			margin-left: 12px;
@@ -149,249 +140,8 @@
 			display: flex;
 			flex-direction: column;
 		}
-		.navbar-burger {
-			color: var(--global-text-color);
-		}
-
-		.icon {
-			color: inherit;
-		}
-
 	}
 }
-
-// .navbar {
-// 	font-family: var(--font-family-navbar);
-
-// 	.navbar-item.logo {
-// 		padding: 0;
-
-// 		img {
-// 			max-height: 100%;
-// 		}
-
-// 	}
-
-// 	&.is-spaced {
-// 		padding-top: 6px;
-// 		padding-bottom: 6px;
-// 	}
-
-// 	&.nav-custum {
-// 		position: absolute;
-// 		top: 0;
-// 		left: 0;
-// 		width: 100%;
-// 		z-index: 3;
-// 		background-color: transparent;
-
-// 		&.invert {
-
-// 			.navbar-brand>.icon,
-// 			>.container>.navbar-brand>.navbar-burger {
-// 				color: var(--white);
-// 			}
-// 		}
-// 	}
-
-// 	.navbar-burger:hover {
-// 		background-color: transparent;
-// 	}
-
-// 	.navbar-menu {
-// 		.navbar-item {
-// 			font-weight: 500;
-
-// 			&.is-active {
-// 				background-color: transparent;
-// 				border-radius: 0;
-// 				border-bottom: 2px solid var(--blue);
-// 			}
-
-// 			.icon {
-// 				padding: 8px;
-// 				color: var(--gray-8);
-// 			}
-
-// 			.icon:hover,
-// 			&:hover {
-// 				background-color: transparent;
-// 				color: var(--blue);
-// 			}
-// 		}
-// 	}
-// }
-
-// @media screen and (min-width: 1024px) {
-// 	.navbar.nav-custum.invert {
-// 		color: var(--white);
-
-// 		.navbar-item {
-// 			color: inherit;
-
-// 			.icon {
-// 				color: var(--white);
-// 			}
-// 		}
-// 	}
-// }
-
-
-// @media screen and (max-width: 1023px) {
-// 	.navbar {
-// 		.navbar-item {
-// 			color: inherit;
-
-// 			.icon {
-// 				color: var(--white);
-// 			}
-// 		}
-
-// 		.navbar-burger {
-// 			margin-left: 0;
-// 		}
-
-// 		.navbar-brand .icon {
-// 			margin-left: auto;
-// 			width: 3.25rem;
-// 			color: inherit;
-// 		}
-
-// 		.navbar-menu {
-// 			position: absolute;
-// 			top: 0;
-// 			left: 0;
-// 			right: 0;
-// 			margin: 0 12px;
-// 			z-index: 5;
-// 			border: 1px solid var(--gray-2);
-// 			border-radius: 8px;
-
-// 			transition: all .5s ease-in-out;
-
-// 			.navbar-item.logo {
-// 				margin-left: 12px;
-// 			}
-
-// 			.navbar-end {
-// 				display: flex;
-// 				flex-direction: column;
-// 			}
-
-// 			.navbar-item {
-// 				font-size: 1rem;
-// 				text-align: right;
-
-// 				&.is-active {
-// 					border-bottom: 0;
-// 				}
-
-// 				&.sosial {
-// 					padding-left: 20px;
-// 					order: 2;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-
-// Nav v1
-
-// .nav-wrapper {
-// 	border-bottom: 1px dotted var(--grey-color);
-// 	margin-bottom: 1rem;
-// 	color: var(--global-text-color);
-
-// 	a.navbar-brand {
-// 		text-decoration: none;
-// 		font-size: 1.7rem;
-// 		color: inherit;
-// 		text-align: center;
-// 		font-weight: 700;
-// 		min-height: 3rem;
-// 		padding-left: 12px;
-// 	}
-// }
-
-// .navbar {
-// 	background-color: transparent;
-// 	.navbar-menu {
-// 		display: flex;
-// 		justify-content: space-between;
-// 		background-color: inherit;
-// 		flex: 1;
-
-// 		.navbar-item {
-// 			background-color: inherit !important;
-// 			color: inherit;
-// 			padding: 0 .5rem;
-// 			display: flex;
-// 			align-items: center;
-
-// 			span {
-// 				font-size: 15px;
-// 				padding-bottom: 2px;
-// 				font-weight: normal;
-// 			}
-
-// 			&:hover span {
-// 				border-bottom: 1px dashed var(--blue-color);
-// 				margin-bottom: -1px;
-// 			}
-
-// 			&.icon {
-// 				color: inherit;
-// 			}
-
-// 		}
-// 		.navbar-item.is-active {
-// 			span {
-// 				border-bottom: 1px dashed var(--blue-color);
-// 				margin-bottom: -1px;
-// 			}
-// 		}
-// 	}
-// }
-
-
-// @media screen and (min-width: 768px) {
-// 	.nav-wrapper {
-// 		margin: 0;
-// 		padding: 3rem 0;
-// 		border-bottom: none;
-
-// 		.navbar .navbar-menu {
-// 			display: flex;
-// 			justify-content: start;
-// 			padding: 0;
-// 			border-bottom: none;
-// 			.navbar-item {
-// 				span {
-// 					font-size: 1rem;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-
-// -----------
-// nav-custom
-// khusus layout post 
-// -----------
-// .nav-custom {
-// 	position: absolute;
-// 	top: 0;
-// 	left: 0;
-// 	width: 100%;
-// 	z-index: 3;
-// }
-
-// Bila ada gambar
-// .nav-custom.invert {
-// 	border: none;
-// 	color: var(--white);
-// }
-
 
 // -----------
 // Intro heading
