@@ -1,0 +1,16 @@
+{% if site.sosial_navbar %}
+    {% if site.sosial.github %}
+    <a class="icon" href="https://github.com/{{ site.sosial.github }}" title="github"><i class="fas fa-fw fa-brands fa-github"></i></a>
+    {% endif %}
+    
+    {% if site.sosial.instagram %}
+    <a class="icon" href="https://www.instagram.com/{{ site.sosial.instagram }}/" title="Instagram"><i class="fas fa-fw fa-brands fa-instagram"></i></a>
+    {% endif %}
+    
+    {% if site.sosial.facebook %}
+    <!-- Facebook -->
+    <a class="icon" href="https://facebook.com/{{ site.facebook_id }}" title="Facebook">
+        <i class="fas fa-fw fa-brands fa-facebook"></i>
+    </a>
+    {% endif %}
+{% endif %}
