@@ -224,3 +224,48 @@ ul.task-list {
 .footer {
 	padding: 3rem 1.5rem;
 }
+
+// --------
+// Hero
+// --------
+
+
+#header {
+    font-family: var(--font-family-navbar);
+
+    text-align: center;
+    
+    .hero-body {
+        display: block;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+        span {
+            color: var(--global-theme-color);
+        }
+    }
+    .hero-subtitle {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #header {
+        .hero-title {
+            font-size: 4rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #header {
+        text-align: left;
+        .hero-title {
+            font-size: 7rem;
+        }
+        .hero-subtitle {
+            max-width: 500px;
+        }
+    }
+}

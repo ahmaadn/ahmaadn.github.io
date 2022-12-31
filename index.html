@@ -5,11 +5,15 @@ nav: false
 
 <div class="container">
     <div class="wrapper">
-        <div class="hero is-halfheight">
+        <section class="hero is-fullheight" id="header">
             <div class="hero-body px-0">
                 <div>
-                    <h1 class="my-5">Hey, Nama saya Ahmad nur sahid</h1>
-                    <p class="mb-5"> 
+                    <h1 class="hero-title my-5">
+                        <span>Selamat datang</span>
+                            <br>
+                        di Blog
+                    </h1>
+                    <p class="hero-subtitle mb-5"> 
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae at
                         natus dicta tempora? Distinctio vero aut, eveniet perferendis
                         maiores corporis.
@@ -17,12 +21,11 @@ nav: false
                     <p class="date">
                         Last updated: {{ "now" | date: '%B %d, %Y' }}. 
                     </p>
-                    <a class="button is-rounded my-3" href="{{ '/blog/' | relative_url }}"> Blog </a>
+                    <a class="button my-3" href="{{ '/blog/' | relative_url }}"> Masuk ke Blog </a>
                 </div>
             </div>
-        </div>
+        </section>
 
-        
         <div class="posts">
             <div class="title">
                 Latest Article
