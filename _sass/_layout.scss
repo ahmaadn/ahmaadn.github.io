@@ -3,7 +3,6 @@
 // -----------
 .navbar {
 	color: var(--global-text-color);
-	font-family: var(--font-family-navbar);
 
 	.navbar-burger {
 		margin-left: 0;
@@ -13,10 +12,11 @@
 		}
 	}
 	.icon {
-		color: inherit;
+		color: var(--gray-10);
 		font-size: 1rem;
 		margin-left: auto;
 		padding: .3rem;
+		transition: 0.3s;
 
 		&:hover {
 			color: var(--global-hover-color);
@@ -25,14 +25,32 @@
 
 	.navbar-item {
 		font-weight: 500;
-		
+		font-family: var(--font-family-navbar);
+		transition: 0.3s;
+
 		&:hover {
 			color: inherit;
 		}
 
+		span {
+			position: relative;
+			font-family: var(--font-family-navbar);
+			top: 2px;
+
+		}
+
 		&:has(img) {
-			font-size: 1.25rem;
 			padding: 0;
+			span {
+				color: var(--gray-10);
+				font-weight: 700;
+				font-size: 1.5rem;
+				line-height: 1.5;
+				text-size-adjust: 100%;
+				word-break: break-word;
+				vertical-align: -4px;
+			}
+			
 		}
 	}
 
@@ -58,6 +76,7 @@
 }
 
 .navbar.nav-custum.invert {
+
 	>.container > .navbar-brand {
 		.navbar-burger,
 		.icon {
@@ -69,7 +88,9 @@
 		}
 
 		.navbar-item {
-			color: var(--white) !important;
+			span {
+				color: var(--white);
+			}
 			img {
 				background-color: var(--white);
 				border-radius: 6px;
@@ -87,6 +108,7 @@
 
 	.navbar.nav-custum.invert {
 		#nav_blog {
+			.icon,
 			.navbar-item {
 				color: var(--white);
 			}
@@ -124,7 +146,7 @@
 		margin: 0 12px;
 
 		border-radius: 6px;
-		text-align: right; 
+		text-align: right;
 
 		.navbar-brand .navbar-item img {
 			margin-left: 12px;
