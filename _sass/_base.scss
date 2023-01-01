@@ -119,6 +119,10 @@ code {
     font-style: italic;
 }
 
+p.date {
+    margin: 0;
+}
+
 
 @media screen and (min-width: 768px) {
     .container {
@@ -231,11 +235,17 @@ ul.task-list {
 
 
 #header {
-    font-family: var(--font-family-navbar);
     text-align: center;
+    min-height: 80vh;
+
+    background-image: url('/assets/img/bg-home.jpg');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center top;
+    // background-attachment: fixed;
 
     .hero-body {
-        display: block;
+        display: block;        
     }
 
     .hero-title {
@@ -246,11 +256,13 @@ ul.task-list {
     }
     .hero-subtitle {
         font-size: 1rem;
+        margin-bottom: 10px !important;
     }
 }
 
 @media screen and (min-width: 768px) {
     #header {
+        background-size: 100% auto;
         .hero-title {
             font-size: 4rem;
         }
