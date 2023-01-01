@@ -1,19 +1,21 @@
-<!-- Search -->
-<!-- Search -->
 <div class="search-page">
-    <div class="search-icon-close-container">
-        <span class="search-icon-close">
-            <i class="fa fa-chevron-down"></i>
-        </span>
-    </div>
-    <div class="search-main container">
-        <div class="is-flex is-justify-content-center mx-6">
-            <div class="is-flex-grow-1">
-                <form></form>
-                <input type="text" id="search-input" placeholder="$ grep...">
-                </form>
+    <div id="modal-js-search" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Search</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <!-- Content ... -->
+                <input id="search-input" class="input is-primary" type="text" placeholder="$">
+                
                 <div id="search-results" class="mini-post-list"></div>
-            </div>
+
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button">Close</button>
+            </footer>
         </div>
     </div>
 </div>
