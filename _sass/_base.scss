@@ -232,21 +232,20 @@ ul.task-list {
 
 #header {
     font-family: var(--font-family-navbar);
-
     text-align: center;
-    
+
     .hero-body {
         display: block;
     }
 
     .hero-title {
-        font-size: 3rem;
+        font-size: 36px;
         span {
             color: var(--global-theme-color);
         }
     }
     .hero-subtitle {
-        font-size: 20px;
+        font-size: 1rem;
     }
 }
 
@@ -255,6 +254,10 @@ ul.task-list {
         .hero-title {
             font-size: 4rem;
         }
+
+        .hero-subtitle {
+            font-size: 20px;
+        }
     }
 }
 
@@ -262,7 +265,7 @@ ul.task-list {
     #header {
         text-align: left;
         .hero-title {
-            font-size: 7rem;
+            font-size: 6rem;
         }
         .hero-subtitle {
             max-width: 500px;
