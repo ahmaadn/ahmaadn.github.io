@@ -15,6 +15,7 @@ sosial:
 # Build settings
 plugins:
   - jekyll-feed
+  - jekyll-imagemagick
   - jekyll-archives
   - jekyll-paginate-v2
   - jekyll-tabs
@@ -73,3 +74,23 @@ default:
 sass:
   sass_dir: _sass
   style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+imagemagick:
+  enabled  : true # enables responsive images for your site (recomended, see https://github.com/alshedivat/al-folio/issues/537)
+  widths:
+    - 480
+    - 800
+    - 1400
+  input_directories:
+    - assets/img/
+  input_formats:
+    - ".jpg"
+    - ".jpeg"
+    - ".png"
+    - ".tiff"
+  output_formats:
+    webp: "-resize 800x"
+
+picture:
+  source: "assets/img"
+  output: "assets/img/generated"

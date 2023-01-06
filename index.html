@@ -4,46 +4,57 @@ nav: false
 ---
 
 <div class="wrapper">
-    <section id="header">
-        <div class="container">
-            <div class="hero-is-fullheight">
-                <div class="hero-body px-0">
-                    <h1 class="hero-title my-5">
-                        <span>Selamat datang</span>
-                            <br class="is-hidden-mobile">
-                        di Blog
-                    </h1>
-                    <p class="hero-subtitle mb-5"> 
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae at
-                        natus dicta tempora? Distinctio vero aut, eveniet perferendis
-                        maiores corporis.
-                    </p>
-                    <p class="date">
-                        Last updated: {{ "now" | date: '%B %d, %Y' }}. 
-                    </p>
-                    <a class="button my-3" href="{{ '/blog/' | relative_url }}"> Masuk ke Blog </a>
+    <section id="intro">
+        <div class="hero is-fullheight">
+            <div class="hero-body px-0">
+                <div class="container">
+                    <div class="columns is-desktop">
+                        <div class="column is-7-desktop pt-6">
+                            <h1 class="hero-title my-5">
+                                <span>Selamat datang</span>
+                                <br class="is-hidden-mobile">
+                                di Blog
+                            </h1>
+                            <p class="hero-subtitle mb-5">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae at
+                                natus dicta tempora? Distinctio vero aut, eveniet perferendis
+                                maiores corporis.
+                            </p>
+                            <p class="date">
+                                Last updated: {{ "now" | date: '%B %d, %Y' }}.
+                            </p>
+                            <a class="button my-3" href="{{ '/blog/' | relative_url }}"> Masuk ke Blog </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="intro-img">
+                <div class="image">
+                    {% include
+                    figure.html
+                    path="assets/img/home-img.jpg"
+                    %}
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="latest-post">
+    <section id="latest-post section">
         <div class="container">
             <div class="posts">
-                <div class="title">
+                <div class="title has-text-centered">
                     Latest Article
                 </div>
                 {%- assign _sorted_list = site.posts -%}
                 {%- assign _sorted_list = _sorted_list | sort: 'date' -%}
                 {%- assign _sorted_list = _sorted_list | reverse -%}
-    
+
                 {% for post in _sorted_list limit: 5 %}
-                <a class="post {% if forloop.last %} is-last {% endif %} is-flex is-justify-content-space-between" href="{{ post.url | prepend: site.baseurl }}">
+                <a class="post {% if forloop.last %} is-last {% endif %} is-flex is-justify-content-space-between"
+                    href="{{ post.url | prepend: site.baseurl }}">
                     <h3> {{ post.title }}</h3>
                     <span class="date has-text-grey is-hidden-mobile is-align-self-center"> {{ post.date | date: '%B %-d, %Y' }} </span>
-    
                 </a>
-    
                 {% endfor %}
             </div>
         </div>

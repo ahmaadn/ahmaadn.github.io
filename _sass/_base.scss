@@ -207,7 +207,6 @@ ul.task-list {
     .footnotes p {
         font-size: 1rem;
     }
-
 }
 
 // -----------
@@ -237,15 +236,24 @@ ul.task-list {
 // --------
 
 
-#header {
+#intro {
     text-align: center;
     min-height: 80vh;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: left top;
 
-    background-image: url('/assets/img/bg-home.jpg');
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position: center top;
-    // background-attachment: fixed;
+    // .header-img {
+    //     display: block;
+    //     border: 1px;
+    //     border-bottom-left-radius: 9999px;
+    // }
+
+    // .header-img img {
+    //     position: relative;
+    //     height: 100%;
+
+    // }
 
     .hero-body {
         display: block;        
@@ -264,8 +272,7 @@ ul.task-list {
 }
 
 @media screen and (min-width: 768px) {
-    #header {
-        background-size: 100% auto;
+    #intro {
         .hero-title {
             font-size: 4rem;
         }
@@ -277,13 +284,73 @@ ul.task-list {
 }
 
 @media screen and (min-width: 1024px) {
-    #header {
+    #intro {
         text-align: left;
-        .hero-title {
-            font-size: 6rem;
-        }
+
+        // .header-img img {
+        //     display: block;
+        //     position: absolute;
+        //     top: 0;
+        //     height: 100%;
+        //     width: auto;
+        //     border-bottom-left-radius: 999px;
+        //     border-top-left-radius: 999px;
+        //     object-fit: cover;
+        // }
+
         .hero-subtitle {
             max-width: 500px;
+        }
+    }
+}
+
+
+#intro {
+    position: relative;
+    .intro-img {
+        position: relative;
+        width: 100%;
+        height: 16rem;
+
+        .image {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #intro .intro-img {
+        height: 24rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #intro {
+        .intro-img {
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+
+            .image {
+                border-bottom-left-radius: 9999px;
+                border-top-left-radius: 9999px;
+            }
         }
     }
 }
