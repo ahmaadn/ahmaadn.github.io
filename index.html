@@ -30,32 +30,36 @@ nav: false
             </div>
             <div class="intro-img">
                 <div class="image">
-                    {% include
-                    figure.html
-                    path="assets/img/home-img.jpg"
-                    %}
+                    {% picture home-img.jpg %}
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="latest-post section">
+    <section id="latest-post" class="mt-5">
         <div class="container">
-            <div class="posts">
-                <div class="title has-text-centered">
-                    Latest Article
+            <div class="columns is-desktop is-justify-content-space-between">
+                <div class="column is-8">
+                    <div class="posts">
+                        <div class="title has-text-centered">
+                            Latest Article
+                        </div>
+                        {%- assign _sorted_list = site.posts -%}
+                        {%- assign _sorted_list = _sorted_list | sort: 'date' -%}
+                        {%- assign _sorted_list = _sorted_list | reverse -%}
+        
+                        {% for post in _sorted_list limit: 5 %}
+                        <a class="post {% if forloop.last %} is-last {% endif %} is-flex is-justify-content-space-between"
+                            href="{{ post.url | prepend: site.baseurl }}">
+                            <h3> {{ post.title }}</h3>
+                            <span class="date has-text-grey is-hidden-mobile is-align-self-center"> {{ post.date | date: '%B %-d, %Y' }} </span>
+                        </a>
+                        {% endfor %}
+                    </div>
                 </div>
-                {%- assign _sorted_list = site.posts -%}
-                {%- assign _sorted_list = _sorted_list | sort: 'date' -%}
-                {%- assign _sorted_list = _sorted_list | reverse -%}
-
-                {% for post in _sorted_list limit: 5 %}
-                <a class="post {% if forloop.last %} is-last {% endif %} is-flex is-justify-content-space-between"
-                    href="{{ post.url | prepend: site.baseurl }}">
-                    <h3> {{ post.title }}</h3>
-                    <span class="date has-text-grey is-hidden-mobile is-align-self-center"> {{ post.date | date: '%B %-d, %Y' }} </span>
-                </a>
-                {% endfor %}
+                <div class="column is-3 profile_pict is-align-self-center">
+                    {% picture profilepict profile_pict.jpg %}
+                </div>
             </div>
         </div>
     </section>
