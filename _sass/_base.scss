@@ -58,7 +58,7 @@ p {
 
 
 code {
-    font-family: SFMono-Regular, Menlo, Monaco,Consolas, "Liberation Mono", "Courier New",monospace;;
+    font-family: SFMono-Regular, Menlo, Monaco,Consolas, "Liberation Mono", "Courier New",monospace;
     color: var(--blue-color);
     padding: 3px 3px;
     border-radius: 3px;
@@ -80,18 +80,6 @@ code {
         color: hsl(141, 71%, 48%);
     }
 }
-
-// .main {
-//     margin-top: 1.5rem;
-// }
-
-
-// @media screen and (min-width: 768px)  {
-//     .main {
-//         margin-top: 2rem;
-//     }
-    
-// }
 
 .container {
     margin-left: auto;
@@ -131,10 +119,6 @@ p.date {
     .container {
         padding: 0 2rem;
     }
-
-    // .segment {
-    //     margin: 2rem 0;
-    // }
 
     .title {
         font-size: 2rem;
@@ -231,126 +215,27 @@ ul.task-list {
 	padding: 3rem 1.5rem;
 }
 
-// --------
-// Hero
-// --------
 
-
-#intro {
-    text-align: center;
-    min-height: 80vh;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: left top;
-
-    // .header-img {
-    //     display: block;
-    //     border: 1px;
-    //     border-bottom-left-radius: 9999px;
-    // }
-
-    // .header-img img {
-    //     position: relative;
-    //     height: 100%;
-
-    // }
-
-    .hero-body {
-        display: block;        
-    }
-
-    .hero-title {
-        font-size: 36px;
-        span {
-            color: var(--global-theme-color);
-        }
-    }
-    .hero-subtitle {
-        font-size: 1rem;
-        margin-bottom: 10px !important;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    #intro {
-        .hero-title {
-            font-size: 4rem;
-        }
-
-        .hero-subtitle {
-            font-size: 20px;
-        }
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    #intro {
-        text-align: left;
-
-        // .header-img img {
-        //     display: block;
-        //     position: absolute;
-        //     top: 0;
-        //     height: 100%;
-        //     width: auto;
-        //     border-bottom-left-radius: 999px;
-        //     border-top-left-radius: 999px;
-        //     object-fit: cover;
-        // }
-
-        .hero-subtitle {
-            max-width: 500px;
-        }
-    }
-}
-
-
-#intro {
+// profile picture
+.profile {
     position: relative;
-    .intro-img {
+    display: flex;
+    justify-content: center;
+    picture {
+        border-radius: 999px;
+        overflow: hidden;
         position: relative;
-        width: 100%;
-        height: 16rem;
-
-        .image {
-            position: relative;
+        width: 13rem;
+        img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            overflow: hidden;
-
-            img {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                top: 0;
-                left: 0;
-            }
         }
-    }
-}
-
-@media screen and (min-width: 768px) {
-    #intro .intro-img {
-        height: 24rem;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    #intro {
-        .intro-img {
-            width: 50%;
-            height: 100%;
-            position: absolute;
-            right: 0;
-            top: 0;
-            bottom: 0;
-
-            .image {
-                border-bottom-left-radius: 9999px;
-                border-top-left-radius: 9999px;
-            }
-        }
+    .profile picture {
+        width: 100%;
     }
+    
 }

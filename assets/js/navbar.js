@@ -9,3 +9,20 @@ $(document).ready(function() {
   
     });
 });
+
+// https://stackoverflow.com/questions/22541364/sticky-navbar-onscroll
+// $(".header-sticky").toggleClass('is-fixed-top',jQuery(window).scrollTop() > 50);
+// var num = 0;
+// $(window).scroll(function () {
+//     $(".navbar").toggleClass('is-fixed-top',$(window).scrollTop() > 0);
+//     $("body").toggleClass('has-navbar-fixed-top',$(window).scrollTop() > 0);
+// });
+
+
+// // $(window).bind('scroll', function () {
+// //     if ($(window).scrollTop() > num) {
+// //         $('.navbar').addClass('is-fixed-top');
+// //     } else {
+// //         $('.navbar').removeClass('is-fixed-top');
+// //     }
+// // });

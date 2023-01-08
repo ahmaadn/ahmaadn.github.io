@@ -39,9 +39,14 @@ nav: false
     <section id="latest-post" class="mt-5">
         <div class="container">
             <div class="columns is-desktop is-justify-content-space-between">
-                <div class="column is-8">
+                <div class="column is-3-desktop is-align-self-center">
+                    <div class="profile">
+                        {% picture profile profile_pict.jpg %}
+                    </div>
+                </div>
+                <div class="column is-8-desktop">
                     <div class="posts">
-                        <div class="title has-text-centered">
+                        <div class="title">
                             Latest Article
                         </div>
                         {%- assign _sorted_list = site.posts -%}
@@ -57,9 +62,7 @@ nav: false
                         {% endfor %}
                     </div>
                 </div>
-                <div class="column is-3 profile_pict is-align-self-center">
-                    {% picture profilepict profile_pict.jpg %}
-                </div>
+                
             </div>
         </div>
     </section>

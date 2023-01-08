@@ -1,7 +1,3 @@
-# _data/picture.yml
-
-# These are used in several places. You likely want to enter whatever CSS media queries your site
-# uses here.
 media_queries:
     mobile: 'max-width: 480px'
     tablet: 'max-width: 768'
@@ -99,9 +95,9 @@ presets:
     fallback_format: webp
     fallback_width: 600
   
-  profilepict:
-    base_width: 850
-    fallback_width: 850
+  profile:
+    widths: [400, 800]
     formats: [webp, original]
     attributes:
       picture: ''
+      img: ''
