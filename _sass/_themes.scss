@@ -6,43 +6,10 @@
     --font-family-code : SFMono-Regular, Menlo, Monaco,Consolas, "Liberation Mono", "Courier New",monospace;
     --font-family-navbar : 'Epilogue', sans-serif;
 
-    /* Color */
-    --red-color:           #FF3636;
-    --red-color-dark:      #B71C1C;
-    --orange-color:        #F29105;
-    --blue-color:          #0076df;
-    --blue-color-dark:     #00369f;
-    --cyan-color:          #2698BA;
-    --light-cyan-color:    lighten(--cyan-color, 25%);
-    --green-color:         #00ab37;
-    --green-color-lime:    #B7D12A;
-    --green-color-dark:    #009f06;
-    --green-color-light:   #ddffdd;
-    --green-color-bright:  #11D68B;
-    --purple-color:        #B509AC;
-    --light-purple-color:  lighten(--purple-color, 25%);
-    --pink-color:          #f92080;
-    --pink-color-light:    #ffdddd;
-    --yellow-color:        #efcc00;
-  
-    --grey-color:          #404040;
-    --grey-color-light:    #a3a3a3;
-    --grey-color-dark:     #1C1C1D;
-    --grey-900:            #212529;
-    --grey-1:              #f5f5f5;
-    --grey-2:              #bfbfbf;
-  
-    --white-color:         #ffffff;
-    --black-color:         #000000;
-  
-    --code-bg-color-light: rgba(--blue-color, 0.05);
-    --code-bg-color-dark:  #2c3237;
-    --code-background-color: #f9f9f9;
-
-    // COlor
-    // --gray-0:       #f9f9f9;
+    // Color
     --white:        #fff;
-    --gray-0:       #F9FAFB;
+    // --gray-0:       #F9FAFB;
+    --gray-0:       #f9f9f9;
     --gray-1:       #eee;
     --gray-2:       #e6e6e6;
     --gray-3:       #ddd;
@@ -81,10 +48,14 @@
     --cyan:         #2698BA;
 
 
-    --global-text-color: var(--gray-7);
+    --global-border-color: var(--gray-2);
+    --global-text-color: var(--gray-8);
     --global-theme-color: var(--blue);
     --global-hover-color: var(--blue);
     --global-navbar-color: var(--white);
-    --global-bg-color: var(--gray-0);
+    --global-navbar-hover-color: var(--gray-0);
+    --global-bg-color: var(--white);
+    --global-icon-color:var(--gray-10);
+    --code-background-color: var(--gray-1);
 
 }

@@ -7,12 +7,9 @@ body {
     background-color: var(--global-bg-color);
 }
 
-a, h1, h2, h3, h4, h4, h5, h6, span, p {
-    font-family: var(--font-family);
-}
-
 h1, h2, h3, h4, h4, h5, h6 {
-    color: var(--grey-color-dark);
+    font-family: var(--font-family);
+    color: var(--global-text-color);
     font-weight: bold;
 }
 
@@ -23,8 +20,7 @@ h1 {
     margin: 0
 }
 
-h2 {    
-    font-family: var(--font-family);
+h2 {
     font-size: 1.7rem;
     font-weight: 700;
     letter-spacing: -.05rem;
@@ -33,7 +29,7 @@ h2 {
 
 p {
     font-weight: 400;
-    color: var(--grey-color-dark);
+    color: var(--global-text-color);
     font-size: 1rem;
     line-height: 1.7;
     font-family: var(--font-family);
@@ -59,7 +55,7 @@ p {
 
 code {
     font-family: SFMono-Regular, Menlo, Monaco,Consolas, "Liberation Mono", "Courier New",monospace;
-    color: var(--blue-color);
+    color: var(--global-theme-color);
     padding: 3px 3px;
     border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -90,7 +86,7 @@ code {
 
 
 .title {
-    color: var(--grey-900);
+    color: var(--global-text-color);
     font-family: var(--font-family);
     font-size: 1.7rem;
     font-weight: 700;
@@ -104,7 +100,7 @@ code {
 }
 
 .date {
-    color: var(--grey-900);
+    color: var(--global-text-color);
     font-family: var(--font-family);
     font-size: 14px;
     font-style: italic;
@@ -154,7 +150,7 @@ p.date {
 
 .content a {
     color: inherit;
-    border-bottom: 1px dotted var(--grey-2);
+    border-bottom: 1px dotted var(--global-border-color);
 }
 
 ul.task-list {
