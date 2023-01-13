@@ -1,3 +1,5 @@
+{%- assign logo = site.icon | prepend: 'assets/img/' -%}
+
 <div class="nav-wrapper">
     {% if page.layout == 'post' %}
     <nav class="navbar nav-custum {% if page.header-img %} invert {% endif %}" role="navigation" aria-label="main navigation">
@@ -7,8 +9,13 @@
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item" href="{{ site.baseurl }}/">
-                    <img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="{{ site.name }}" width="52px" height="52px">
+                
+                    {% if site.icon %}
+                    <img src="{{ logo | relative_url }}" alt="{{ site.name }}" width="52px" height="52px">
+                    <span class="is-hidden-touch"> Ahmaadn </span>
+                    {% else %}
                     <span> Ahmaadn </span>
+                    {% endif %}
                 </a>
 
                 <!-- Search Icon -->
@@ -25,10 +32,11 @@
             <div id="nav_blog">
                 <div class="navbar-menu">
                     <div class="navbar-brand is-hidden-desktop">
+                        {% if site.icon %}
                         <a class="navbar-item logo" href="{{ site.baseurl }}/">
-                            <img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="{{ site.name }}"
-                                width="52px" height="52px">
+                            <img src="{{ logo | relative_url }}" alt="{{ site.name }}" width="52px" height="52px">
                         </a>
+                        {% endif %}
 
                         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
                             data-target="nav_blog">

@@ -1,6 +1,7 @@
 ---
 ---
 
+
 @font-face {
   font-family: 'Menlo Regular';
   font-style: normal;
@@ -8,14 +9,4 @@
   src: local('Menlo Regular'), url('/assets/fonts/Menlo-Regular.woff') format('woff');
 }
 
-// Bulma v 0.9.4
-// @import "bulma/bulma";
-
-@import
-  "variables",
-  "themes",
-  "layout",
-  "highlight",
-  "codetabs",
-  "base"
-;
+@import "all";
