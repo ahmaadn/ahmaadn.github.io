@@ -253,7 +253,7 @@ article {
 
 	.buttons {
 		a {
-			font-family: var(--font-family-monospace);
+			font-family: $font-family-monospace;
 		}
 	}
 
@@ -525,7 +525,7 @@ article.media {
 	}
 
 	.date {
-		font-family: var(--font-family-monospace);
+		font-family: $font-family-monospace;
 		font-size: .75rem;
 		letter-spacing: 0.5px;
 	}
@@ -836,7 +836,7 @@ h2.year {
 }
 
 .tab {
-    font-family: var(--font-family);
+    font-family: $family-sans-serif;
     color: #2c2c2c;
     -webkit-text-size-adjust: 100%;
     background: #fff;

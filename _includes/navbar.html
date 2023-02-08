@@ -1,84 +1,96 @@
-{%- assign logo = site.icon | prepend: 'assets/img/' -%}
+{% if page.layout == 'post' %}
+<nav class="navbar nav-custum {% if page.header-img %} invert {% endif %} is-fixed-top" role="navigation" aria-label="main navigation">
+{% else %}
+<nav class="navbar has-shadow  is-fixed-top" role="navigation" aria-label="main navigation">
+{% endif %}
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="{{ site.baseurl }}/">
+                {% if site.icon %}
+                <img src="{{ site.icon | prepend: 'assets/img/' | relative_url }}" alt="{{ site.name }}" width="52px" height="52px">
+                <span class="is-hidden-touch"> Ahmaadn </span>
+                {% else %}
+                <span> Ahmaadn </span>
+                {% endif %}
+            </a>
 
-<div class="nav-wrapper">
-    {% if page.layout == 'post' %}
-    <nav class="navbar nav-custum {% if page.header-img %} invert {% endif %}" role="navigation" aria-label="main navigation">
-    {% else %}
-    <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
-    {% endif %}
-        <div class="container">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="{{ site.baseurl }}/">
-                
-                    {% if site.icon %}
-                    <img src="{{ logo | relative_url }}" alt="{{ site.name }}" width="52px" height="52px">
-                    <span class="is-hidden-touch"> Ahmaadn </span>
-                    {% else %}
-                    <span> Ahmaadn </span>
-                    {% endif %}
-                </a>
-
-                <!-- Search Icon -->
-                <a class="icon js-modal-trigger is-hidden-desktop" data-target="modal-js-search">
+            <!-- Search Icon -->
+            <div class="navbar-item is-hidden-desktop">
+                <a class="icon js-modal-trigger" data-target="modal-js-search">
                     <i class="fas fa-fw fa-sharp fa-solid fa-magnifying-glass"></i>
                 </a>
-
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="nav_blog">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
             </div>
-            <div id="nav_blog">
-                <div class="navbar-menu">
-                    <div class="navbar-brand is-hidden-desktop">
-                        {% if site.icon %}
-                        <a class="navbar-item logo" href="{{ site.baseurl }}/">
-                            <img src="{{ logo | relative_url }}" alt="{{ site.name }}" width="52px" height="52px">
-                        </a>
-                        {% endif %}
 
-                        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                            data-target="nav_blog">
-                            <span aria-hidden="true"></span>
-                            <span aria-hidden="true"></span>
-                            <span aria-hidden="true"></span>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="nav_blog">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="nav_blog">
+            <div class="navbar-menu">
+                <div class="navbar-brand is-justify-content-end is-hidden-desktop">
+                    {% if site.icon %}
+                    <a class="navbar-item" href="{{ site.baseurl }}/">
+                        <img src="{{ site.icon | prepend: 'assets/img/' | relative_url }}" alt="{{ site.name }}" width="52px" height="52px">
+                    </a>
+                    {% endif %}
+
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                        data-target="nav_blog">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div class="navbar-end">
+
+                    <!-- About -->
+                    <a class="navbar-item {% if page.title == 'About' %} is-active {% endif %}"
+                        href="{{ '/me/' | relative_url }}">
+                        <span>About</span>
+                    </a>
+
+                    <!-- Blog -->
+                    <a class="navbar-item {% if page.title == 'Blog' %} is-active {% endif %}"
+                        href="{{ '/blog/' | relative_url }}">
+                        <span>Blog</span>
+                    </a>
+
+                    <!-- Other -->
+                    {% for p in site.pages %} {% if p.nav %}
+                    <a class="navbar-item {% if page.title == p.title %} is-active {% endif %}"
+                        href="{{ p.url | relative_url }}">
+                        <span>{{ p.title }}</span>
+                    </a>
+                    {% endif %} {% endfor %}
+
+                    <!-- Github -->
+                    {% if site.sosial.github %}
+                    <a href="https://github.com/{{ site.sosial.github }}" class="navbar-item is-hidden-touch" target="_blank">
+                        <span class="icon-text">
+                            <span class="icon">
+                                <i class="icon fas fa-fw fa-brands fa-github"></i>
+                            </span>
+                            <span>Github</span>
+                        </span>
+                    </a>
+                    {% endif %}
+                    
+                    <div class="navbar-item is-hidden-touch">
+                        <a class="icon js-modal-trigger" data-target="modal-js-search">
+                            <i class="fas fa-fw fa-sharp fa-solid fa-magnifying-glass"></i>
                         </a>
                     </div>
 
-                    <div class="navbar-start">
-
-                        <!-- About -->
-                        <a class="navbar-item {% if page.title == 'About' %} is-active {% endif %}"
-                            href="{{ '/me/' | relative_url }}">
-                            <span>About</span>
-                        </a>
-
-                        <!-- Blog -->
-                        <a class="navbar-item {% if page.title == 'Blog' %} is-active {% endif %}"
-                            href="{{ '/blog/' | relative_url }}">
-                            <span>Blog</span>
-                        </a>
-
-                        <!-- Other -->
-                        {% for p in site.pages %} {% if p.nav %}
-                        <a class="navbar-item {% if page.title == p.title %} is-active {% endif %}"
-                            href="{{ p.url | relative_url }}">
-                            <span>{{ p.title }}</span>
-                        </a>
-                        {% endif %} {% endfor %}
-
+                    {% if site.sosial_navbar %}
+                    <div class="icons is-hidden-desktop">
+                        {% include sosial_icon.html %}
                     </div>
-                    <div class="navbar-end">
-                        <div class="navbar-item icons">
-                            {% include sosial_nav.html %}
-                            <a class="icon js-modal-trigger is-hidden-touch" data-target="modal-js-search">
-                                <i class="fas fa-fw fa-sharp fa-solid fa-magnifying-glass"></i>
-                            </a>
-                        </div>
-                    </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
-    </nav>
-</div>
+    </div>
+</nav>

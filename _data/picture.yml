@@ -100,4 +100,4 @@ presets:
     formats: [webp, original]
     attributes:
       picture: ''
-      img: ''
+      img:

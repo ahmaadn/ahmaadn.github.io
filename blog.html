@@ -1,7 +1,6 @@
 ---
 layout : blog
 title : Blog
-
 pagination:
     enabled: true
     collection: posts
@@ -15,39 +14,57 @@ pagination:
         after: 1  # The number of links after the current page
 ---
 
+<div>
+    {% include intro-heading.html %}
+</div>
+<hr>
 {% for post in paginator.posts %}
-<article class="columns is-multiline is-justify-content-center mb-3">
-    <div class="column is-12">
-        <h3 class="title mb-2">
-            <a class="post-title" href="{{ post.url | relative_url }}"> {{ post.title }} </a>
-        </h3>
-        <ul class="list-inline post-meta mb-3">
-            <!-- Date -->
-            <li class="list-inline-item">
-                Date : {{ post.date | date: '%B %-d, %Y' }} 
-            </li>
+<article class="post mb-3">
 
-            {% unless post.categories == empty %}
-            <li class="list-inline-item">Categories : 
-                {% for category in post.categories %}  
-                <a href="{{ '/categories/' | append : category | relative_url }}" class="ml-1">{{ category }}</a>
-                    {% unless forloop.last %}<span>,</span>{% endunless %}
-                {% endfor %}
-            </li>
-            {% endunless %}
-
-            {% unless post.tags == empty %}
-            <li class="list-inline-item">tags : 
-                {% for tag in post.tags %}  
-                <a href="{{ '/tags/' | append : tag | relative_url }}" class="ml-1">{{ tag }}</a>
-                    {% unless forloop.last %}<span>,</span>{% endunless %}
-                {% endfor %}
-            </li>
-            {% endunless %}
-        </ul>
-        <div class="post-preview" > {{ post.content | strip_html | truncate:300  }} </div>
+    <div class="post-preview">
+        <a href="{{ post.url | relative_url }}">
+            <h2 class="title mb-2 is-spaced">{{ post.title }}</h2>
+            <h3 class="subtitle" > {{ post.subtitle }} </h3>
+            <div class="post-preview-content"> 
+                {{ post.content | strip_html | truncate:300  }} 
+            </div>
+        </a>
     </div>
+        
+    <ul class="post-meta list-inline mb-1">
+        <li class="date list-inline-item">
+            <i class="fa-solid fa-calendar-days"></i>
+            {{ post.date | date: '%B %-d, %Y' }} 
+        </li>
+
+        {% unless post.categories == empty %}
+        <li class="list-inline-item">
+            &nbsp; · &nbsp;
+            <i class="fa-solid fa-tag"></i> 
+            {% for category in post.categories %}  
+            <a href="{{ '/categories/' | append : category | relative_url }}" class="tag">
+                {{ category }}
+            </a>
+            {% unless forloop.last %}<span>,</span>{% endunless %}
+            {% endfor %}
+        </li>
+        {% endunless %}
+
+        {% unless post.tags == empty %}
+        <li class="list-inline-item">
+            &nbsp; · &nbsp;
+            <i class="fa-solid fa-hashtag"></i>
+            {% for tag in post.tags %}  
+            <a href="{{ '/tags/' | append : tag | relative_url }}" class="tag">{{ tag }}</a>
+                {% unless forloop.last %}<span>,</span>{% endunless %}
+            {% endfor %}
+        </li>
+        {% endunless %}
+
+    </ul>
+
 </article>
+<hr>
 {% endfor %}
 
 {% include pagination.html %}

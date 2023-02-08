@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Welcome to Jekyll! 2"
+subtitle: ini adalah jakyll
 date:   2022-12-14 06:02:18 +0700
 categories: 
     - jekyll 

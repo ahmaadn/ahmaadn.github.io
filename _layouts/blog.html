@@ -5,39 +5,72 @@ layout: page
 <div class="container">
     <div class="wrapper">
         <div class="columns is-desktop is-multiline mt-3">
-            <div class="column is-8-desktop">
-                <!-- Jika  -->
+            <div class="column is-8-desktop postlist">
                 {{ content }}
             </div>
-            
-            <div class="column is-4-desktop">
-                <div class="widget">
-                    <div class="container">
-                        <div class="title"> Categories </div>
-                        <div class="category">
-                            {% for category in site.categories %}
-                            <a class="is-flex is-justify-content-space-between is-align-items-center {% if forloop.last %} is-last {% endif %} {% if page.type == 'category' and page.title == category[0] %} is-active {% endif %}" href="{{ '/categories/' | append: category[0] | relative_url }}">
-                                <span class="name">{{ category[0] }}</span>
-                                <sup>{{ category[1].size }}</sup>
-                            </a>
-                            {% endfor %}
+            <div class="column is-4-desktop sidebar">
+                <div class="container">
+                    <!-- Category  -->
+                    {% if site.categories %}
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="content">
+                                <h4>CATEGORIES</h4>
+                                <div class="categories">
+                                    {% for category in site.categories %}
+                                    <a class="category is-flex is-justify-content-space-between is-align-items-center {% if page.type == 'category' and page.title == category[0] %} is-active {% endif %}"
+                                        href="{{ '/categories/' | append: category[0] | relative_url }}">
+                                        {{ category[0] }}
+                                        <sup>{{ category[1].size }}</sup>
+                                    </a>
+                                    {% endfor %}
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Tags Cloud  -->
-                <div class="widget">
-                    <div class="container">
-                        <div class="title">Tags </div>
-                        <div class="tags">
-                            {% for tag in site.tags %}
-                            <a class="tag {% if page.type == 'tag' and page.title == tag[0] %}is-active{% endif %}" href="{{ '/tags/' | append: tag[0] | relative_url }}">
-                                {{ tag[0] }}
-                            </a>
-                            {% endfor %}
+                    {% endif %}
+                    <!-- About me -->
+                    <div class="card is-hidden-touch">
+                        <div class="card-content">
+                            <div class="content">
+                                <h4>ABOUT ME</h4>
+                                <div class="profile">
+                                    {% picture
+                                    profile {{ site.profile_picture }}
+                                    --img width="150"
+                                    --img height="150"
+                                    %}
+                                </div>
+                                <p class="subtitle">
+                                    Dunia ini memiliki aturan nya sendiri
+                                </p>
+                                <div class="icons">
+                                    {% include sosial_icon.html %}
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Tags Cloud  -->
+                    {% if site.tags %}
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="content">
+                                <h4>TAGS</h4>
+                                <div class="tags">
+                                    {% for tag in site.tags %}
+                                    <a class="tag {% if page.type == 'tag' and page.title == tag[0] %}is-active{% endif %}"
+                                        href="{{ '/tags/' | append: tag[0] | relative_url }}">
+                                        {{ tag[0] }}
+                                    </a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
-    </div>        
+    </div>
 </div>

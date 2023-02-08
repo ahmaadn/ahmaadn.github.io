@@ -2,38 +2,26 @@
 layout : default
 ---
 
-{% include post-heading.html %}
+{% include intro-heading.html %}
 
 <article>
     <div class="container">
-        <div class="wrapper">
-            <div class="columns is-desktop">
-                <div class="column is-2-desktop">
-                    {% include media-object.html  %}
-                </div>
-        
-                <div class="column is-10-desktop">
-                    <div class="columns mt-0">
-                        <div class="column pt-0 is-10-desktop is-9-tablet content post-container">
-                            {{ content }}
-                        </div>
-                        <div class="column is-2-desktop is-3-tablet is-hidden-mobile sidebar-container catalog-container">
-                            {% if page.catalog %}
-                            <nav class="sticky-top">
-                                <div class="side-catalog">
-                                    <h4>
-                                        <a class="catalog-toggle" href="#">CATALOG</a>
-                                    </h4>
-                                    <ul class="catalog-body"></ul>
-                                </div>
-                            </nav>
-                            {% endif %}
-                        </div>
-        
+        <div class="columns mt-0">
+            <div class="column pt-0 is-9-desktop is-9-tablet content post-container">
+                {{ content }}
+            </div>
+            <div class="column is-3-desktop is-3-tablet is-hidden-mobile sidebar-container catalog-container">
+                {% if page.catalog %}
+                <nav class="sticky-top">
+                    <div class="side-catalog">
+                        <h4>
+                            <a class="catalog-toggle" href="#">CATALOG</a>
+                        </h4>
+                        <ul class="catalog-body"></ul>
                     </div>
-                </div>
-            </div> 
-
+                </nav>
+                {% endif %}
+            </div>
         </div>
     </div>
 </article>

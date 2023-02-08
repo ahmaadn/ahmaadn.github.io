@@ -6,8 +6,7 @@ first_name: Ahmad
 middle_name: Nur
 last_name: 
 email: ahmadnursahid12345@gmail.com
-description: >-
-
+description:
 home_title:
   Hello 👋 <br> 
   I'm <span>Ahmad nur</span> <br> 
@@ -90,10 +89,9 @@ default:
     values:
       sitemap: false
 
-# Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed
 
 picture:
   source: "assets/img"

@@ -3,70 +3,105 @@ layout: page
 nav: false
 ---
 
-<div class="wrapper">
-    <section id="intro">
-        <div class="hero is-fullheight">
-            <div class="hero-body px-0">
-                <div class="container">
-                    <div class="columns is-desktop">
-                        <div class="column is-6-desktop">
-                            <h1 class="hero-title my-5">
-                                {{ site.home_title }}
-                            </h1>
-                            {% if site.description %}
-                            <p class="hero-subtitle mb-5">
-                                {{ site.description }}
-                            </p>
-                            {% endif %}
-                            
-                            {% if latest_update %}
-                            <p class="date">
-                                Last updated: {{ "now" | date: '%B %d, %Y' }}.
-                            </p>
-                            {% endif %}
-                            <a class="button is-primary" role="button" href="{{ '/blog/' | relative_url }}"> 
-                                Masuk ke Blog 
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="intro-img">
-                <div class="image">
-                    {% picture home-img.jpg %}
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="intro" class="section">
+    <div class="hero">
+        <div class="hero-body px-0 pt-4">
+            <div class="container">
+                <div class="columns is-desktop">
+                    <div class="column is-8-desktop">
+                        <h1 class="title my-3">
+                            Hello 👋 <br>
+                            I'm <span>Ahmad nur</span> <br> 
+                            Mahasiswa Institut Teknologi Garut
+                        </h1>
+                        {% if site.description %}
+                        <div class="subtitle mb-3"> </div>
+                        {% endif %}
 
-    <section id="latest-post" class="mt-5">
-        <div class="container">
-            <div class="columns is-desktop is-justify-content-space-between">
-                <div class="column is-3-desktop is-align-self-center">
-                    <div class="profile">
-                        {% picture profile {{ site.profile_picture }} %}
-                    </div>
-                </div>
-                <div class="column is-8-desktop">
-                    <div class="posts">
-                        <div class="title">
-                            Latest Article
-                        </div>
-                        {%- assign _sorted_list = site.posts -%}
-                        {%- assign _sorted_list = _sorted_list | sort: 'date' -%}
-                        {%- assign _sorted_list = _sorted_list | reverse -%}
-        
-                        {% for post in _sorted_list limit: 5 %}
-                        <a class="post {% if forloop.last %} is-last {% endif %} is-flex is-justify-content-space-between"
-                            href="{{ post.url | prepend: site.baseurl }}">
-                            <h3> {{ post.title }}</h3>
-                            <span class="date has-text-grey is-hidden-mobile is-align-self-center"> {{ post.date | date: '%B %-d, %Y' }} </span>
+                        {% if site.latest_update %}
+                        <p class="date">
+                            Last updated: {{ "now" | date: '%B %d, %Y' }}.
+                        </p>
+                        {% endif %}
+                        <a class="button is-primary" role="button" href="{{ '/blog/' | relative_url }}">
+                            Masuk ke Blog
                         </a>
-                        {% endfor %}
+                    </div>
+                    <div class="column is-4-desktop">
+                        <div class="profile is-flex is-flex-grow-1 is-justify-content-center">
+                            {% picture 
+                                profile {{ site.profile_picture }} 
+                                --img width="auto"
+                                --img height="auto"
+                                %}
+                            {% include svg_pattern.html 
+                                class="is-hidden-touch pt-5"
+                                width=200
+                                height=400
+                            %}
+                        </div>
                     </div>
                 </div>
-                
             </div>
         </div>
-    </section>
-</div>
+    </div>
+</section>
+<section id="latest_posts" class="section">
+    <div class="container">
+        <h1 class="title has-text-centered">
+            Latest <span>Article</span>
+        </h1>
+        <ul class="mini-post-list">
+            {%- assign _sorted_list = site.posts -%}
+            {%- assign _sorted_list = _sorted_list | sort: 'date' -%}
+            {%- assign _sorted_list = _sorted_list | reverse -%}
+            
+            {% for post in _sorted_list limit: 5 %}
+            <li class="post">
+                <a href="{{ post.url | prepend: site.baseurl }}">
+                    <div>
+                        <h2 class="title is-spaced"> {{  post.title }}</h2>
+                        <h3 class="subtitle"> {{ post.subtitle }} </h3>
+                    </div>
+                    <span class="date is-hidden-mobile"> {{ post.date | date: '%b %-d' }} </span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+
+<section id="project" class="section">
+    <div class="container">
+        <h1 class="title has-text-centered">
+            Project
+        </h1>
+
+        <div class="columns is-flex-wrap-wrap">
+        {% for post in _sorted_list limit: 5 %}  
+        <div class="column is-4-desktop is-6-tablet is-12-mobile">
+            <div class="card is-primary">
+                <div class="card-content">
+                    <div class="content">
+                        <span class="date">
+                            {{ post.date | date: '%Y' }} 
+                        </span>
+                        <h3 class="title mt-0" >
+                            Hallo Semua
+                        </h3>
+                        <p class="subtitle">
+                            Ini adalah  Subtitle
+                        </p>
+                        <div class="buttons">
+                            <a href="" class="button">dadaa</a>
+                            <a href="" class="button">dadaa</a>
+                            <a href="" class="button">dadaa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+</section>
