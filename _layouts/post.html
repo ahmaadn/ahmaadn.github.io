@@ -2,20 +2,20 @@
 layout : default
 ---
 
-{% include intro-heading.html %}
+{% include post-heading.html %}
 
 <article>
     <div class="container">
         <div class="columns mt-0">
-            <div class="column pt-0 is-9-desktop is-9-tablet content post-container">
+            <div class="column pt-0 is-9-desktop is-9-tablet content post">
                 {{ content }}
             </div>
-            <div class="column is-3-desktop is-3-tablet is-hidden-mobile sidebar-container catalog-container">
+            <div class="column is-3-desktop is-3-tablet is-hidden-mobile sidebar catalog">
                 {% if page.catalog %}
                 <nav class="sticky-top">
                     <div class="side-catalog">
-                        <h4>
-                            <a class="catalog-toggle" href="#">CATALOG</a>
+                        <h4 class="title is-size-6 mb-4">
+                            <a href="#">CATALOG</a>
                         </h4>
                         <ul class="catalog-body"></ul>
                     </div>

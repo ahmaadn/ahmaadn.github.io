@@ -1,0 +1,41 @@
+{% if page.header-img %}
+<style type="text/css">
+    .intro-heading {
+        background-image: url('{{ page.header-img | relative_url }}');
+        background-color: lightgray;
+    }
+</style>
+{% endif %}
+
+
+{% unless page.header-img %}
+<header class="intro-heading post-heading style-text">
+{% else %}
+<header class="intro-heading post-heading">
+{% endunless %}
+    <div class="container">
+        <div class="hero is-medium">
+            <div class="hero-body">
+                {% if page.tags %}
+                <div class="tags mb-2">
+                    {% for tag in page.tags %}
+                    <a class="tag is-rounded" href="{{ site.baseurl }}/tags/{{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                <h1 class="title is-size-1-desktop is-size-2-mobile">
+                    {{ page.title }}
+                </h1>
+                {% if page.subtitle %}
+                <h3 class="subtitle is-size-3-desktop is-size-4-mobile">
+                    {{ page.subtitle }}
+                </h3>
+                {% endif %}
+                <div class="date">
+                    {{ page.date | date: '%B %-d, %Y' }}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

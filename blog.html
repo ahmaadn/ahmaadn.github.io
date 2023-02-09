@@ -14,35 +14,43 @@ pagination:
         after: 1  # The number of links after the current page
 ---
 
-<div>
-    {% include intro-heading.html %}
+
+<div class="intro-heading style-text">
+    <div class="hero">
+        <div class="hero-body">
+            <h2 class="title is-size-1-desktop is-size-2-mobile has-text-centered">
+                {{ page.title }}
+            </h2>
+        </div>
+    </div>
 </div>
+
 <hr>
 {% for post in paginator.posts %}
 <article class="post mb-3">
 
     <div class="post-preview">
         <a href="{{ post.url | relative_url }}">
-            <h2 class="title mb-2 is-spaced">{{ post.title }}</h2>
-            <h3 class="subtitle" > {{ post.subtitle }} </h3>
+            <h2 class="title is-size-3">{{ post.title }}</h2>
+            <h3 class="subtitle is-size-5" > {{ post.subtitle }} </h3>
             <div class="post-preview-content"> 
                 {{ post.content | strip_html | truncate:300  }} 
             </div>
         </a>
     </div>
-        
-    <ul class="post-meta list-inline mb-1">
-        <li class="date list-inline-item">
+
+    <ul class="post-meta is-list-inline mb-1">
+        <li class="date is-inline-block">
             <i class="fa-solid fa-calendar-days"></i>
             {{ post.date | date: '%B %-d, %Y' }} 
         </li>
 
         {% unless post.categories == empty %}
-        <li class="list-inline-item">
+        <li class="is-inline-block">
             &nbsp; · &nbsp;
             <i class="fa-solid fa-tag"></i> 
             {% for category in post.categories %}  
-            <a href="{{ '/categories/' | append : category | relative_url }}" class="tag">
+            <a href="{{ '/categories/' | append : category | relative_url }}">
                 {{ category }}
             </a>
             {% unless forloop.last %}<span>,</span>{% endunless %}
@@ -51,18 +59,16 @@ pagination:
         {% endunless %}
 
         {% unless post.tags == empty %}
-        <li class="list-inline-item">
+        <li class="is-inline-block">
             &nbsp; · &nbsp;
             <i class="fa-solid fa-hashtag"></i>
             {% for tag in post.tags %}  
-            <a href="{{ '/tags/' | append : tag | relative_url }}" class="tag">{{ tag }}</a>
+            <a href="{{ '/tags/' | append : tag | relative_url }}">{{ tag }}</a>
                 {% unless forloop.last %}<span>,</span>{% endunless %}
             {% endfor %}
         </li>
         {% endunless %}
-
     </ul>
-
 </article>
 <hr>
 {% endfor %}
