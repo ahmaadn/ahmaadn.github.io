@@ -33,16 +33,6 @@ Strikethrough uses two tildes. ~~Scratch this~~
 
 ***
 
-<div class="tabs-wrapper">
-  <div class="tabs">
-    <ul>
-      <li class="is-active"><a>Pictures</a></li>
-      <li><a>Music</a></li>
-      <li><a>Videos</a></li>
-      <li><a>Documents</a></li>
-    </ul>
-  </div>
-</div>
 ## Link
 
 [I'm an inline-style link](https://www.google.com)
@@ -209,12 +199,3 @@ That is so funny! :joy:
   Lorem ipsum dolor sit amet, consectetur
   adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur.
 </div>
-
-
-
-<li class="">
-  <div class="buttons">
-
-  </div>
-  
-</li>

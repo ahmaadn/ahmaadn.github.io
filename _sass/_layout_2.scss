@@ -171,7 +171,7 @@
 	}
 
 	&.style-text .hero .hero-body {
-		padding-top: 7rem;
+		padding-top: 8rem;
 		padding-bottom: 4rem;
 	}
 }
@@ -478,16 +478,43 @@
 	}
 }
 
+article > .container > .columns {
+	margin-top: 2rem;
+}
+
 article .content {
-	p {
-		&:has(.footnote) {
-			scroll-margin-top: 5rem;
+	a {
+		color: var(--global-text-color);
+		border-bottom: 1px dotted var(--global-divider-color);
+		text-decoration: none;
+		&:hover {
+			color: var(--global-hover-color);
 		}
 	}
+
+	li > ul {
+		margin-left: 1.2rem;
+	}
+
 	.message-header p {
 		margin-bottom: 0;
 	}
+
+	.tabs ul {
+		margin-left: 0;
+		a {
+			border-bottom-style: solid;
+		}
+	}
+
+	table, .table  {
+		tbody tr:not(.is-selected):nth-child(even) {
+			background-color: var(--global-bg-hover-color);
+		}
+	}
 }
+
+
 
 // ------------
 // Code Tabs
