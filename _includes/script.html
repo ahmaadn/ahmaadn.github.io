@@ -1,7 +1,6 @@
 <!-- Simple Jekyll Search -->
 <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
 
-
 <!-- Script jquery -->
 <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
 
@@ -16,6 +15,25 @@ https://github.com/VizuaaLOG/BulmaJS
 <script src="{{ '/assets/js/message.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/notification.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/modal.js' | relative_url }}"></script>
+
+
+<!-- clipboard -->
+<script src="{{ '/assets/js/clipboard.min.js' | relative_url }}"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy');
+
+    clipboard.on('success', function (e) {
+      console.info('Action:', e.action);
+      console.info('Text:', e.text);
+    //   console.info('Trigger:', e.trigger);
+    });
+
+    clipboard.on('error', function (e) {
+      console.info('Action:', e.action);
+      console.info('Text:', e.text);
+    //   console.info('Trigger:', e.trigger);
+    });
+</script>
 
 <!-- Code Tabs  -->
 <script src="{{ '/assets/js/tabs.js' | relative_url }}"></script>

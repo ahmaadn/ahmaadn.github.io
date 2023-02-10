@@ -7,7 +7,7 @@ group :jekyll_plugins do
   gem 'jekyll_picture_tag', '~> 2.0'
   gem "jekyll-archives"
   gem 'jekyll-paginate-v2'
-  gem "jekyll-tabs"
+  # gem "jekyll-tabs"
   gem 'jemoji'
   gem 'unicode_utils'
   gem 'webrick'

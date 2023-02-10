@@ -65,25 +65,25 @@ figure.highlight {
 
 .highlight {
     text-align: left !important;
-    border-radius: 6px;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    -ms-border-radius: 6px;
-    -o-border-radius: 6px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 
     > pre {
         border: 1px solid #e8eaed;
-        border-radius: 6px;
-        -webkit-border-radius: 6px;
-        -moz-border-radius: 6px;
-        -ms-border-radius: 6px;
-        -o-border-radius: 6px;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
     }
 
     pre {
-        background: var(--code-background-color);
+        // background: var(--global-code-background-color);
         font-size: 1rem;
-        padding: 1.25em 1.5em;
+        padding: 1em;
         font-family: SFMono-Regular, Menlo, Monaco,Consolas, "Liberation Mono", "Courier New",monospace;
         
     }

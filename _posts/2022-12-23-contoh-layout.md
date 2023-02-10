@@ -45,6 +45,16 @@ Strikethrough uses two tildes. ~~Scratch this~~
 
 ***
 
+<div class="tabs-wrapper">
+  <div class="tabs">
+    <ul>
+      <li class="is-active"><a>Pictures</a></li>
+      <li><a>Music</a></li>
+      <li><a>Videos</a></li>
+      <li><a>Documents</a></li>
+    </ul>
+  </div>
+</div>
 ## Link
 
 [I'm an inline-style link](https://www.google.com)
@@ -125,8 +135,13 @@ console.log('hello');
 ```
 {% endtab %}
 
-{% endtabs %}
+{% tab log akukamu %}
+<div>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quibusdam vel iste at, possimus alias natus corporis inventore, in perferendis molestiae officiis deleniti beatae. Nobis esse quae earum fugit repellendus.</p>
+</div>
+{% endtab %}
 
+{% endtabs %}
 
 # Markdown Cheat Sheet
 
@@ -162,74 +177,6 @@ These elements extend the basic syntax by adding additional features. Not all Ma
 | Header | Title |
 | Paragraph | Text |
 
-### Fenced Code Block
-
-{% tabs log %}
-
-{% tab log php %}
-```php
-var_dump('hello');
-```
-{% endtab %}
-
-{% tab log js %}
-```javascript
-console.log('hello');
-```
-{% endtab %}
-
-{% tab log ruby %}
-```javascript
-pputs 'hello'
-```
-{% endtab %}
-
-{% endtabs %}
-
-### Second tabs ada dad adand adaodan dadna daoda
-
-{% highlight javascript linenos %}
-document.write("JavaScript is a simple language for javatpoint learners");
-document.write("JavaScript is a simple language for javatpoint learners");
-document.write("JavaScript is a simple language for javatpoint learners");
-document.write("JavaScript is a simple language for javatpoint learners");
-document.write("JavaScript is a simple language for javatpoint learners");
-document.write("JavaScript is a simple language for javatpoint learners");
-document.write("JavaScript is a simple language for javatpoint learners");
-document.write("JavaScript is a simple language for javatpoint learners");
-{% endhighlight %}
-
-{% tabs name %}
-{% tab name aku %}
-{% highlight python %}
-print("Hello World")
-{% endhighlight %}
-{% endtab %}
-
-{% tab name kamu %}
-{% highlight javascript linenos %}
-document.write("JavaScript is a simple language for javatpoint learners");
-document.write("JavaScript is a simple language for javatpoint learners");
-document.write("JavaScript is a simple language for javatpoint learners");
-document.write("JavaScript is a simple language for javatpoint learners");
-{% endhighlight %}
-{% endtab %}
-{% endtabs %}
-
-
-
-{% highlight ruby %}
-def foo
-  puts 'foo' highlight_lines="1 2" highlight_line_class="1 2"
-end
-{% endhighlight %}
-
-
-```json
-{
-    "hello": ["whatsup", "hi"]
-}
-```
 ***
 
 ### Footnote
@@ -274,3 +221,12 @@ That is so funny! :joy:
   Lorem ipsum dolor sit amet, consectetur
   adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur.
 </div>
+
+
+
+<li class="">
+  <div class="buttons">
+
+  </div>
+  
+</li>

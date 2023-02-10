@@ -480,3 +480,64 @@ article .content {
 		margin-bottom: 0;
 	}
 }
+
+// ------------
+// Code Tabs
+// ------------
+.code-tabs {
+	position: relative;
+	background-color: var(--global-bg-color);
+	ul {
+		margin-left: 0;
+	}
+	a {
+		font-weight: 500;
+	}
+}
+
+.code-tabs:has(~ .tabs-content ul li.is-active pre) {
+	margin-bottom: 0 !important;
+	ul {
+		border: none;
+	}	
+}
+
+.tabs-content {
+	position: relative;
+	.btn-copy {
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin-top: 8px;
+		margin-right: 8px;
+		height: auto;
+		display: none;
+		justify-content: center;
+		padding: 8px;
+	}
+
+	.btn-copy:hover,
+	.btn-copy:has(~ ul li:hover.is-active pre) {
+		display: flex;
+	}
+}
+
+.tabs-content ul {
+	margin: 0;
+	list-style: none;
+	display: inline;
+
+	li {
+		display: none;
+		&.is-active {
+			display: initial;
+		}
+
+	}
+	li.is-active:first-child pre {
+		border-top-left-radius: 0;
+	}
+	li.is-active:last-child pre {
+		border-top-right-radius: 0;
+	}
+}

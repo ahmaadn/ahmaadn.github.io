@@ -1,7 +1,7 @@
 const removeActiveClasses = function (ulElement) {
     const lis = ulElement.querySelectorAll('li');
     Array.prototype.forEach.call(lis, function(li) {
-        li.classList.remove('active');
+        li.classList.remove('is-active');
     });
   }
 
@@ -18,7 +18,7 @@ const removeActiveClasses = function (ulElement) {
     }
 
 window.addEventListener('load', function () {
-    const tabLinks = document.querySelectorAll('ul.tab li a');
+    const tabLinks = document.querySelectorAll('div.tabs ul li a');
 
     Array.prototype.forEach.call(tabLinks, function(link) {
       link.addEventListener('click', function (event) {
@@ -27,7 +27,7 @@ window.addEventListener('load', function () {
         liTab = link.parentNode;
         ulTab = liTab.parentNode;
         position = getChildPosition(liTab);
-        if (liTab.className.includes('active')) {
+        if (liTab.className.includes('is-active')) {
           return;
         }
 
@@ -36,8 +36,8 @@ window.addEventListener('load', function () {
         tabContentElement = document.getElementById(tabContentId);
         removeActiveClasses(tabContentElement);
 
-        tabContentElement.querySelectorAll('li')[position].classList.add('active');
-        liTab.classList.add('active');
+        tabContentElement.querySelectorAll('li')[position].classList.add('is-active');
+        liTab.classList.add('is-active');
       }, false);
     });
 });

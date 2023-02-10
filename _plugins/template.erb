@@ -1,0 +1,21 @@
+<div class="tabs is-centered code-tabs is-boxed is-fullwidth">
+   <ul data-tab="<%= uuid %>" data-name="<%= @name %>">
+      <% environment["tabs-#{@name}"].each_with_index do |(key, value), index| %>
+         <li<%= index == 0 ? ' class="is-active"' : ''%>>
+            <a><%= key %></a>
+         </li>
+      <% end %>
+   </ul>
+</div>
+<div class="tabs-content">
+   <button class="button btn-copy" data-clipboard-action="copy" data-clipboard-target="#tab-<%= uuid %>.is-active .highlight">
+   <img src="/assets/img/copy.svg" width="15" height="15">
+   </button>
+   <ul id="<%= uuid %>" data-name="<%= @name %>">
+      <% environment["tabs-#{@name}"].each_with_index do |(key, value), index| %>
+      <li id="tab-<%= uuid %>" <%= index == 0 ? ' class="is-active"' : ''%>>
+         <%= value %>
+      </li>
+      <% end %>
+   </ul>
+</div>
