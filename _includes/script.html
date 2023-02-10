@@ -52,7 +52,7 @@ https://github.com/VizuaaLOG/BulmaJS
 
 
 <!-- Side Catalog -->
-{% if page.catalog %}
+{% unless page.catalog %}
 <script type="text/javascript">
     function generateCatalog(selector) {
 
@@ -103,7 +103,7 @@ https://github.com/VizuaaLOG/BulmaJS
         });
     });
 </script>
-{% endif %}
+{% endunless %}
 
 <!-- Simple Jekyll Search -->
 <script>

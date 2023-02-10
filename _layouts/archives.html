@@ -6,11 +6,11 @@ layout: blog
     <div class="hero">
         <div class="hero-body">
             {% if page.title != 'Blog' and page.posts.size %}
-            <h3 class="subtitle is-size-4-desktop is-size-5-mobile mb-3">
+            <h3 class="subtitle is-size-4-tablet is-size-5-mobile mb-3">
                 <span>{{ page.posts.size }}</span> posts {% if page.type == 'tag' %} tags {% else %} categorized {% endif %} as:
             </h3>
             {% endif %}
-            <h2 class="title is-size-1-desktop is-size-2-mobile">
+            <h2 class="title is-size-1-tablet is-size-2-mobile">
                 {{ page.title }}
             </h2>
         </div>
@@ -50,7 +50,7 @@ layout: blog
     {% endif %}
 
         <li class="post">
-            <a href="{{ post.url | prepend: site.baseurl }}">
+            <a href="{{ _article.url | prepend: site.baseurl }}">
                 <div>
                     <h2 class="title is-size-5"> {{  _article.title }}</h2>
                     <h3 class="subtitle is-size-6"> {{ _article.subtitle }} </h3>

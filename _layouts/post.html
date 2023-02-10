@@ -11,16 +11,14 @@ layout : default
                 {{ content }}
             </div>
             <div class="column is-3-desktop is-3-tablet is-hidden-mobile sidebar catalog">
-                {% if page.catalog %}
                 <nav class="sticky-top">
                     <div class="side-catalog">
                         <h4 class="title is-size-6 mb-4">
-                            <a href="#">CATALOG</a>
+                            <a href="#" class="catalog-toggle">CATALOG</a>
                         </h4>
                         <ul class="catalog-body"></ul>
                     </div>
                 </nav>
-                {% endif %}
             </div>
         </div>
     </div>

@@ -4,18 +4,6 @@ title : Contoh Layout
 subtitle : tentang layout
 date : 2022-12-23 00:00:00 +0700
 header-img : '/assets/img/home-bg.jpg'
-catalog: true
-toc:
-  - name: Perangkat Lunak Sistem
-    subsections:
-      - name: A. Sistem operasi / platform perangkat lunak
-      - name: B. Driver
-      - name: C. Utilitas
-  - name: Perangkat Lunak Aplikasi
-    subsections:
-      - name: A. Application Software
-      - name: B. Jenis Perangkat Lunak Aplikasi
-  - name: Daftar pustaka
 tags:
   - contoh
   - jekyll
