@@ -34,24 +34,6 @@ body.has-navbar-fixed-top {
 }
 
 
-h1, h2, h3, h4, h4, h5, h6 {
-    font-family: var(--font-family);
-    color: var(--global-text-color);
-}
-
-@media screen and (min-width: 768px) {
-    h1 {
-        font-size: 3rem;
-    }
-    h2 {
-        font-size: 2rem;
-    }
-
-    p {
-        font-size: 1.2rem;
-    }
-}
-
 .title, .subtitle {
     color: var(--global-text-color);
     span {
@@ -62,6 +44,15 @@ h1, h2, h3, h4, h4, h5, h6 {
 .subtitle:not(:last-child) {
     margin-bottom: 8px;
 }
+
+.date {
+    font-family: $family-monospace;
+    color: var(--global-date-color);
+    font-size: 15px;
+    font-weight: 500;
+    font-style: italic;
+}
+
 
 code {
     font-family: $family-monospace;
@@ -74,16 +65,16 @@ code {
     -o-border-radius: 3px;
 
     &.is-info {
-        color: hsl(204, 86%, 53%);
+        color: $blue;
     }
     &.is-danger {
-        color: hsl(348, 100%, 61%);
+        color: $red;
     }
     &.is-warning {
-        color: hsl(48, 100%, 67%);
+        color: $yellow;
     }
     &.is-success {
-        color: hsl(141, 71%, 48%);
+        color: $green;
     }
 }
 
@@ -100,29 +91,11 @@ a:hover > .icon {
     border-radius: 3px;
 }
 
-.date {
-    font-family: $family-monospace;
-    color: var(--global-date-color);
-    font-size: 15px;
-    font-weight: 500;
-    font-style: italic;
-}
-
 .is-list-inline {
   padding-left: 0;
   list-style: none;
 }
 
-// ---------
-// Content
-// ---------
-.content li > ul {
-    margin-top: 0;
-}
-
-.content p {
-    font-size: 1rem;
-}
 
 ul.task-list {
     list-style: none;
@@ -139,62 +112,55 @@ ul.task-list {
    }
 }
 
-// -----------
-// Footnotes
-// -----------
+sup {
+    font-family: $family-monospace;
+}
+
+sup:has(.footnote) {
+	scroll-margin-top: 5rem;
+}
+
 .footnotes {
     ol {
-        color: inherit;
-        font-weight: 500;
+        color: var(--global-text-color-muted);
     }
     p {
-        color: inherit;
-        font-weight: 500;
         font-size: 15px;
         margin-bottom: 3px;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .footnotes p {
+    // .footnotes p {
+    //     font-size: 1rem;
+    // }
+}
+
+.content {
+    .reversefootnote, .footnote {
+        color: var(--global-theme-color);
+    }
+
+    blockquote {
+        border-left: 5px solid var(--global-theme-color);;
+        font-size: 14px;
+        font-style: italic;
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    p {
         font-size: 1rem;
     }
+
+    
+
 }
 
-.content .reversefootnote, 
-.content .footnote {
-    color: var(--global-theme-color);
-}
-
-p :has(.footnote) {
-	scroll-margin-top: 5rem;
-}
-
-// -----------
-// blockquote
-// -----------
-.content blockquote {
-    border-left: 5px solid var(--global-theme-color);
-    // margin: 1.5em 10px;
-    // padding: 0.5em 10px;
-    font-size: 14px;
-    font-style: italic;
-    // padding: 8px;
-    p {
-        margin-bottom: 0;
-    }
-}
-
-// ---------
-// Footer
-// ---------
 .footer {
 	padding: 3rem 1.5rem;
 }
-
-// ---------
-// Button
-// ---------
 
 .button {
     font-weight: 500;
@@ -219,21 +185,11 @@ p :has(.footnote) {
 	opacity: .5;
 }
 
-
-.checker {
-	fill: var(--global-theme-color);
-}
-
-sup {
-    font-family: $family-monospace;
-}
-
-
 a.tag {
     outline: 1px solid var(--global-divider-color);
     font-weight: 400;
     &:hover, &.is-active {
-        outline-color: var(--global-hover-color);
+        outline-color: var(--global-hover-color) !important;
         text-decoration: none;
     }
 }
@@ -267,4 +223,9 @@ a.tag {
 .svg-pattern {
 	z-index: -10;
 	position: absolute;
+}
+
+
+.checker {
+	fill: var(--global-theme-color);
 }

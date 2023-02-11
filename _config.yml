@@ -13,43 +13,32 @@ home_title:
   Mahasiswa Institut Teknologi Garut
 profile_picture: profile_pict.jpg
 
-footer_text: >-
-  ""
-
 baseurl: ""
 url: "ahmaadn.github.io"
 
 latest_update: true
+sosial_navbar: True
 icon: logo.svg
+permalink: /blog/:year/:month/:day/:title/
 
-#-------------
 # Sosial
-#-------------
-
 sosial:
   github      : ahmaadn
   facebook    : a.ahmad415
   instagram   : a.ahmaadn
 
-# Build settings
 plugins:
   - jekyll-feed
   - jekyll_picture_tag
   - jekyll-archives
   - jekyll-paginate-v2
-  # - jekyll-tabs
   - jemoji
 
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layouts:
-    category: archives
-    tag: archives
-  permalinks:
-    category: /categories/:name/
-    tag: /tags/:name/
+default:
+  - scope:
+      path: "assets/**/*.*"
+    values:
+      sitemap: false
 
 exclude:
   - .sass-cache/
@@ -63,11 +52,17 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
 
-# Blog
-permalink: /blog/:year/:month/:day/:title/
-sosial_navbar: True
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archives
+    tag: archives
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
 
-# Pagination
 pagination:
   enabled: true
 
@@ -82,12 +77,6 @@ kramdown:
     block:
       line_numbers: false
       start_line: 1
-
-default:
-  - scope:
-      path: "assets/**/*.*"
-    values:
-      sitemap: false
 
 sass:
   sass_dir: _sass

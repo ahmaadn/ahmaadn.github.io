@@ -1,0 +1,18 @@
+{% if page.layout == "post" %}
+<script src="{{ '/assets/js/clipboard.min.js' | relative_url }}"></script>
+<script>
+  var clipboard = new ClipboardJS('.btn-copy');
+
+  clipboard.on('success', function (e) {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+  //   console.info('Trigger:', e.trigger);
+  });
+
+  clipboard.on('error', function (e) {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+  //   console.info('Trigger:', e.trigger);
+  });
+</script>
+{% endif %}

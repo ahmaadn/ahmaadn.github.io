@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="id">
-{% include head.html %}
-<body class="has-navbar-fixed-top">
-	{% include navbar.html %}
-	{% include search.html %}
 
-	{{ content }}
+	<!-- Head -->
+	<head>
+		{% include head.html %}
+	</head>
 
-	{% include footer.html %}
-	{% include script.html %}
-</body>
+	<!-- Body -->
+	<body class="has-navbar-fixed-top">
+
+		{% include navbar.html %}
+		{% include search.html %}
+
+		<!-- Content -->
+		{{ content }}
+
+		<!-- Footer -->
+		{% include footer.html %}
+
+		<!-- JavaScripts -->
+		{% include scripts/jquery.html %}
+		{% include scripts/misc.html %}
+		{% include scripts/clipboard.html %}
+		{% include scripts/catalog.html %}
+		{% include scripts/tabs.html %}
+		{% include scripts/search.html %}
+	</body>
 </html>

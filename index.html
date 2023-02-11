@@ -10,18 +10,20 @@ nav: false
                 <div class="columns is-desktop">
                     <div class="column is-8-desktop">
                         <h1 class="title is-size-1-tablet is-size-2-mobile">
-                            Hello 👋 <br>
-                            I'm <span>Ahmad nur</span> <br> 
-                            Mahasiswa Institut Teknologi Garut
+                            {{ site.home_title }}
                         </h1>
-                        <h3 class="subtitle is-size-4-tablet mb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-
+                        
+                        {% if site.description %}
+                        <h3 class="subtitle is-size-4-tablet mb-5">
+                            {{ site.description }}
                         </h3>
+                        {% endif %}
 
                         {% if site.latest_update %}
                         <p class="date mb-1">
                             Last updated: {{ "now" | date: '%B %d, %Y' }}.
                         </p>
+
                         {% endif %}
                         <a class="button is-primary" role="button" href="{{ '/blog/' | relative_url }}">
                             Masuk ke Blog

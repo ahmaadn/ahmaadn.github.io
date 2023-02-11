@@ -46,8 +46,8 @@ pagination:
         </li>
 
         {% unless post.categories == empty %}
+        &nbsp; · &nbsp;
         <li class="is-inline-block">
-            &nbsp; · &nbsp;
             <i class="fa-solid fa-tag"></i> 
             {% for category in post.categories %}  
             <a href="{{ '/categories/' | append : category | relative_url }}">
@@ -59,8 +59,8 @@ pagination:
         {% endunless %}
 
         {% unless post.tags == empty %}
+        &nbsp; · &nbsp;
         <li class="is-inline-block">
-            &nbsp; · &nbsp;
             <i class="fa-solid fa-hashtag"></i>
             {% for tag in post.tags %}  
             <a href="{{ '/tags/' | append : tag | relative_url }}">{{ tag }}</a>
