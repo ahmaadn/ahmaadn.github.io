@@ -1,7 +1,7 @@
 {% if page.layout == 'post' %}
 <nav class="navbar nav-custum {% if page.header-img %} invert {% endif %} is-fixed-top" role="navigation" aria-label="main navigation">
 {% else %}
-<nav class="navbar has-shadow  is-fixed-top" role="navigation" aria-label="main navigation">
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
 {% endif %}
     <div class="container">
         <div class="navbar-brand">
@@ -16,7 +16,7 @@
 
             <!-- Search Icon -->
             <div class="navbar-item is-hidden-desktop">
-                <a class="icon js-modal-trigger" data-target="modal-js-search">
+                <a class="icon" href="{{ '/search/' | relative_url }}">
                     <i class="fas fa-fw fa-sharp fa-solid fa-magnifying-glass"></i>
                 </a>
             </div>
@@ -77,9 +77,10 @@
                         </span>
                     </a>
                     {% endif %}
-                    
+
+                    <!-- Search Icon -->
                     <div class="navbar-item is-hidden-touch">
-                        <a class="icon js-modal-trigger" data-target="modal-js-search">
+                        <a class="icon" href="{{ '/search/' | relative_url }}">
                             <i class="fas fa-fw fa-sharp fa-solid fa-magnifying-glass"></i>
                         </a>
                     </div>

@@ -43,6 +43,7 @@ default:
 exclude:
   - .sass-cache/
   - .jekyll-cache/
+  - .vscode
   - gemfiles/
   - Gemfile
   - Gemfile.lock
