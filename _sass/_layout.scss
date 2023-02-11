@@ -5,7 +5,7 @@
 .navbar {
 	color: var(--global-navbar-color);
 	transition: 0.3s ease;
-	padding: 6px 0;
+	padding: 20px 0;
 	overflow: hidden;
 
 	.navbar-brand {
@@ -45,6 +45,10 @@
 	.icon.js-modal-trigger:hover {
 		color: var(--global-hover-color) !important;
 	}
+}
+
+.navbar.in {
+	padding: 6px 0;
 }
 
 #nav_blog {
