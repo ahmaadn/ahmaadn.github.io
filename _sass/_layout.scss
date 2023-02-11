@@ -10,10 +10,9 @@
 
 	.navbar-brand {
 		a.navbar-item {
-			font-family: $font-navbar ;
+			font-family: $font-navbar;
 			padding: 0;
 			span {
-				color: var(--global-text-color);
 				position: relative;
 				top: 2px;
 				font-weight: 700;
@@ -35,6 +34,7 @@
 		font-size: 1rem;
 		font-weight: 500;
 		transition: 0.3s ease;
+		text-decoration: none;
 	}
 
 	.icons {
@@ -52,19 +52,17 @@
 	padding: 8px 12px;
 	flex-grow: 1;
 
-	a.navbar-item:hover {
+	a.navbar-item:hover:not(:has(img)) {
 		background-color: var(--global-bg-hover-color);
 		border-radius: 5px;
 		color: var(--global-text-color);
-		.icon {
-			color: var(--global-icon-color);
-		}
 	}
 
 	a.navbar-item.is-active {
-		color: var(--global-theme-color);
+		color: var(--global-theme-color) !important;
 	}
 } 
+
 @media screen and (max-width: 1024px) {
 	.navbar .navbar-brand .navbar-item:not(:has(.icon)) {
 		margin-right: auto;
@@ -102,7 +100,7 @@
 		}
 
 		.navbar-brand img {
-			margin: 0;
+			margin-left: 8px;
 		}
 	}
 
@@ -206,22 +204,9 @@
 	margin-bottom: .8rem;
 
 	a {
-		color: var(--global-text-color);
 		padding: .1rem .4rem;
-		border-bottom: 1px solid transparent;
 		text-decoration: none;
 		font-weight: 500;
-		&:hover:not(.tag) {
-			color: var(--global-hover-color);
-			background-color: var(--global-bg-hover-color);
-			border-radius: 3px;
-		}
-		&.is-active {
-			color: var(--global-theme-color);
-		}
-	}
-	.tag {
-		outline-color: transparent;
 	}
 
 	p {
@@ -235,7 +220,6 @@
 
 	.icons a {
 		padding: 0;
-		padding-right: 5px;
 	}
 }
 
@@ -258,9 +242,9 @@
 
 	a {
 		color: var(--global-text-color-muted);
-	}
-	a:hover {
-		color: var(--global-hover-color);
+		&:hover {
+			color: var(--global-hover-color);
+		}
 	}
 
 	.title a:before {
@@ -379,9 +363,12 @@
 // Post List
 // -----------
 
-.post-preview a:hover {
-	.title, .subtitle {
-		color: var(--global-hover-color);
+.post-preview a {
+	text-decoration: none;
+	&:hover {
+		.title, .subtitle {
+			color: var(--global-hover-color);
+		}
 	}
 }
 
@@ -399,25 +386,27 @@
 
 .post-meta {
 	color: var(--global-text-color-muted);
+	
+	.icon {
+		color: var(--global-text-color-muted);
+	}
+
 	.date {
-		font-size: 14px;
+		font-size: 1rem;
 		font-weight: 400;
 		color: inherit;
 	}
 }
 
 .post-meta a {
-	color: inherit;
 	padding: 0;
 	font-weight: 400;
 	margin-left: 6px;
-	font-size: 14px;
-	border-bottom: 1px dotted var(--global-divider-color);
+	font-size: 1rem;
 	text-decoration: none;
 
-	&:hover {
-		color: var(--global-hover-color);
-		text-decoration: none;
+	span:not(.icon) {
+		text-decoration: underline 1px dotted var(--global-divider-color);
 	}
 }
 
@@ -432,7 +421,7 @@
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
-		
+
 		&:hover {
 			.title, .subtitle {
 				color: var(--global-hover-color);
@@ -484,15 +473,6 @@ article > .container > .columns {
 }
 
 article .content {
-	a {
-		color: var(--global-text-color);
-		border-bottom: 1px dotted var(--global-divider-color);
-		text-decoration: none;
-		&:hover {
-			color: var(--global-hover-color);
-		}
-	}
-
 	li > ul {
 		margin-left: 1.2rem;
 		margin-top: 0;
@@ -505,6 +485,7 @@ article .content {
 	.tabs ul {
 		margin-left: 0;
 		a {
+			text-decoration: none;
 			border-bottom-style: solid;
 		}
 	}
@@ -515,8 +496,6 @@ article .content {
 		}
 	}
 }
-
-
 
 // -----------
 // Code Tabs

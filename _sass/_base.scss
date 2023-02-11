@@ -85,8 +85,13 @@ code {
 
 .icon {
     color: var(--global-icon-color);
+    text-decoration: none;
+    &:hover {
+        color: var(--global-hover-color);
+    }
 }
-a:hover > .icon {
+
+.icon.is-hoverable:hover {
     color: $white;
     background-color: var(--global-hover-color);
     border-radius: 3px;
@@ -186,12 +191,27 @@ sup:has(.footnote) {
 	opacity: .5;
 }
 
-a.tag {
+.tag {
     outline: 1px solid var(--global-divider-color);
+    color: var(--global-text-color);
+    text-decoration: none !important;
     font-weight: 400;
-    &:hover, &.is-active {
+    &:hover {
+        color: var(--global-text-color);
         outline-color: var(--global-hover-color) !important;
-        text-decoration: none;
+    }
+    &.is-active:hover {
+        color: var(--global-hover-color);
+        outline-color: var(--global-hover-color) !important;
+    }
+}
+
+a {
+    color: var(--global-text-color);
+    text-decoration: underline 1px dotted var(--global-divider-color);
+
+    &:hover, &.is-active {
+        color: var(--global-hover-color);
     }
 }
 
