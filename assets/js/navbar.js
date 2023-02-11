@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     // Check for click events on the navbar burger icon
     $(".navbar-burger").click(function() {
   
@@ -16,6 +15,6 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
     $(".navbar").toggleClass(
         "in has-shadow",
-        document.body.scrollTop > 80 || document.documentElement.scrollTop > 80
+        document.body.scrollTop > 80 || document.documentElement.scrollTop > 10
     )
 }

@@ -8,13 +8,11 @@ body {
 }
 
 body.has-navbar-fixed-top {
-    padding-top: 4.5rem;
+    padding-top: 5rem;
 }
 
-@media screen and (max-width: 768px) {
-    body.has-navbar-fixed-top {
-        padding-top: 4rem;
-    }   
+body.has-navbar-fixed-top:has(.nav-custum.is-fixed-top) {
+	padding: 0;
 }
 
 .container {
@@ -32,7 +30,6 @@ body.has-navbar-fixed-top {
 .section {
     padding-bottom: 1.5rem;
 }
-
 
 .title, .subtitle {
     color: var(--global-text-color);
