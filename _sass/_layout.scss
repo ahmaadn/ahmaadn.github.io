@@ -155,12 +155,27 @@
 	background-attachment: scroll;
 	background-size: cover;
 	margin-bottom: 1rem;
+
+	.hero .hero-body {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 .intro-heading:not(.style-text) {
 	.title, .subtitle, .date , .tag {
 		color: $white;
 	}
+}
+
+@media screen and (max-width: 1024px) {
+	.intro-heading {
+		.hero .hero-body {
+			padding-top: 1.5rem;
+			padding-bottom: 1rem;
+		}
+	}
+
 }
 
 .post-heading {
@@ -246,6 +261,7 @@
 
 	a {
 		color: var(--global-text-color-muted);
+		text-decoration: none;
 		&:hover {
 			color: var(--global-hover-color);
 		}

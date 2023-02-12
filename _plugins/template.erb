@@ -9,7 +9,7 @@
 </div>
 <div class="tabs-content">
    <button class="button btn-copy" data-clipboard-action="copy" data-clipboard-target="#tab-<%= uuid %>.is-active .highlight">
-   <img src="/assets/img/copy.svg" width="15" height="15">
+   <i class="fa-regular fa-clone"></i>
    </button>
    <ul id="<%= uuid %>" data-name="<%= @name %>">
       <% environment["tabs-#{@name}"].each_with_index do |(key, value), index| %>

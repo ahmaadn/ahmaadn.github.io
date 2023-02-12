@@ -205,11 +205,13 @@ sup:has(.footnote) {
 
 a {
     color: var(--global-text-color);
-    text-decoration: underline 1px dotted var(--global-divider-color);
 
     &:hover, &.is-active {
         color: var(--global-hover-color);
     }
+}
+.content a {
+    text-decoration: underline 1px dotted var(--global-divider-color);
 }
 
 .profile {
