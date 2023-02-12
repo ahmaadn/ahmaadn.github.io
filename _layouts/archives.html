@@ -2,20 +2,18 @@
 layout: blog
 ---
 
-<div class="intro-heading style-text">
-    <div class="hero">
-        <div class="hero-body">
-            {% if page.title != 'Blog' and page.posts.size %}
-            <h3 class="subtitle is-size-4-tablet is-size-5-mobile mb-3">
-                <span>{{ page.posts.size }}</span> posts {% if page.type == 'tag' %} tags {% else %} categorized {% endif %} as:
-            </h3>
-            {% endif %}
-            <h2 class="title is-size-1-tablet is-size-2-mobile">
-                {{ page.title }}
-            </h2>
-        </div>
-    </div>
-</div>
+{% assign subtitle ='' %}
+
+{% if page.posts.size %}
+{%- assign subtitle = '<span>' | append: page.posts.size | append: '</span>' -%}
+    {% if page.type == 'tag' %}
+    {%- assign subtitle = subtitle | append: ' tags as: ' -%}
+    {% else %}
+    {%- assign subtitle = subtitle | append: ' categorized as: ' -%}
+    {% endif %}
+{% endif %}
+
+{% include intro-heading.html first='subtitle' subtitle=subtitle %}
 
 <!-- Post -->
 {% if page.posts %}

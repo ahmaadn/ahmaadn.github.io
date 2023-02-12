@@ -4,10 +4,11 @@
         background-image: url('{{ page.header-img | relative_url }}');
         background-color: lightgray;
     }
+    
 </style>
 {% endif %}
 
-
+{% if page.layout == "post" or include.type == "post" %}
 {% unless page.header-img %}
 <header class="intro-heading post-heading style-text">
 {% else %}
@@ -39,3 +40,35 @@
         </div>
     </div>
 </header>
+
+{% else %}
+
+{% unless page.header-img %}
+<header class="intro-heading page-heading style-text">
+{% else %}
+<header class="intro-heading page-heading">
+{% endunless %}
+    <div class="hero">
+        <div class="hero-body">
+            
+            {% if include.first == 'subtitle' %}
+            <h3 class="subtitle is-size-4-tablet is-size-5-mobile mb-3">
+                {% if include.subtitle  %} {{ include.subtitle }} {% else %} {{ page.subtitle }} {% endif %}
+            </h3>
+            {% endif %}
+
+            <h2 class="title is-size-1-tablet is-size-2-mobile">
+                {% if include.title  %} {{ include.title }} {% else %} {{ page.title }} {% endif %}
+            </h2>
+
+            {% unless include.first %}
+            <h3 class="subtitle is-size-4-tablet is-size-5-mobile">
+                {% if include.subtitle  %} {{ include.subtitle }} {% else %} {{ page.subtitle }} {% endif %}
+            </h3>
+            {% endunless %}
+
+        </div>
+    </div>
+</header>
+
+{% endif %}
