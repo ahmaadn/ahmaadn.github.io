@@ -9,7 +9,7 @@ nav: false
             <div class="container">
                 <div class="columns is-desktop">
                     <div class="column is-8-desktop">
-                        <h1 class="title is-size-1-tablet is-size-2-mobile">
+                        <h1 class="title is-size-1-tablet is-size-2-mobile mb-5">
                             {{ site.home_title }}
                         </h1>
                         
@@ -28,14 +28,11 @@ nav: false
                         <a class="button is-primary" role="button" href="{{ '/blog/' | relative_url }}">
                             Masuk ke Blog
                         </a>
+
                     </div>
                     <div class="column is-4-desktop">
                         <div class="profile is-flex is-flex-grow-1 is-justify-content-center">
-                            {% picture 
-                                profile {{ site.profile_picture }} 
-                                --img width="auto"
-                                --img height="auto"
-                                %}
+                            {% picture headshot {{ site.profile_picture }} %}
                             {% include svg_pattern.html 
                                 class="is-hidden-touch pt-5"
                                 width=200

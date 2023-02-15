@@ -8,7 +8,7 @@ body {
 }
 
 body.has-navbar-fixed-top {
-    padding-top: 5rem;
+    padding-top: 5.5rem;
 }
 
 body.has-navbar-fixed-top:has(.nav-custum.is-fixed-top) {
@@ -25,10 +25,6 @@ body.has-navbar-fixed-top:has(.nav-custum.is-fixed-top) {
     .container {
         padding: 0 2rem;
     }
-}
-
-.section {
-    padding-bottom: 1.5rem;
 }
 
 .title, .subtitle {
@@ -133,12 +129,6 @@ sup:has(.footnote) {
     }
 }
 
-@media screen and (min-width: 768px) {
-    // .footnotes p {
-    //     font-size: 1rem;
-    // }
-}
-
 .content {
     .reversefootnote, .footnote {
         color: var(--global-theme-color);
@@ -156,9 +146,6 @@ sup:has(.footnote) {
     p {
         font-size: 1rem;
     }
-
-    
-
 }
 
 .footer {
@@ -233,7 +220,7 @@ a {
 
 @media screen and (max-width: 1024px) {
 	.profile picture {
-		width: 13rem;
+		width: 15rem;
 		img {
 			width: 100%;
 		}
