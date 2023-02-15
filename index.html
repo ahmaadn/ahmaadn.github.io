@@ -76,10 +76,10 @@ nav: false
             Project
         </h1>
         <div class="columns is-flex-wrap-wrap">
-        {% for project in _sorted_list limit: 5 %}  
-        <div class="column is-4-desktop is-6-tablet is-12-mobile">
-            {% include project.html %}
-        </div>
+        {% for project in site.data.projects limit: 5 %}
+            <div class="column column is-4-desktop is-6-tablet is-12-mobile">
+                {% include project.html %}
+            </div>
         {% endfor %}
         </div>
     </div>
