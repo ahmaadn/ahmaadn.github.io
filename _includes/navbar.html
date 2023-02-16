@@ -5,19 +5,14 @@
 {% endif %}
     <div class="container">
         <div class="navbar-brand ml-0">
-            <a class="navbar-item" href="{{ site.baseurl }}/">
-                {% if site.icon %}
-                <img src="{{ site.icon | prepend: 'assets/img/' | relative_url }}" alt="{{ site.name }}" width="52px" height="52px">
-                <span class="is-hidden-touch"> Ahmaadn </span>
-                {% else %}
-                <span> Ahmaadn </span>
-                {% endif %}
-            </a>
-
-            <!-- Search Icon -->
-            <div class="navbar-item is-hidden-desktop">
-                <a class="icon" href="{{ '/search/' | relative_url }}">
-                    <i class="fas fa-fw fa-sharp fa-solid fa-magnifying-glass"></i>
+            <div class="navbar-item p-0">
+                <a href="{{ site.baseurl }}/" class="is-flex is-align-items-center">
+                    {% if site.icon %}
+                    <img src="{{ site.icon | prepend: 'assets/img/' | relative_url }}" alt="{{ site.name }}" width="52px" height="52px">
+                    <h1 class="is-hidden-touch"> Ahmaadn </h1>
+                    {% else %}
+                    <h1> Ahmaadn </h1>
+                    {% endif %}
                 </a>
             </div>
 
@@ -31,9 +26,11 @@
             <div class="navbar-menu">
                 <div class="navbar-brand is-justify-content-end is-hidden-desktop">
                     {% if site.icon %}
-                    <a class="navbar-item" href="{{ site.baseurl }}/">
-                        <img src="{{ site.icon | prepend: 'assets/img/' | relative_url }}" alt="{{ site.name }}" width="52px" height="52px">
-                    </a>
+                    <div class="navbar-item p-0">
+                        <a  href="{{ site.baseurl }}/" class="is-flex">
+                            <img src="{{ site.icon | prepend: 'assets/img/' | relative_url }}" alt="{{ site.name }}" width="52px" height="52px">
+                        </a>
+                    </div>
                     {% endif %}
 
                     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
@@ -78,18 +75,18 @@
                     </a>
                     {% endif %}
 
-                    <!-- Search Icon -->
-                    <div class="navbar-item is-hidden-touch">
+                    <div class="navbar-item icons is-flex is-align-items-center is-justify-content-space-between">
+                        <!-- Sosial Icon -->
+                        {% if site.sosial_navbar %}
+                        <div class="sosial-icons is-hidden-desktop">
+                            {% include sosial_icon.html %}
+                        </div>
+                        {% endif %}
+                        <!-- Search Icon -->
                         <a class="icon" href="{{ '/search/' | relative_url }}">
                             <i class="fas fa-fw fa-sharp fa-solid fa-magnifying-glass"></i>
                         </a>
                     </div>
-
-                    {% if site.sosial_navbar %}
-                    <div class="icons is-hidden-desktop">
-                        {% include sosial_icon.html %}
-                    </div>
-                    {% endif %}
                 </div>
             </div>
         </div>
