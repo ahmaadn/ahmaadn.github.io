@@ -5,7 +5,7 @@
     --bg-navbar-color: #{$white};
     --bg-hover-color: #{$gray-0};
     --bg-code-color: #{$gray-0};
-    --bg-strip-table-color: #{$gray-1};
+    --bg-strip-table-color: #{$gray-0};
     --bg-tab-active-color: #{$white};
 
     --font-heading-color: #{$gray-7};
@@ -33,18 +33,18 @@ html[data-theme='dark'] {
     --bg-navbar-color: #{$gray-10};
     --bg-hover-color: #{$gray-8};
     --bg-code-color: #{$gray-8};
-    --bg-strip-table-color: #{$gray-1};
+    --bg-strip-table-color: #{$gray-8};
     --bg-tab-active-color: #{$gray-8};
 
     --font-heading-color: #{$white};
     --font-text-color: #{$gray-2};
     --font-text-color-muted: #{$gray-3};
     --font-date-color: #{$gray-3};
-    
+
     --hover-color: #{$blue};
-    --icon-color: #{$gray-2};
+    --icon-color: #{$gray-1};
     --divider-color: #{$gray-6};
-    
+
     .fa-moon {
         display: block;
     }

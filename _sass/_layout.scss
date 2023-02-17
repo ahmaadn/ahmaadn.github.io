@@ -31,6 +31,7 @@ a.navbar-item {
 	border-radius: 5px;
 	&:hover {
 		background-color: var(--bg-hover-color);
+		color: inherit;
 	}
 	&.is-active {
 		color: var(--theme-color) !important;
@@ -140,13 +141,14 @@ a.navbar-item {
 			color: $white;
 		}
 
-		a.navbar-item {
+		a.navbar-item span {
 			color: $white;
-			&:hover {
+		}
+
+		a.navbar-item:hover span {
+			color: inherit;
+			.icon {
 				color: inherit;
-				.icon {
-					color: inherit;
-				}
 			}
 		}
 
@@ -547,66 +549,71 @@ article > .container > .columns {
 }
 
 // -----------
-// Code Tabs
+// Tabs
 // -----------
-.tabs.is-boxed {
+.tabs, .tabs.is-boxed {
 	position: relative;
 	background-color: var(--bg-color);
 
 	ul {
 		margin-left: 0;
+		border-bottom-color: var(--divider-color);
+
+		li.is-active a {
+			color: var(--theme-color);
+			background-color: var(--bg-color) !important;
+			border-color: var(--divider-color);
+		}
 	}
 
 	a {
 		font-weight: 500;
+		color: var(--font-text-color);
+		border-bottom-color: var(--divider-color);
+		&:hover {
+			background-color: var(--bg-hover-color) !important;
+			color: inherit;
+		}
 	}
 }
 
-.tabs:has(~ .tabs-content ul li.is-active pre) {
-	margin-bottom: 0 !important;
+.btn-copy {
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin-top: 8px;
+	margin-right: 8px;
+	height: auto;
+	display: none;
+	justify-content: center;
+	padding: 8px;
+	background-color: var(--bg-hover-color);
+	border-color: var(--divider-color);
 
-	ul {
-		border: none;
-	}	
+	.fa-clone {
+		color: var(--icon-color);
+	}
+}
+
+.btn-copy:hover,
+.btn-copy:has(~ ul li.is-active:hover pre) {
+	display: flex;
 }
 
 .tabs-content {
 	position: relative;
 
-	.btn-copy {
-		position: absolute;
-		right: 0;
-		top: 0;
-		margin-top: 8px;
-		margin-right: 8px;
-		height: auto;
-		display: none;
-		justify-content: center;
-		padding: 8px;
-	}
+	ul {
+		margin: 0;
+		list-style: none;
+		display: inline;
 
-	.btn-copy:hover,
-	.btn-copy:has(~ ul li:hover.is-active pre) {
-		display: flex;
-	}
-}
+		li {
+			display: none;
+			&.is-active {
+				display: initial;
+			}
 
-.tabs-content ul {
-	margin: 0;
-	list-style: none;
-	display: inline;
-
-	li {
-		display: none;
-		&.is-active {
-			display: initial;
 		}
-
-	}
-	li.is-active:first-child pre {
-		border-top-left-radius: 0;
-	}
-	li.is-active:last-child pre {
-		border-top-right-radius: 0;
 	}
 }

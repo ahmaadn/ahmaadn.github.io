@@ -20,6 +20,10 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--font-heading-color);
 }
 
+p, em, div, li, span, strong {
+    color: var(--font-text-color);
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -34,9 +38,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .title {
     color: var(--font-heading-color);
+    font-weight: 700;
+    line-height: 1.1;
     span {
         color: var(--theme-color);
     }
+}
+
+.title.is-size-1 {
+    font-size: 4rem !important;
 }
 
 .subtitle {
@@ -166,16 +176,28 @@ sup:has(.footnote) {
     h1, h2, h3, h4, h5, h6 {
         color: var(--font-heading-color);
     }
+
+    table {
+        tr th {
+            color: var(--font-heading-color);
+        }
+    }
 }
 
 .footer {
 	padding: 3rem 1.5rem;
+    background-color: var(--bg-color);
 }
 
 .button {
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
+    
+}
+
+a.button {
+    text-decoration: none !important;
 }
 
 .button:focus,
@@ -210,14 +232,13 @@ sup:has(.footnote) {
     }
 }
 
-a {
-    color: var(--font-text-color);
-    &:hover, &.is-active {
-        color: var(--hover-color);
-    }
-}
 .content a {
     text-decoration: underline 1px dotted var(--divider-color);
+    color: var(--font-text-color);
+
+    &:hover {
+        color: var(--hover-color);
+    }
 }
 
 .profile {
