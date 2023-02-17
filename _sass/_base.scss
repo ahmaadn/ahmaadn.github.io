@@ -102,7 +102,7 @@ code {
     display: flex;
 }
 
-.icon {
+.icon, a.icon, .content a.icon {
     color: var(--icon-color);
     text-decoration: none;
     &:hover {
@@ -193,8 +193,13 @@ sup:has(.footnote) {
 }
 
 .footer {
-	padding: 3rem 1.5rem;
+	padding: 1.5rem;
     background-color: var(--bg-color);
+
+    .icon {
+        font-size: 1.5rem;
+        width: 2.5rem;
+    }
 }
 
 .button {
@@ -300,5 +305,9 @@ a.tag, .tag {
 }
 
 .card {
-    background-color: var(--bg-color);
+    background-color: var(--bg-card-color);
+}
+
+.input {
+    background-color: var(--bg-code-color) !important;
 }

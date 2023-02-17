@@ -3,11 +3,11 @@
 
     --bg-color: #{$white};
     --bg-navbar-color: #{$white};
-    --bg-hover-color: #{$gray-0};
+    --bg-hover-color: #{$gray-1};
     --bg-code-color: #{$gray-0};
     --bg-strip-table-color: #{$gray-0};
-    --bg-tab-active-color: #{$white};
-    --bg-card-color: #{$white};
+    --bg-card-color: #{$gray-0};
+    --bg-tablet-navbar-color: #{$gray-1};
 
     --font-heading-color: #{$gray-7};
     --font-text-color: #{$gray-7};
@@ -16,7 +16,7 @@
     
     --hover-color: #{$blue};
     --icon-color: #{$gray-7};
-    --divider-color: #{$gray-4};
+    --divider-color: #{$gray-3};
 
     .fa-moon {
         display: none;
@@ -25,6 +25,10 @@
     .fa-sun {
         display: block;
     }
+
+    .navbar-item img {
+        background-color: $gray-0;
+    }
 }
 
 html[data-theme='dark'] {
@@ -32,11 +36,11 @@ html[data-theme='dark'] {
 
     --bg-color: #{$gray-10};
     --bg-navbar-color: #{$gray-10};
-    --bg-hover-color: #{$gray-8};
+    --bg-hover-color: #{$gray-9};
     --bg-code-color: #{$gray-8};
     --bg-strip-table-color: #{$gray-8};
-    --bg-tab-active-color: #{$gray-8};
     --bg-card-color: #{$gray-8};
+    --bg-tablet-navbar-color: #{$gray-8};
 
     --font-heading-color: #{$white};
     --font-text-color: #{$gray-2};
@@ -53,5 +57,9 @@ html[data-theme='dark'] {
 
     .fa-sun {
         display: none;
+    }
+
+    .navbar-item img {
+        background-color: $gray-9;
     }
 }

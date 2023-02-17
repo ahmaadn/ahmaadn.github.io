@@ -8,34 +8,31 @@ viewBox="0 0 256 256"
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str0 {stroke:white;stroke-width:0.756;stroke-miterlimit:22.9256}
-    .fil0 {fill:white}
-    .fil4 {fill:url(#id0)}
+    .fil2 {fill:url(#id0)}
     .fil3 {fill:url(#id1)}
     .fil1 {fill:url(#id2)}
-    .fil2 {fill:url(#id3)}
+    .fil0 {fill:url(#id3)}
    ]]>
   </style>
-  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="227.228" y1="65.323" x2="28.772" y2="190.871">
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="218.188" y1="69.291" x2="39.296" y2="182.462">
    <stop offset="0" style="stop-opacity:1; stop-color:#000066"/>
    <stop offset="0.458824" style="stop-opacity:1; stop-color:#0066B2"/>
    <stop offset="1" style="stop-opacity:1; stop-color:#00CCFF"/>
   </linearGradient>
-  <linearGradient id="id1" gradientUnits="userSpaceOnUse" xlink:href="#id0" x1="227.228" y1="65.324" x2="28.773" y2="190.871">
+  <linearGradient id="id1" gradientUnits="userSpaceOnUse" xlink:href="#id0" x1="218.187" y1="69.292" x2="39.296" y2="182.462">
   </linearGradient>
-  <linearGradient id="id2" gradientUnits="userSpaceOnUse" xlink:href="#id0" x1="227.227" y1="65.323" x2="28.773" y2="190.871">
+  <linearGradient id="id2" gradientUnits="userSpaceOnUse" xlink:href="#id0" x1="218.188" y1="69.292" x2="39.295" y2="182.462">
   </linearGradient>
-  <linearGradient id="id3" gradientUnits="userSpaceOnUse" xlink:href="#id0" x1="227.229" y1="65.324" x2="28.772" y2="190.87">
+  <linearGradient id="id3" gradientUnits="userSpaceOnUse" xlink:href="#id0" x1="218.188" y1="69.291" x2="39.296" y2="182.462">
   </linearGradient>
  </defs>
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <rect class="fil0 str0" x="-0.001" width="256" height="256"/>
-  <g id="_649644344">
-   <path class="fil1" d="M28.773 190.871c13.184,-12.558 21.693,-35.014 29.058,-51.703l21.258 1.215c-4.695,10.62 -26.906,53.258 -50.316,50.488z"/>
-   <path class="fil2" d="M59.796 133.635c10.086,-15.281 61.614,-8.349 80.619,-11.271 -8.729,13.706 -64.798,11.251 -80.619,11.271z"/>
-   <path class="fil3" d="M62.837 126.152c33.401,-16.196 19.894,-2.478 40.002,-37.458l13.982 29.36 21.915 -0.385 -24.072 -51.056 -23.556 0.022c-9.377,19.835 -18.894,39.681 -28.271,59.517z"/>
-   <path class="fil4" d="M142.664 127.996l13.644 32.504c12.112,-24.345 35.274,-101.082 70.92,-95.177 -22.26,29.492 -45.931,90.556 -62.723,125.187l-16.043 0.152c-7.562,-25.858 -26.396,-34.862 -5.798,-62.666z"/>
+  <g id="_649877616">
+   <path class="fil0" d="M39.296 182.462c11.885,-11.319 19.555,-31.561 26.194,-46.605l19.162 1.094c-4.231,9.574 -24.254,48.008 -45.356,45.511z"/>
+   <path class="fil1" d="M67.261 130.869c9.092,-13.774 55.54,-7.526 72.672,-10.16 -7.869,12.355 -58.411,10.142 -72.672,10.16z"/>
+   <path class="fil2" d="M70.003 124.123c30.107,-14.599 17.932,-2.233 36.058,-33.765l12.604 26.466 19.754 -0.347 -21.699 -46.023 -21.234 0.02c-8.452,17.879 -17.031,35.769 -25.483,53.649z"/>
+   <path class="fil3" d="M141.96 125.786l12.299 29.3c10.918,-21.945 31.797,-91.118 63.928,-85.795 -20.065,26.584 -41.402,81.629 -56.54,112.846l-14.46 0.137c-6.817,-23.309 -23.795,-31.426 -5.227,-56.488z"/>
   </g>
  </g>
 </svg>
