@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    background-color: var(--global-bg-color);
+    background-color: var(--bg-color);
 }
 
 body.has-navbar-fixed-top {
@@ -13,6 +13,10 @@ body.has-navbar-fixed-top {
 
 body.has-navbar-fixed-top:has(.nav-custum.is-fixed-top) {
 	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--font-heading-color);
 }
 
 .container {
@@ -27,10 +31,17 @@ body.has-navbar-fixed-top:has(.nav-custum.is-fixed-top) {
     }
 }
 
-.title, .subtitle {
-    color: var(--global-text-color);
+.title {
+    color: var(--font-heading-color);
     span {
-        color: var(--global-theme-color);
+        color: var(--theme-color);
+    }
+}
+
+.subtitle {
+    color: var(--font-text-color);
+    span {
+        color: var(--theme-color);
     }
 }
 
@@ -40,7 +51,7 @@ body.has-navbar-fixed-top:has(.nav-custum.is-fixed-top) {
 
 .date {
     font-family: $family-monospace;
-    color: var(--global-date-color);
+    color: var(--font-date-color);
     font-size: 15px;
     font-weight: 500;
     font-style: italic;
@@ -50,14 +61,13 @@ body.has-navbar-fixed-top:has(.nav-custum.is-fixed-top) {
 
 code {
     font-family: $family-monospace;
-    color: var(--global-theme-color);
+    color: var(--theme-color);
     padding: 3px 3px;
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
-
     &.is-info {
         color: $blue;
     }
@@ -77,22 +87,22 @@ code {
 }
 
 .icon {
-    color: var(--global-icon-color);
+    color: var(--icon-color);
     text-decoration: none;
     &:hover {
-        color: var(--global-hover-color);
+        color: var(--hover-color);
     }
 }
 
 .icon.is-hoverable:hover {
     color: $white;
-    background-color: var(--global-hover-color);
+    background-color: var(--hover-color);
     border-radius: 3px;
 }
 
 .is-list-inline {
-  padding-left: 0;
-  list-style: none;
+    padding-left: 0;
+    list-style: none;
 }
 
 
@@ -100,15 +110,15 @@ ul.task-list {
     list-style: none;
     list-style-type: none;
     margin-left: 1rem;
+
     .task-list-item {
-       display: flex;
-       align-items: center;
+        display: flex;
+        align-items: center;
 
-       .task-list-item-checkbox {
-        margin-right: 4px;
-       }
-
-   }
+        .task-list-item-checkbox {
+            margin-right: 4px;
+        }
+    }
 }
 
 sup {
@@ -121,8 +131,9 @@ sup:has(.footnote) {
 
 .footnotes {
     ol {
-        color: var(--global-text-color-muted);
+        color: var(--font-text-color-muted);
     }
+
     p {
         font-size: 15px;
         margin-bottom: 3px;
@@ -131,13 +142,14 @@ sup:has(.footnote) {
 
 .content {
     .reversefootnote, .footnote {
-        color: var(--global-theme-color);
+        color: var(--theme-color);
     }
 
     blockquote {
-        border-left: 5px solid var(--global-theme-color);;
+        border-left: 5px solid var(--theme-color);
         font-size: 14px;
         font-style: italic;
+
         p {
             margin-bottom: 0;
         }
@@ -176,29 +188,28 @@ sup:has(.footnote) {
 }
 
 .tag {
-    outline: 1px solid var(--global-divider-color);
-    color: var(--global-text-color);
+    outline: 1px solid var(--divider-color);
+    color: var(--font-text-color);
     text-decoration: none !important;
     font-weight: 400;
     &:hover {
-        color: var(--global-text-color);
-        outline-color: var(--global-hover-color) !important;
+        color: var(--font-text-color);
+        outline-color: var(--hover-color) !important;
     }
     &.is-active:hover {
-        color: var(--global-hover-color);
-        outline-color: var(--global-hover-color) !important;
+        color: var(--hover-color);
+        outline-color: var(--hover-color) !important;
     }
 }
 
 a {
-    color: var(--global-text-color);
-
+    color: var(--font-text-color);
     &:hover, &.is-active {
-        color: var(--global-hover-color);
+        color: var(--hover-color);
     }
 }
 .content a {
-    text-decoration: underline 1px dotted var(--global-divider-color);
+    text-decoration: underline 1px dotted var(--divider-color);
 }
 
 .profile {
@@ -210,6 +221,7 @@ a {
 
 	picture {
 		width: 100%;
+
 		img {
 			width: 80%;
 			border-radius: 100%;
@@ -232,7 +244,6 @@ a {
 	position: absolute;
 }
 
-
 .checker {
-	fill: var(--global-theme-color);
+	fill: var(--theme-color);
 }

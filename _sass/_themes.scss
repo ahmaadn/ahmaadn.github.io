@@ -1,14 +1,18 @@
 :root {
-    --global-divider-color: #{$gray-4};
-    --global-text-color: #{$gray-7};
-    --global-text-color-muted: #{$gray-5};
-    --global-date-color: #{$gray-6};
-    --global-theme-color: #{$blue};
-    --global-navbar-color: #{$white};
-    --global-hover-color: #{$blue};
-    --global-bg-hover-color: #{$gray-0};
-    --global-bg-color: #{$white};
-    --global-icon-color:#{$gray-7};
-    --global-code-background-color: #{$gray-0};
-    --global-color-table: #{$gray-1};
+    --theme-color: #{$blue};
+
+    --bg-color: #{$white};
+    --bg-navbar-color: #{$white};
+    --bg-hover-color: #{$gray-0};
+    --bg-code-color: #{$gray-0};
+    --bg-strip-table-color: #{$gray-1};
+
+    --font-heading-color: #{$gray-7};
+    --font-text-color: #{$gray-7};
+    --font-text-color-muted: #{$gray-5};
+    --font-date-color: #{$gray-5};
+    
+    --hover-color: #{$blue};
+    --icon-color: #{$gray-7};
+    --divider-color: #{$gray-4};
 }
