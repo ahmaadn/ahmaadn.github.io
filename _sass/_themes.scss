@@ -5,7 +5,9 @@
     --bg-navbar-color: #{$white};
     --bg-hover-color: #{$gray-0};
     --bg-code-color: #{$gray-0};
-    --bg-strip-table-color: #{$gray-1};
+    --bg-strip-table-color: #{$gray-0};
+    --bg-tab-active-color: #{$white};
+    --bg-card-color: #{$white};
 
     --font-heading-color: #{$gray-7};
     --font-text-color: #{$gray-7};
@@ -15,4 +17,41 @@
     --hover-color: #{$blue};
     --icon-color: #{$gray-7};
     --divider-color: #{$gray-4};
+
+    .fa-moon {
+        display: none;
+    }
+
+    .fa-sun {
+        display: block;
+    }
+}
+
+html[data-theme='dark'] {
+    --theme-color: #{$blue};
+
+    --bg-color: #{$gray-10};
+    --bg-navbar-color: #{$gray-10};
+    --bg-hover-color: #{$gray-8};
+    --bg-code-color: #{$gray-8};
+    --bg-strip-table-color: #{$gray-8};
+    --bg-tab-active-color: #{$gray-8};
+    --bg-card-color: #{$gray-8};
+
+    --font-heading-color: #{$white};
+    --font-text-color: #{$gray-2};
+    --font-text-color-muted: #{$gray-3};
+    --font-date-color: #{$gray-3};
+
+    --hover-color: #{$blue};
+    --icon-color: #{$gray-1};
+    --divider-color: #{$gray-6};
+
+    .fa-moon {
+        display: block;
+    }
+
+    .fa-sun {
+        display: none;
+    }
 }

@@ -75,17 +75,25 @@
                     </a>
                     {% endif %}
 
-                    <div class="navbar-item icons is-flex is-align-items-center is-justify-content-space-between">
+                    <div class="navbar-item is-flex is-align-items-center is-justify-content-space-between py-0">
                         <!-- Sosial Icon -->
                         {% if site.sosial_navbar %}
-                        <div class="sosial-icons is-hidden-desktop">
+                        <div class="icons is-hidden-desktop p-0">
                             {% include sosial_icon.html %}
                         </div>
                         {% endif %}
                         <!-- Search Icon -->
-                        <a class="icon" href="{{ '/search/' | relative_url }}">
-                            <i class="fas fa-fw fa-sharp fa-solid fa-magnifying-glass"></i>
-                        </a>
+                        <div class="icons p-0">
+                            <button class="py-0" id="theme-toggle">
+                                <span class="icon is-medium">
+                                    <i class="fas fa-fw fa-solid fa-moon"></i>
+                                    <i class="fas fa-fw fa-solid fa-sun"></i>
+                                </span>
+                            </button>
+                            <a class="icon is-medium py-0" href="{{ '/search/' | relative_url }}">
+                                <i class="fas fa-fw fa-sharp fa-solid fa-magnifying-glass"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

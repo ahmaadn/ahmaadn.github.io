@@ -4,6 +4,7 @@ html {
 }
 
 body {
+    color: var(--font-text-color);
     background-color: var(--bg-color);
 }
 
@@ -17,6 +18,14 @@ body.has-navbar-fixed-top:has(.nav-custum.is-fixed-top) {
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--font-heading-color);
+}
+
+p, em, div, li, span, strong {
+    color: var(--font-text-color);
+}
+
+hr {
+    background-color: var(--divider-color);
 }
 
 .container {
@@ -33,9 +42,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .title {
     color: var(--font-heading-color);
+    font-weight: 700;
+    line-height: 1.1;
     span {
         color: var(--theme-color);
     }
+}
+
+.title.is-size-1 {
+    font-size: 4rem !important;
 }
 
 .subtitle {
@@ -62,6 +77,7 @@ h1, h2, h3, h4, h5, h6 {
 code {
     font-family: $family-monospace;
     color: var(--theme-color);
+    background-color: var(--bg-code-color);
     padding: 3px 3px;
     border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -94,11 +110,15 @@ code {
     }
 }
 
-.icon.is-hoverable:hover {
-    color: $white;
-    background-color: var(--hover-color);
-    border-radius: 3px;
+a.icon {
+    text-decoration: none;
 }
+
+// .icon.is-hoverable:hover {
+//     color: $white;
+//     background-color: var(--hover-color);
+//     border-radius: 3px;
+// }
 
 .is-list-inline {
     padding-left: 0;
@@ -147,27 +167,53 @@ sup:has(.footnote) {
 
     blockquote {
         border-left: 5px solid var(--theme-color);
+        background-color: var(--bg-code-color);
         font-size: 14px;
         font-style: italic;
-
+    
         p {
             margin-bottom: 0;
         }
     }
 
     p {
+        color: var(--font-text-color);
         font-size: 1rem;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--font-heading-color);
+    }
+
+    table {
+        tr th {
+            color: var(--font-heading-color);
+        }
     }
 }
 
 .footer {
 	padding: 3rem 1.5rem;
+    background-color: var(--bg-color);
 }
 
 .button {
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
+    background-color: var(--bg-code-color);
+    border-color: var(--divider-color);
+
+    &:hover {
+        border-color: var(--theme-color);
+    }
+}
+
+a.button {
+    text-decoration: none !important;
+    &:hover {
+        color: var(--font-text-color) !important;
+    }
 }
 
 .button:focus,
@@ -187,29 +233,29 @@ sup:has(.footnote) {
 	opacity: .5;
 }
 
-.tag {
-    outline: 1px solid var(--divider-color);
+a.tag, .tag {
     color: var(--font-text-color);
-    text-decoration: none !important;
+    background-color: var(--bg-code-color);
     font-weight: 400;
+    text-decoration: none !important;
+    outline: 1px solid var(--divider-color);
     &:hover {
-        color: var(--font-text-color);
+        color: var(--font-text-color) !important;
         outline-color: var(--hover-color) !important;
     }
-    &.is-active:hover {
-        color: var(--hover-color);
+    &.is-active {
+        color: var(--hover-color) !important;
         outline-color: var(--hover-color) !important;
     }
 }
 
-a {
-    color: var(--font-text-color);
-    &:hover, &.is-active {
-        color: var(--hover-color);
-    }
-}
 .content a {
     text-decoration: underline 1px dotted var(--divider-color);
+    color: var(--font-text-color);
+
+    &:hover {
+        color: var(--hover-color);
+    }
 }
 
 .profile {
@@ -246,4 +292,13 @@ a {
 
 .checker {
 	fill: var(--theme-color);
+}
+
+#theme-toggle {
+    background-color: transparent;
+    border: none;
+}
+
+.card {
+    background-color: var(--bg-color);
 }
