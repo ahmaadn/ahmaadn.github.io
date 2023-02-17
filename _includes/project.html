@@ -15,6 +15,7 @@
             <p class="subtitle is-size-6">
                 {{ project.subtitle }}
             </p>
+            {% if project.links %}
             <div class="buttons are-small">
             {% for link in project.links %}
                 {% if link.name == "github" %}
@@ -28,6 +29,7 @@
                 </a>
             {% endfor %}
             </div>
+            {% endif %}
         </div>
     </div>
 </div>

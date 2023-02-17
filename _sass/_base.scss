@@ -24,6 +24,10 @@ p, em, div, li, span, strong {
     color: var(--font-text-color);
 }
 
+hr {
+    background-color: var(--divider-color);
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -104,6 +108,10 @@ code {
     &:hover {
         color: var(--hover-color);
     }
+}
+
+a.icon {
+    text-decoration: none;
 }
 
 // .icon.is-hoverable:hover {
@@ -193,11 +201,19 @@ sup:has(.footnote) {
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    
+    background-color: var(--bg-code-color);
+    border-color: var(--divider-color);
+
+    &:hover {
+        border-color: var(--theme-color);
+    }
 }
 
 a.button {
     text-decoration: none !important;
+    &:hover {
+        color: var(--font-text-color) !important;
+    }
 }
 
 .button:focus,
@@ -217,17 +233,18 @@ a.button {
 	opacity: .5;
 }
 
-.tag {
-    outline: 1px solid var(--divider-color);
+a.tag, .tag {
     color: var(--font-text-color);
-    text-decoration: none !important;
+    background-color: var(--bg-code-color);
     font-weight: 400;
+    text-decoration: none !important;
+    outline: 1px solid var(--divider-color);
     &:hover {
-        color: var(--font-text-color);
+        color: var(--font-text-color) !important;
         outline-color: var(--hover-color) !important;
     }
-    &.is-active:hover {
-        color: var(--hover-color);
+    &.is-active {
+        color: var(--hover-color) !important;
         outline-color: var(--hover-color) !important;
     }
 }
@@ -280,4 +297,8 @@ a.button {
 #theme-toggle {
     background-color: transparent;
     border: none;
+}
+
+.card {
+    background-color: var(--bg-color);
 }

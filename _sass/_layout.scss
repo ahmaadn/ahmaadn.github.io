@@ -459,6 +459,7 @@ a.navbar-item {
 	text-decoration: none;
 
 	span:not(.icon) {
+		color: var(--font-text-color-muted);
 		text-decoration: underline 1px dotted var(--divider-color);
 	}
 }
@@ -496,6 +497,7 @@ a.navbar-item {
 	box-shadow: none;
 	color: var(--font-text-color-muted);
 	opacity: .5;
+	background-color: var(--bg-color);
 }
 
 .pagination .pagination-previous {

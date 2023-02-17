@@ -7,6 +7,7 @@
     --bg-code-color: #{$gray-0};
     --bg-strip-table-color: #{$gray-0};
     --bg-tab-active-color: #{$white};
+    --bg-card-color: #{$white};
 
     --font-heading-color: #{$gray-7};
     --font-text-color: #{$gray-7};
@@ -35,6 +36,7 @@ html[data-theme='dark'] {
     --bg-code-color: #{$gray-8};
     --bg-strip-table-color: #{$gray-8};
     --bg-tab-active-color: #{$gray-8};
+    --bg-card-color: #{$gray-8};
 
     --font-heading-color: #{$white};
     --font-text-color: #{$gray-2};
