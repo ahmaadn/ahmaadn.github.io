@@ -3,8 +3,8 @@
 // -----------
 
 .navbar {
-	color: var(--bg-navbar-color);
-	transition: 0.4s ease-in-out;
+	background-color: var(--bg-navbar-color);
+	transition: 0.4s padding ease-in-out;
 	padding: 20px 0;
 	overflow: hidden;
 	&.has-shadow {
@@ -14,25 +14,32 @@
 		padding: 6px 0;
 	}
 
-	a.navbar-item {
-		color: var(--font-text-color);
-		font-size: 1rem;
-		font-weight: 500;
-		transition: 0.3s ease;
-		text-decoration: none;
-		border-radius: 5px;
+	.icons .icon {
+		color: var(--icon-color);
 		&:hover {
-			background-color: var(--bg-hover-color);
+			color: var(--hover-color);
 		}
-		&.is-active {
-			color: var(--theme-color) !important;
-		}
+	}
+}
+
+a.navbar-item {
+	color: var(--font-text-color);
+	font-size: 1rem;
+	font-weight: 500;
+	transition: 0.3s all ease;
+	text-decoration: none;
+	border-radius: 5px;
+	&:hover {
+		background-color: var(--bg-hover-color);
+	}
+	&.is-active {
+		color: var(--theme-color) !important;
 	}
 }
 
 .navbar-burger {
 	color: var(--font-text-color);
-	&:hover {
+	&:hover span {
 		color: var(--hover-color);
 	}
 }
@@ -42,7 +49,7 @@
 	padding: 0;
 
 	h1 {
-		color: var(--font-text-color);
+		color: var(--font-heading-color);
 		position: relative;
 		top: 2px;
 		font-weight: 700;
@@ -61,12 +68,7 @@
 	display: flex;
 	padding: 8px 12px;
 	flex-grow: 1;
-
-	.icons {
-		padding: 8px 12px;
-		justify-content: flex-end;
-	}
-} 
+}
 
 @media screen and (max-width: 1024px) {
 	.navbar-brand .navbar-item {
@@ -122,21 +124,54 @@
 
 .nav-custum:not(.in) {
 	background-color: transparent;
-	&.invert {
-		.navbar-brand h1,
-		.navbar-burger span,
-		.navbar-item:not(:hover) {
+
+	.navbar-burger span {
+		color: $white;
+		&:hover {
+			color: var(--hover-color);
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.nav-custum:not(.in) {
+
+		.navbar-brand h1 {
 			color: $white;
 		}
 
-		@media screen and (min-width: 1024px) {
-			.navbar-item:not(:hover) .icon {
-				color: $white;
+		a.navbar-item {
+			color: $white;
+			&:hover {
+				color: inherit;
+				.icon {
+					color: inherit;
+				}
 			}
 		}
+
+		.icon {
+			color: $white;
+		}
 	}
-	
 }
+
+// .nav-custum:not(.in) {
+// 	background-color: transparent;
+// 	&.invert {
+// 		.navbar-brand h1,
+// 		.navbar-burger span,
+// 		.navbar-item:not(:hover) {
+// 			color: $white;
+// 		}
+
+// 		@media screen and (min-width: 1024px) {
+// 			.navbar-item:not(:hover) .icon {
+// 				color: $white;
+// 			}
+// 		}
+// 	}
+// }
 
 
 // -----------
@@ -514,7 +549,7 @@ article > .container > .columns {
 // -----------
 // Code Tabs
 // -----------
-.code-tabs {
+.tabs.is-boxed {
 	position: relative;
 	background-color: var(--bg-color);
 
@@ -527,7 +562,7 @@ article > .container > .columns {
 	}
 }
 
-.code-tabs:has(~ .tabs-content ul li.is-active pre) {
+.tabs:has(~ .tabs-content ul li.is-active pre) {
 	margin-bottom: 0 !important;
 
 	ul {

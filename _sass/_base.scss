@@ -4,6 +4,7 @@ html {
 }
 
 body {
+    color: var(--font-text-color);
     background-color: var(--bg-color);
 }
 
@@ -62,6 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 code {
     font-family: $family-monospace;
     color: var(--theme-color);
+    background-color: var(--bg-code-color);
     padding: 3px 3px;
     border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -94,11 +96,11 @@ code {
     }
 }
 
-.icon.is-hoverable:hover {
-    color: $white;
-    background-color: var(--hover-color);
-    border-radius: 3px;
-}
+// .icon.is-hoverable:hover {
+//     color: $white;
+//     background-color: var(--hover-color);
+//     border-radius: 3px;
+// }
 
 .is-list-inline {
     padding-left: 0;
@@ -147,16 +149,22 @@ sup:has(.footnote) {
 
     blockquote {
         border-left: 5px solid var(--theme-color);
+        background-color: var(--bg-code-color);
         font-size: 14px;
         font-style: italic;
-
+    
         p {
             margin-bottom: 0;
         }
     }
 
     p {
+        color: var(--font-text-color);
         font-size: 1rem;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--font-heading-color);
     }
 }
 
@@ -246,4 +254,9 @@ a {
 
 .checker {
 	fill: var(--theme-color);
+}
+
+#theme-toggle {
+    background-color: transparent;
+    border: none;
 }
