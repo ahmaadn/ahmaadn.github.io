@@ -125,11 +125,16 @@
 	&.invert {
 		.navbar-brand h1,
 		.navbar-burger span,
-		.navbar-item:not(:hover) .icon,
 		.navbar-item:not(:hover) {
 			color: $white;
 		}
+		@media screen and (min-width: 1024px) {
+			.navbar-item:not(:hover) .icon {
+				color: $white;
+			}
+		}
 	}
+	
 }
 
 
@@ -172,14 +177,14 @@
 }
 
 .post-heading {
-	&.tag {
-		background-color: transparent;
-		text-decoration: none;
+	&.style-text .hero .hero-body {
+		padding-top: 2rem;
+		padding-bottom: 1rem;
 	}
 
-	&.style-text .hero .hero-body {
-		padding-top: 5rem;
-		padding-bottom: 4rem;
+	.tag {
+		background-color: transparent;
+		text-decoration: none;
 	}
 }
 
@@ -442,8 +447,6 @@
 		}
 	}
 }
-
-
 
 // -----------
 // pagination
