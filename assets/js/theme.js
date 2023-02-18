@@ -9,9 +9,6 @@ let toggleTheme = (theme) => {
 };
 
 let setTheme = (theme) => {
-    // transTheme();
-    // setHighlight(theme);
-
     if (theme) {
         document.documentElement.setAttribute("data-theme", theme);
     } else {
@@ -19,23 +16,6 @@ let setTheme = (theme) => {
     }
     localStorage.setItem("theme", theme);
 
-};
-
-let setHighlight = (theme) => {
-    if (theme == "dark") {
-        document.getElementById("highlight_theme_light").media = "none";
-        document.getElementById("highlight_theme_dark").media = "";
-    } else {
-        document.getElementById("highlight_theme_dark").media = "none";
-        document.getElementById("highlight_theme_light").media = "";
-    }
-};
-
-let transTheme = () => {
-    document.documentElement.classList.add("transition");
-    window.setTimeout(() => {
-        document.documentElement.classList.remove("transition");
-    }, 500);
 };
 
 let initTheme = (theme) => {
@@ -50,7 +30,6 @@ let initTheme = (theme) => {
 };
 
 initTheme(localStorage.getItem("theme"));
-
 
 document.addEventListener('DOMContentLoaded', function() {
     const mode_toggle = document.getElementById("theme-toggle");
