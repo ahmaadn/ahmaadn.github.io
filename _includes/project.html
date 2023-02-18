@@ -12,11 +12,11 @@
             <h3 class="title is-size-4 mt-0" >
                 {{ project.title }}
             </h3>
-            <p class="subtitle is-size-6">
+            <p class="subtitle is-size-6 mt-0">
                 {{ project.subtitle }}
             </p>
             {% if project.links %}
-            <div class="buttons are-small">
+            <div class="buttons are-small mt-4">
             {% for link in project.links %}
                 {% if link.name == "github" %}
                 <a href="https://github.com/{{ link.url }}" target="_blank" class="button">
