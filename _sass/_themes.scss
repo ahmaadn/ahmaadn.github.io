@@ -1,5 +1,11 @@
+$d-primary: findDarkColor($primary);
+$d-success: findDarkColor($success);
+$d-warning: findDarkColor($warning);
+$d-danger: findDarkColor($danger);
+$d-info: findDarkColor($info);
+
 :root {
-    --theme-color: #{$blue};
+    --theme-color: #{$primary};
 
     --bg-color: #{$white};
     --bg-navbar-color: #{$white};
@@ -7,16 +13,23 @@
     --bg-code-color: #{$gray-0};
     --bg-strip-table-color: #{$gray-0};
     --bg-card-color: #{$gray-0};
-    --bg-tablet-navbar-color: #{$gray-1};
+    --bg-tablet-navbar-color: #{$gray-0};
+    --bg-blockquote-color: #{$gray-0};
 
-    --font-heading-color: #{$gray-7};
+    --font-heading-color: #{$gray-8};
     --font-text-color: #{$gray-7};
     --font-text-color-muted: #{$gray-5};
     --font-date-color: #{$gray-5};
-    
-    --hover-color: #{$blue};
+
+    --hover-color: #{$primary};
     --icon-color: #{$gray-7};
     --divider-color: #{$gray-3};
+    --tag-color: #{$gray-0};
+
+    --primary: #{$primary};
+    --success: #{$success};
+    --warning: #{$warning};
+    --danger: #{$danger};
 
     .fa-moon {
         display: none;
@@ -32,24 +45,32 @@
 }
 
 html[data-theme='dark'] {
-    --theme-color: #{$blue};
+    --theme-color: #{$d-primary};
 
     --bg-color: #{$gray-10};
     --bg-navbar-color: #{$gray-10};
     --bg-hover-color: #{$gray-9};
-    --bg-code-color: #{$gray-8};
-    --bg-strip-table-color: #{$gray-8};
-    --bg-card-color: #{$gray-8};
+    --bg-code-color: rgba(0, 0, 0, 0.2);
+    --bg-strip-table-color: #{$gray-9};
+    --bg-card-color: #{$gray-9};
     --bg-tablet-navbar-color: #{$gray-8};
+    --bg-blockquote-color: #{$gray-9};
 
     --font-heading-color: #{$white};
     --font-text-color: #{$gray-2};
     --font-text-color-muted: #{$gray-3};
     --font-date-color: #{$gray-3};
 
-    --hover-color: #{$blue};
+    --hover-color: #{$d-primary};
     --icon-color: #{$gray-1};
-    --divider-color: #{$gray-6};
+    --divider-color: #{$gray-65};
+    --tag-color: #{$gray-9};
+
+    --primary: #{$d-primary};
+    --success: #{$d-success};
+    --warning: #{$warning};
+    --danger: #{$d-danger};
+    --info: #{$d-info};
 
     .fa-moon {
         display: block;
@@ -61,5 +82,8 @@ html[data-theme='dark'] {
 
     .navbar-item img {
         background-color: $gray-9;
+    }
+    .language-plaintext {
+        background-color: var(--bg-code-color) !important;
     }
 }

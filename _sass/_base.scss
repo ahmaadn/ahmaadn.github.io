@@ -6,6 +6,7 @@ html {
 body {
     color: var(--font-text-color);
     background-color: var(--bg-color);
+	min-height: 100vh;
 }
 
 body.has-navbar-fixed-top {
@@ -20,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--font-heading-color);
 }
 
-p, em, div, li, span, strong {
+p, div, li, span, strong {
     color: var(--font-text-color);
 }
 
@@ -73,28 +74,31 @@ hr {
     white-space: nowrap;
 }
 
-
-code {
+.language-plaintext {
     font-family: $family-monospace;
+	background-color: findLightColor($primary);
     color: var(--theme-color);
-    background-color: var(--bg-code-color);
     padding: 3px 3px;
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
+	&.is-success {
+        color: var(--success);
+		background-color: findLightColor($success);
+    }
+	&.is-warning {
+        color: var(--warning);
+		background-color: findLightColor($warning);
+    }
+	&.is-danger {
+        color: var(--danger);
+		background-color: findLightColor($danger);
+    }
     &.is-info {
-        color: $blue;
-    }
-    &.is-danger {
-        color: $red;
-    }
-    &.is-warning {
-        color: $yellow;
-    }
-    &.is-success {
-        color: $green;
+        color: var(--info);
+		background-color: findLightColor($info);
     }
 }
 
@@ -143,18 +147,22 @@ sup:has(.footnote) {
 }
 
 .content {
-    h1, h2, h3, h4, h5, h6, table tr th {
+	h1, h2, h3, h4, h5, h6, table tr th {
         color: var(--font-heading-color);
     }
 
-    p {
-        color: var(--font-text-color);
+	p {
         font-size: 1rem;
     }
 
+	a {
+		color: var(--font-text-color);
+	}
+}
+
+article .content {
     a {
         text-decoration: underline 2px solid var(--theme-color);
-        color: var(--font-text-color);
         &:hover {
             color: $white;
             background-color: var(--hover-color);
@@ -162,8 +170,9 @@ sup:has(.footnote) {
     }
 
     blockquote {
-        border-left: 5px solid var(--theme-color);
-        background-color: var(--bg-code-color);
+        border-left: 4px solid var(--divider-color);
+		border-radius: 4px;
+        background-color: var(--bg-blockquote-color);
         font-size: 14px;
         font-style: italic;
 
@@ -185,14 +194,16 @@ sup:has(.footnote) {
 		}
 	}
 
-	table, .table  {
+	table, .table {
+		th, td {
+			border-color: var(--divider-color);
+		}
 		tbody tr:not(.is-selected):nth-child(even) {
 			background-color: var(--bg-strip-table-color);
 		}
 	}
 
 }
-
 
 article > .container > .columns {
 	margin-top: 2rem;
@@ -279,18 +290,19 @@ a.button {
 
 a.tag, .tag {
     color: var(--font-text-color);
-    background-color: var(--bg-code-color);
+    background-color: var(--tag-color);
     font-weight: 400;
     text-decoration: none !important;
     outline: 1px solid var(--divider-color);
-    &:hover {
-        color: var(--font-text-color) !important;
-        outline-color: var(--hover-color) !important;
-    }
     &.is-active {
         color: var(--hover-color) !important;
         outline-color: var(--hover-color) !important;
     }
+}
+
+a.tag:hover {
+	color: var(--font-text-color) !important;
+	outline-color: var(--hover-color) !important;
 }
 
 .profile {
@@ -611,11 +623,10 @@ a.navbar-item {
 
 	a:not(.icon) {
 		padding: .1rem .4rem;
-		text-decoration: none;
 		font-weight: 500;
 		&:hover {
 			color: var(--font-text-color);
-			text-decoration: underline 2px solid var(--divider-color);
+			text-decoration: underline 2px solid var(--hover-color);
 		}
 		&.is-active {
 			color: var(--theme-color);
@@ -633,6 +644,10 @@ a.navbar-item {
 
 	.icons a {
 		padding: 0;
+	}
+	.icon {
+		font-size: 1.2rem;
+		width: 2rem;
 	}
 }
 
@@ -811,6 +826,7 @@ a.navbar-item {
 
 	.icon {
 		color: var(--font-text-color-muted);
+		text-decoration: none;
 	}
 
 	.date {
@@ -818,18 +834,22 @@ a.navbar-item {
 		font-weight: 400;
 		color: inherit;
 	}
-}
 
-.post-meta a {
-	padding: 0;
-	font-weight: 400;
-	margin-left: 6px;
-	font-size: 1rem;
-	text-decoration: none;
-
-	span:not(.icon) {
+	a {
+		padding: 0;
+		font-weight: 400;
+		margin-left: 6px;
+		font-size: 1rem;
+		text-decoration: none;
 		color: var(--font-text-color-muted);
-		text-decoration: underline 1px dotted var(--divider-color);
+		&:hover span {
+			color: var(--hover-color);
+		}
+
+		span {
+			color: var(--font-text-color-muted);
+			text-decoration: underline 1px solid var(--divider-color);
+		}
 	}
 }
 
@@ -847,7 +867,7 @@ a.navbar-item {
 		width: 100%;
 		&:hover {
 			.title {
-				text-decoration: underline 3px solid var(--hover-color);
+				text-decoration: underline 2px solid var(--hover-color);
 			}
 		}
 	}
