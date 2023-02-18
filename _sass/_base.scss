@@ -948,3 +948,51 @@ a.navbar-item {
 		}
 	}
 }
+
+.message {
+	.icon, span {
+		color: $white;
+	}
+
+	.message-header {
+		background-color: $gray-65;
+	}
+
+	.message-body {
+		color: var(--font-text-color);
+		a {
+			text-decoration-thickness: 2px !important;
+			&:hover {
+				color: var(--font-text-color) !important;
+				text-decoration: none !important;
+			}
+		}
+	}
+
+	&.is-success {
+		.message-header {
+			background-color: var(--success);
+		}
+		.message-body {
+			color: var(--success);
+		}
+	}
+
+	&.is-warning {
+		.message-header {
+			background-color: var(--warning);
+		}
+		.message-body {
+			color: var(--warning);
+		}
+	}
+
+	&.is-danger {
+		.message-header {
+			background-color: var(--danger);
+		}
+		.message-body {
+			color: var(--danger);
+		}
+	}
+}

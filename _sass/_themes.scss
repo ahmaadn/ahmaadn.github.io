@@ -83,6 +83,11 @@ html[data-theme='dark'] {
     .navbar-item img {
         background-color: $gray-9;
     }
+
+    .message {
+        background-color: $gray-9;    
+    }
+
     .language-plaintext {
         background-color: var(--bg-code-color) !important;
     }

@@ -10,8 +10,15 @@ tags:
 ---
 
 ### Heading example
-Here is example of hedings. You can use this heading by following markdownify rules. For example: use `#` for heading 1 and use `######`{:.is-info} for heading 6.
-`adaaadad adaoda ada ada`{:.is-warning}
+Here is example of hedings. You can use this heading by following markdownify rules. For example: use `#` for heading 1 and use `######` for heading 6.
+
+### Code
+`is primary`
+`is-success`{:.is-success}
+`is-warning`{:.is-warning}
+`is-danger`{:.is-danger}
+`is-info`{:.is-info}
+
 
 # Heading 1
 ## Heading 2
@@ -19,8 +26,7 @@ Here is example of hedings. You can use this heading by following markdownify ru
 #### Heading 4
 ##### Heading 5
 ###### Heading 6
-### Heading ID
-### My Great Heading {#custom-id}
+### heading with custom id {#custom-id}
 
 ***
 
@@ -132,8 +138,6 @@ These are the elements outlined in John Gruber’s original design document. All
 
 > blockquote
 
-`code`
-
 ---
 
 ### Link
@@ -182,20 +186,6 @@ That is so funny! :joy:
 
 ## Other 
 
-#### message
-<article class="message">
-  <div class="message-header">
-    <p>Hello World</p>
-    <button class="delete" aria-label="delete"></button>
-  </div>
-  <div class="message-body">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-  </div>
-</article>
-
 #### notification
-<div class="notification">
-  <button class="delete"></button>
-  Lorem ipsum dolor sit amet, consectetur
-  adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur.
-</div>
+
+{% include message.html content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem." type="is-danger" title="abc" delete=true %}

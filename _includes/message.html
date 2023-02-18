@@ -1,0 +1,24 @@
+<div class="message {{ include.type }}">
+  {% unless include.header %}
+  <div class="message-header">
+    <span class="text-icon">
+      <span class="icon">
+        <i class="fa-solid fa-circle-info"> </i>
+      </span>
+      <span>
+        {% unless include.title %}
+        Info
+        {% else %}
+        {{ include.title }}
+        {% endunless %}
+      </span>
+    </span>
+    {% if include.delete %}
+    <button class="delete" aria-label="delete"></button>
+    {% endif %}
+  </div>
+  {% endunless %}
+  <div class="message-body">
+    {{ include.content }}
+  </div>
+</div>
