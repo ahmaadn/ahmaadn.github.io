@@ -272,12 +272,25 @@ a.button {
 	height: auto;
 	display: none;
 	justify-content: center;
-	padding: 8px;
+	padding: 6px;
+	color: var(--icon-color);
 	background-color: var(--bg-hover-color);
 	border-color: var(--divider-color);
+	box-shadow: none !important;
 
-	.fa-clone {
-		color: var(--icon-color);
+	.fa {
+		font-size: 12px;
+		color: inherit;
+	}
+
+	&:has(.fa-check) {
+		border-color: var(--success);
+		color: var(--success);
+	}
+
+	&:has(.fa-xmark) {
+		border-color: var(--danger);
+		color: var(--danger);
 	}
 }
 

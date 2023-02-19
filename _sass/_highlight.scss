@@ -158,7 +158,11 @@ figure.highlight {
         font-size: 1rem;
         padding: 1em;
         font-family: $family-monospace;
-        
+        &:hover {
+            .btn-copy {
+                display: flex;
+            }
+        }
     }
 
     tbody td {

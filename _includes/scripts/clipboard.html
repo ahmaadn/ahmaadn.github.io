@@ -1,18 +1,39 @@
 {% if page.layout == "post" %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
-<script>
+<script>  
+  function uuidv4() {
+    return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+      (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+    );
+  }
+
+  function changeIcon(e, icon){
+    var i = e.children().toggleClass('fa-regular fa-clone ' + icon);
+    setTimeout(function () {
+      i.toggleClass('fa-regular fa-clone ' + icon);
+    }, 1000);
+  }
+
+  var codeBlocks = $('div.content.post').find('.highlight pre');
   var clipboard = new ClipboardJS('.btn-copy');
 
+  codeBlocks.each(function() {
+    this.id = "copy-" + uuidv4();
+    $(this).prepend(
+      $("<button/>", {
+        class: "button btn-copy",
+        "data-clipboard-action": "copy",
+        "data-clipboard-target": "#" + this.id
+      }).append($("<i/>", {class: "fa fa-regular fa-clone"}))
+    );
+  });
+
   clipboard.on('success', function (e) {
-    console.info('Action:', e.action);
-    console.info('Text:', e.text);
-  //   console.info('Trigger:', e.trigger);
+    changeIcon($(e.trigger), "fa-solid fa-check")
   });
 
   clipboard.on('error', function (e) {
-    console.info('Action:', e.action);
-    console.info('Text:', e.text);
-  //   console.info('Trigger:', e.trigger);
+    changeIcon($(e.trigger), "fa-solid fa-xmark")
   });
 </script>
 {% endif %}

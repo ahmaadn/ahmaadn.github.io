@@ -8,12 +8,9 @@
    </ul>
 </div>
 <div class="tabs-content">
-   <button class="button btn-copy" data-clipboard-action="copy" data-clipboard-target="#tab-<%= uuid %>.is-active .highlight">
-   <i class="fa-regular fa-clone"></i>
-   </button>
    <ul id="<%= uuid %>" data-name="<%= @name %>">
       <% environment["tabs-#{@name}"].each_with_index do |(key, value), index| %>
-      <li id="tab-<%= uuid %>" <%= index == 0 ? ' class="is-active"' : ''%>>
+      <li <%= index == 0 ? ' class="is-active"' : ''%>>
          <%= value %>
       </li>
       <% end %>
