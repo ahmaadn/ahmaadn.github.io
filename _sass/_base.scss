@@ -283,6 +283,11 @@ a.button {
 		color: inherit;
 	}
 
+	&:has(.fa-clone) {
+		border-color: var(--divider-color);
+		color: var(--icon-color);
+	}
+
 	&:has(.fa-check) {
 		border-color: var(--success);
 		color: var(--success);
@@ -672,6 +677,7 @@ a.navbar-item {
 
 .catalog {
 	padding: 0px;
+	margin-top: 0 !important;
 
 	nav.sticky-top {
 		position: -webkit-sticky;
