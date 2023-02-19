@@ -132,8 +132,7 @@ html[data-theme='dark'] {
 }
 
 figure.highlight {
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0 !important;
 }
 
 .highlight {
@@ -145,6 +144,9 @@ figure.highlight {
     -o-border-radius: 4px;
 
     > pre {
+        position: relative;
+        z-index: 1;
+        margin: 1.5rem 0 !important;
         border: 1px solid var(--divider-color);
         border-radius: 4px;
         -webkit-border-radius: 4px;

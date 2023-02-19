@@ -127,6 +127,22 @@ console.log('hello');
 
 {% endtabs %}
 
+***
+
+{% code_title page rendered at: %}
+```php
+var_dump('hello');
+var_dump('hello');
+var_dump('hello');
+var_dump('hello');
+```
+{% code_title Python %}
+{% highlight python%}
+while True:
+  print("hello")
+  print("world")
+{% endhighlight %}
+
 # Markdown Cheat Sheet
 
 Thanks for visiting [The Markdown Guide](https://www.markdownguide.org)!

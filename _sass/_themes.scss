@@ -23,7 +23,7 @@ $d-info: findDarkColor($info);
 
     --hover-color: #{$primary};
     --icon-color: #{$gray-7};
-    --divider-color: #{$gray-3};
+    --divider-color: #{$gray-2};
     --tag-color: #{$gray-0};
 
     --primary: #{$primary};
@@ -50,7 +50,7 @@ html[data-theme='dark'] {
     --bg-color: #{$gray-10};
     --bg-navbar-color: #{$gray-10};
     --bg-hover-color: #{$gray-9};
-    --bg-code-color: rgba(0, 0, 0, 0.2);
+    --bg-code-color: #131313;
     --bg-strip-table-color: #{$gray-9};
     --bg-card-color: #{$gray-9};
     --bg-tablet-navbar-color: #{$gray-8};
@@ -63,7 +63,7 @@ html[data-theme='dark'] {
 
     --hover-color: #{$d-primary};
     --icon-color: #{$gray-1};
-    --divider-color: #{$gray-65};
+    --divider-color: #{$gray-7};
     --tag-color: #{$gray-9};
 
     --primary: #{$d-primary};
@@ -88,7 +88,11 @@ html[data-theme='dark'] {
         background-color: $gray-9;    
     }
 
-    .language-plaintext {
+    code.language-plaintext {
         background-color: var(--bg-code-color) !important;
+    }
+
+    .code-title {
+        background-color: #161616;
     }
 }
