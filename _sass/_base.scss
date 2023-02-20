@@ -172,8 +172,7 @@ article.content {
 
     blockquote {
         border-left: 4px solid var(--divider-color);
-		border-radius: 4px;
-        background-color: var(--bg-blockquote-color);
+        background-color: transparent;
         font-size: 14px;
         font-style: italic;
 
