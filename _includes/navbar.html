@@ -9,9 +9,11 @@
                 <a href="{{ site.baseurl }}/" class="is-flex is-align-items-center">
                     {% if site.icon %}
                     <img src="{{ site.icon | prepend: 'assets/img/' | relative_url }}" alt="{{ site.name }}" width="52px" height="52px">
-                    <h1 class="is-hidden-touch"> Ahmaadn </h1>
+                    {% endif %}
+                    {% if site.title %}
+                    <h1> {{ site.title }} </h1>
                     {% else %}
-                    <h1> Ahmaadn </h1>
+                    <h1>{{ site.first_name }} {{ site.middle_name }}</h1>
                     {% endif %}
                 </a>
             </div>
