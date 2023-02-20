@@ -16,7 +16,6 @@ profile_picture: profile_pict.jpg
 baseurl: ""
 url: "ahmaadn.github.io"
 
-latest_update: true
 sosial_navbar: True
 icon: logo.svg
 permalink: /blog/:year/:month/:day/:title/

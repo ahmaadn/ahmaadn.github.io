@@ -66,12 +66,13 @@ hr {
 }
 
 .date {
-    font-family: $family-monospace;
+    font-family: Menlo,"IBM Plex Mono",Menlo,monospace;
     color: var(--font-date-color);
-    font-size: 15px;
+    font-size: .9rem;
     font-weight: 500;
-    font-style: italic;
     white-space: nowrap;
+	letter-spacing: -1px;
+	display: block;
 }
 
 code.language-plaintext {
@@ -856,8 +857,6 @@ a.navbar-item {
 	}
 
 	.date {
-		font-size: 1rem;
-		font-weight: 400;
 		color: inherit;
 	}
 
