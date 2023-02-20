@@ -1,0 +1,19 @@
+---
+layout: page
+---
+<div class="container" id="about">
+    {% include intro-heading.html %}
+
+    <div class="columns is-desktop is-multiline mt-3 is-flex">
+        <div class="column is-8-desktop main">
+            <article class="content">
+                {{ content }}
+            </article>
+        </div>
+        <div class="column is-4-desktop sidebar mt-0">
+            <div class="container">
+                {% include card_me.html show_name=true %}
+            </div>
+        </div>
+    </div>
+</div>

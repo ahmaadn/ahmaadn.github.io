@@ -7,14 +7,15 @@ $d-info: findDarkColor($info);
 :root {
     --theme-color: #{$primary};
 
-    --bg-color: #{$white};
-    --bg-navbar-color: #{$white};
+    --bg-color: #{$gray-0};
+    --bg-navbar-color: #{$gray-0};
     --bg-hover-color: #{$gray-1};
-    --bg-code-color: #{$gray-0};
-    --bg-strip-table-color: #{$gray-0};
-    --bg-card-color: #{$gray-0};
+    --bg-code-color: #{$white};
+    --bg-strip-table-color: #{$gray-1};
+    --bg-card-color: #{$white};
     --bg-tablet-navbar-color: #{$gray-0};
-    --bg-blockquote-color: #{$gray-0};
+    --bg-blockquote-color: #{$white};
+    --bg-message-color: #{$white};
 
     --font-heading-color: #{$gray-8};
     --font-text-color: #{$gray-7};
@@ -24,7 +25,7 @@ $d-info: findDarkColor($info);
     --hover-color: #{$primary};
     --icon-color: #{$gray-7};
     --divider-color: #{$gray-2};
-    --tag-color: #{$gray-0};
+    --tag-color: #{$white};
 
     --primary: #{$primary};
     --success: #{$success};
@@ -55,6 +56,7 @@ html[data-theme='dark'] {
     --bg-card-color: #{$gray-9};
     --bg-tablet-navbar-color: #{$gray-8};
     --bg-blockquote-color: #{$gray-9};
+    --bg-message-color: #{$gray-9};
 
     --font-heading-color: #{$white};
     --font-text-color: #{$gray-2};
@@ -85,7 +87,7 @@ html[data-theme='dark'] {
     }
 
     .message {
-        background-color: $gray-9;    
+        background-color: $gray-9;
     }
 
     code.language-plaintext {

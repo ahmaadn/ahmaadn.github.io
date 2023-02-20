@@ -26,7 +26,7 @@ Here is example of hedings. You can use this heading by following markdownify ru
 #### Heading 4
 ##### Heading 5
 ###### Heading 6
-### heading with custom id {#custom-id}
+### heading with custom idaaaaaaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaaaaaaa {#custom-id}
 
 ***
 
@@ -203,5 +203,11 @@ That is so funny! :joy:
 ## Other 
 
 #### notification
+{% capture content %}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+{% endcapture %}
 
-{% include message.html content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem." type="is-danger" title="abc" delete=true %}
+{% include message.html content=content title="abc" delete=true %}
+{% include message.html content=content type="is-success" title="abc" delete=true %}
+{% include message.html content=content type="is-warning" title="abc" delete=true %}
+{% include message.html content=content type="is-danger" title="abc" delete=true %}

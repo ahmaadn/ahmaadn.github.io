@@ -14,7 +14,7 @@
     }, 1000);
   }
 
-  var codeBlocks = $('div.content.post').find('.highlight pre');
+  var codeBlocks = $('article.content').find('.highlight pre');
   var clipboard = new ClipboardJS('.btn-copy');
 
   codeBlocks.each(function() {
