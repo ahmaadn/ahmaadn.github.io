@@ -21,10 +21,6 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--font-heading-color);
 }
 
-p, div, li, span, strong {
-    color: var(--font-text-color);
-}
-
 hr {
     background-color: var(--divider-color);
 }
@@ -197,17 +193,6 @@ article.content {
 	}
 
 }
-
-// article > .container > .columns {
-// 	margin-top: 2rem;
-// }
-
-// @media screen and (min-width: 1024px) {
-// 	article > .container > .columns {
-// 		margin-left: 6rem;
-// 	}
-// }
-
 .footer {
 	padding: 1.5rem;
     background-color: var(--bg-color);
@@ -758,9 +743,6 @@ a.navbar-item {
 	}
 }
 
-
-
-
 // -----------
 // latest-posts
 // -----------
@@ -870,28 +852,34 @@ a.navbar-item {
 
 .pagination {
 	font-size: 14px;
-}
 
-.pagination .is-disabled {
-	pointer-events: none !important;
-	box-shadow: none;
-	color: var(--font-text-color-muted);
-	opacity: .5;
-	background-color: var(--bg-color);
-}
+	.is-disabled {
+		pointer-events: none !important;
+		box-shadow: none;
+		color: var(--font-text-color-muted);
+		opacity: .5;
+		background-color: var(--bg-color);
+	}
+	.pagination-previous {
+		padding-left: 8px;
+	}
+	.pagination-next {
+		padding-right: 8px;
+	}
+	.pagination-link {
+		border-radius: 5px;
+		&.is-current {
+			color: $white;
+		}
+	}
 
-.pagination .pagination-previous {
-	padding-left: 8px;
-	
+	.pagination-previous, .pagination-next, .pagination-link {
+		color: var(--font-text-color);
+		&:hover {
+			box-shadow: inset 0 1px 2px rgb(0 0 0 / 20%);
+		}
+	}
 }
-.pagination .pagination-next {
-	padding-right: 8px;
-}
-
-.pagination .pagination-link {
-	border-radius: 5px;
-}
-
 
 // -----------
 // Tabs
@@ -940,6 +928,9 @@ a.navbar-item {
 	}
 }
 
+// -----------
+// message
+// -----------
 .message {
 	.message-header {
 		background-color: $gray-65;	
