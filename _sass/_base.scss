@@ -347,9 +347,40 @@ a.tag:hover {
 
 .card {
     background-color: var(--bg-card-color);
+	margin-bottom: .8rem;
+	&.categories a {
+		font-weight: 500;
+		padding: .1rem .4rem;
+		&:hover {
+			text-decoration: underline 2px solid var(--hover-color);
+		}
+		&.is-active {
+			color: var(--theme-color);
+		}
+	}
+	&.tags {
+		.tag {
+			background-color: var(--tag-color);
+		}
+		.tag.is-active {
+			background-color: var(--hover-color);
+			color: $white;
+		}
+	}
+	&.me {
+		.icon {
+			font-size: 1.2rem;
+		}
+		figure figcaption {
+			font-weight: 500;
+			color: var(--font-text-color);
+			font-style: normal;
+		}
+		.subtitle {
+			color: var(--font-text-color-muted);
+		}
+	}
 }
-
-// Input
 
 input, .input {
     color: var(--font-text-color);
@@ -609,59 +640,18 @@ a.navbar-item {
 }
 
 // -----------
-// Sidebar
+// sidebar
 // -----------
-
-.sidebar .card {
-	margin-bottom: .8rem;
-
-	a:not(.icon) {
-		padding: .1rem .4rem;
-		font-weight: 500;
-		&:hover {
-			color: var(--font-text-color);
-			text-decoration: underline 2px solid var(--hover-color);
-		}
-		&.is-active {
-			color: var(--theme-color);
-		}
-	}
-
-	p {
-		color: var(--font-text-color-muted);
-	}
-
-	img {
-		border-radius: 5px;
-		width: 65%;
-	}
-
-	.icons a {
-		padding: 0;
-	}
-	.icon {
-		font-size: 1.2rem;
-		width: 2rem;
-	}
-
-	figure {
-		margin: 0;
-		text-align: inherit;
-
-		figcaption {
-			font-weight: 500;
-			font-size: 1rem;
-			line-height: 1.5;
-			font-style: normal;
-		}
-	}
-}
 
 @media screen and (min-width: 1024px) {
 	.sidebar {
 		margin-top: 5rem;
 	}
 }
+
+// -----------
+// Catalog
+// -----------
 
 .catalog {
 	padding: 0px;
@@ -1033,7 +1023,6 @@ a.navbar-item {
 @media screen and (max-width: 1024px) {
 	#about {
 		.columns {
-			display: flex;
 			flex-direction: column;
 		}
 		
@@ -1043,26 +1032,15 @@ a.navbar-item {
 
 		.sidebar {
 			order: 1;
-			.card {
-				height: auto;
-				text-align: center;
-				background-color: transparent;
-
-				.title {
-					display: none;
-				}
-			}
 		}
 
-		.icons {
-			justify-content: center;
-		}
+		.card {
+			height: auto;
+			text-align: center;
+			background-color: transparent;
 
-		.profile {
-			display: flex;
-			justify-content: center;
-			img {
-				border-radius: 999px;
+			.title {
+				display: none;
 			}
 		}
 	}

@@ -12,7 +12,30 @@ layout: page
         </div>
         <div class="column is-4-desktop sidebar mt-0">
             <div class="container">
-                {% include card_me.html show_name=true %}
+                {% capture card-content %}
+                <div class="profile is-flex-touch is-justify-content-center"> 
+                    <figure>
+                        {% if page.profile_picture %}
+                        {% picture headshot {{ page.profile_picture }} %}
+                        {% else %}
+                        {% picture headshot {{ site.profile_picture }} %}
+                        {% endif %}
+                        
+                        {% if page.show_name %}
+                        <figcaption>
+                            {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}
+                        </figcaption>
+                        {% endif %}
+                    </figure>
+                </div>
+                <p class="subtitle">
+                    {{ page.short_text }}
+                </p>
+                <div class="is-flex-touch is-justify-content-center">
+                    {% include sosial_icon.html %}
+                </div>
+                {% endcapture %}
+                {% include card.html class="me" title="ME" content=card-content %}
             </div>
         </div>
     </div>
