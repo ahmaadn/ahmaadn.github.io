@@ -20,13 +20,33 @@
             {% for link in project.links %}
                 {% if link.name == "github" %}
                 <a href="https://github.com/{{ link.url }}" target="_blank" class="button">
+                    <span class="text-icon is-align-content-center">
+                        <span>
+                            {{ link.name | capitalize }}
+                        </span>
+                        <span class="icon ml-0">
+                            <i class="fas fa-fw  fa-brands fa-github"></i>
+                        </span>
+                    </span>
+                </a>
                 {% elsif link.name == "article"  %}
                 <a href="{{ '/blog/' | append: link.url | relative_url }}" class="button">
+                    <span>
+                        {{ link.name | capitalize }}
+                    </span>
+                </a>
                 {% else %}
                 <a href="{{ link.url }}" target="_blank" class="button">
-                {% endif %}
-                {{ link.name }}
+                    <span class="text-icon is-align-content-center">
+                        <span>
+                            {{ link.name | capitalize }}
+                        </span>
+                        <span class="icon ml-0">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </span>
+                    </span>
                 </a>
+                {% endif %}
             {% endfor %}
             </div>
             {% endif %}

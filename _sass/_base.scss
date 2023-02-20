@@ -103,20 +103,13 @@ code.language-plaintext {
     }
 }
 
-.icons {
-    display: flex;
+
+.icon {
+	color: var(--icon-color);
 }
 
-.icon, a.icon, .content a.icon {
-    color: var(--icon-color);
-    text-decoration: none;
-    &:hover {
-        color: var(--hover-color);
-    }
-}
-
-a.icon {
-    text-decoration: none;
+a.icon:hover{
+	color: var(--hover-color);
 }
 
 ul.task-list {
@@ -347,6 +340,9 @@ a.tag:hover {
 #theme-toggle {
     background-color: transparent;
     border: none;
+	&:hover .icon {
+		color: var(--hover-color);
+	}
 }
 
 .card {

@@ -67,10 +67,10 @@
                     {% if site.sosial.github %}
                     <a href="https://github.com/{{ site.sosial.github }}" class="navbar-item is-hidden-touch" target="_blank">
                         <span class="icon-text">
+                            <span>Github</span>
                             <span class="icon">
                                 <i class="icon fas fa-fw fa-brands fa-github"></i>
                             </span>
-                            <span>Github</span>
                         </span>
                     </a>
                     {% endif %}
@@ -78,12 +78,12 @@
                     <div class="navbar-item is-flex is-align-items-center is-justify-content-space-between py-0">
                         <!-- Sosial Icon -->
                         {% if site.sosial_navbar %}
-                        <div class="icons is-hidden-desktop p-0">
+                        <div class="is-flex is-hidden-desktop p-0">
                             {% include sosial_icon.html %}
                         </div>
                         {% endif %}
                         <!-- Search Icon -->
-                        <div class="icons p-0">
+                        <div class="is-flex p-0 is-justify-content-end" style="width: 100%;">
                             <button class="py-0" id="theme-toggle">
                                 <span class="icon is-medium">
                                     <i class="fas fa-fw fa-solid fa-moon"></i>
