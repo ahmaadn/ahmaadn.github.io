@@ -24,7 +24,7 @@ $d-info: findDarkColor($info);
     --hover-color: #{$primary};
     --icon-color: #{$gray-7};
     --divider-color: #{$gray-2};
-    --tag-color: #{$white};
+    --tag-color: #{$gray-0};
 
     --primary: #{$primary};
     --success: #{$success};
@@ -64,7 +64,7 @@ html[data-theme='dark'] {
     --hover-color: #{$d-primary};
     --icon-color: #{$gray-1};
     --divider-color: #{$gray-7};
-    --tag-color: #{$gray-9};
+    --tag-color: #{$gray-8};
 
     --primary: #{$d-primary};
     --success: #{$d-success};

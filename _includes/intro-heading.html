@@ -31,7 +31,7 @@
                 {% if page.tags %}
                 <div class="tags mt-4">
                     {% for tag in page.tags %}
-                    <a class="tag is-normal is-rounded" href="{{ site.baseurl }}/tags/{{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
+                    <a class="tag is-primary" href="{{ site.baseurl }}/tags/{{ tag | url_encode }}" title="{{ tag }}">{{ tag }}</a>
                     {% endfor %}
                 </div>
                 {% endif %}
