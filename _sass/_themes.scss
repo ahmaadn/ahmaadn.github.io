@@ -15,6 +15,7 @@ $d-info: findDarkColor($info);
     --bg-card-color: #{$white};
     --bg-tablet-navbar-color: #{$gray-0};
     --bg-message-color: #{$white};
+    --bg-button : #{$gray-0};
 
     --font-heading-color: #{$gray-8};
     --font-text-color: #{$gray-7};
@@ -55,6 +56,7 @@ html[data-theme='dark'] {
     --bg-card-color: #{$gray-9};
     --bg-tablet-navbar-color: #{$gray-8};
     --bg-message-color: #{$gray-9};
+    --bg-button : #{$gray-9};
 
     --font-heading-color: #{$white};
     --font-text-color: #{$gray-2};
