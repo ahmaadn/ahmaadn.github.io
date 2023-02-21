@@ -145,8 +145,12 @@ sup:has(.footnote) {
         font-size: 1rem;
     }
 
-	a {
+	a, p, div {
 		color: var(--font-text-color);
+	}
+	
+	em, strong {
+		color: inherit;
 	}
 }
 
@@ -252,6 +256,7 @@ article.content {
 	background-color: var(--bg-hover-color);
 	border-color: var(--divider-color);
 	box-shadow: none !important;
+	z-index: 1;
 	&:hover {
 		display: flex;
 	}

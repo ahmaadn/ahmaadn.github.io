@@ -14,20 +14,23 @@
     }, 1000);
   }
 
-  var codeBlocks = $('article.content').find('.highlight pre');
-  var clipboard = new ClipboardJS('.btn-copy');
 
-  codeBlocks.each(function() {
-    this.id = "copy-" + uuidv4();
+  var codeBlocks = $("article.content .highlight:has(> pre)");
+  codeBlocks.each(function () {
+    var idCode = "code-" + uuidv4();
+    var code = $(this).find("pre:not(:has(table)) code, td.code pre")[0];
+    if (code) { code.id = idCode }
+
     $(this).prepend(
       $("<button/>", {
         class: "button btn-copy",
         "data-clipboard-action": "copy",
-        "data-clipboard-target": "#" + this.id
+        "data-clipboard-target": "#" + idCode
       }).append($("<i/>", {class: "fa fa-regular fa-clone"}))
     );
   });
 
+  var clipboard = new ClipboardJS('.btn-copy');
   clipboard.on('success', function (e) {
     changeIcon($(e.trigger), "fa-solid fa-check")
   });

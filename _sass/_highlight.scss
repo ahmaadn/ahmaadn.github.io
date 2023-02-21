@@ -137,15 +137,19 @@ figure.highlight {
 
 .highlight {
     text-align: left !important;
+    position: relative;
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
+    &:hover {
+        .btn-copy {
+            display: flex;
+        }
+    }
 
     > pre {
-        position: relative;
-        z-index: 1;
         margin: 1.5rem 0 !important;
         border: 1px solid var(--divider-color);
         border-radius: 4px;
@@ -160,15 +164,12 @@ figure.highlight {
         font-size: 1rem;
         padding: 1em;
         font-family: $family-monospace;
-        &:hover {
-            .btn-copy {
-                display: flex;
-            }
-        }
     }
 
     tbody td {
         padding-left: 0;
+        padding-top: 0;
+        padding-bottom: 0;
         > pre {
             padding: 0;
             span {
@@ -176,4 +177,8 @@ figure.highlight {
             }            
         }
     }
+}
+
+.lineno {
+    color: var(--theme-color);
 }
