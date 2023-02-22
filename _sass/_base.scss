@@ -376,8 +376,10 @@ input, .input {
     color: var(--font-text-color);
     background-color: var(--bg-color) !important;
 	box-shadow: none !important;
+	border-bottom: 2px solid var(--hover-color);
+	border-radius: 6px;
     &::placeholder {
-        color: var(--font-text-color);
+        color: var(--font-text-color-muted);
     }
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
@@ -387,6 +389,7 @@ input, .input {
         -webkit-box-shadow: 0 0 0px 30px var(--bg-color) inset;
         transition: background-color 5000s ease-in-out 0s;
 		border-color: var(--hover-color);
+		border-bottom: 2px solid var(--hover-color);
     }
 }
 
@@ -434,11 +437,11 @@ a.navbar-item {
 		background-color: var(--bg-hover-color);
 		color: inherit;
 	}
-	&.is-active {
+	&.is-active:not(:hover) {
 		background-color: transparent;
-		span {
-			color: var(--theme-color) !important;
-		}
+	}
+	&.is-active span {
+		color: var(--theme-color) !important;
 	}
 }
 
