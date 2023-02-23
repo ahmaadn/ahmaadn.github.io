@@ -32,7 +32,9 @@ $d-info: findDarkColor($info);
     --warning: #{$warning};
     --danger: #{$danger};
 
-    .fa-moon {
+    --scrollbar-color: #{$gray-4};
+    --scrollbar-track: #{$gray-3};
+
         display: none;
     }
 
@@ -74,7 +76,9 @@ html[data-theme='dark'] {
     --danger: #{$d-danger};
     --info: #{$d-info};
 
-    .fa-moon {
+    --scrollbar-color: #{$gray-65};
+    --scrollbar-track: #{$gray-7};
+
         display: block;
     }
 
