@@ -1,9 +1,9 @@
 <div class="message {{ include.type }}">
   {% unless include.header %}
   <div class="message-header">
-    <span class="text-icon">
+    <span class="text-icon is-flex is-align-items-center">
       <span class="icon">
-        <i class="fa-solid fa-circle-info"> </i>
+        <ion-icon name="information-circle-outline" size="small"></ion-icon>
       </span>
       <span>
         {% unless include.title %}

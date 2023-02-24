@@ -120,6 +120,19 @@ code.language-plaintext {
 
 .icon {
 	color: var(--icon-color);
+	&.is-small ion-icon {
+		font-size: 14px;
+	}
+	&.is-medium ion-icon {
+		font-size: 32px;
+	}
+	&.is-large ion-icon {
+		font-size: 64px;
+	}
+
+	ion-icon {
+		font-size: 24px;
+	}
 }
 
 a.icon:hover{
@@ -161,6 +174,7 @@ sup:has(.footnote) {
 
 	p {
         font-size: 1rem;
+		color: var(--font-text-color);
     }
 
 	a, p, div {
@@ -278,17 +292,15 @@ article.content {
 	&:hover {
 		display: flex;
 	}
-	&:has(.fa-clone) {
+	&:has(ion-icon[name='copy-outline']) {
 		border-color: var(--divider-color);
 		color: var(--icon-color);
 	}
-	&:has(.fa-check) {
-		display: flex;
+	&:has(ion-icon[name='checkmark-done-outline']) {
 		border-color: var(--success);
 		color: var(--success);
 	}
-	&:has(.fa-xmark) {
-		display: flex;
+	&:has(ion-icon[name='close-outline']) {
 		border-color: var(--danger);
 		color: var(--danger);
 	}

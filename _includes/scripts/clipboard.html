@@ -8,9 +8,9 @@
   }
 
   function changeIcon(e, icon){
-    var i = e.children().toggleClass('fa-regular fa-clone ' + icon);
+    $(e).children().attr("name", icon);
     setTimeout(function () {
-      i.toggleClass('fa-regular fa-clone ' + icon);
+      $(e).children().attr("name", "copy-outline");
     }, 1000);
   }
 
@@ -26,17 +26,17 @@
         class: "button btn-copy",
         "data-clipboard-action": "copy",
         "data-clipboard-target": "#" + idCode
-      }).append($("<i/>", {class: "fa fa-regular fa-clone"}))
+      }).append($("<ion-icon></ion-icon>", {name: "copy-outline"}))
     );
   });
 
   var clipboard = new ClipboardJS('.btn-copy');
   clipboard.on('success', function (e) {
-    changeIcon($(e.trigger), "fa-solid fa-check")
+    changeIcon($(e.trigger), "checkmark-done-outline")
   });
 
   clipboard.on('error', function (e) {
-    changeIcon($(e.trigger), "fa-solid fa-xmark")
+    changeIcon($(e.trigger), "close-outline")
   });
 </script>
 {% endif %}

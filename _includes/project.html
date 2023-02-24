@@ -20,12 +20,12 @@
             {% for link in project.links %}
                 {% if link.name == "github" %}
                 <a href="https://github.com/{{ link.url }}" target="_blank" class="button">
-                    <span class="text-icon is-align-content-center">
+                    <span class="text-icon is-flex is-align-items-center">
                         <span>
                             {{ link.name | capitalize }}
                         </span>
-                        <span class="icon ml-0">
-                            <i class="fas fa-fw  fa-brands fa-github"></i>
+                        <span class="icon is-small">
+                            <ion-icon name="logo-github"></ion-icon>
                         </span>
                     </span>
                 </a>
@@ -37,12 +37,12 @@
                 </a>
                 {% else %}
                 <a href="{{ link.url }}" target="_blank" class="button">
-                    <span class="text-icon is-align-content-center">
+                    <span class="text-icon is-flex is-align-items-center">
                         <span>
                             {{ link.name | capitalize }}
                         </span>
-                        <span class="icon ml-0">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <span class="icon is-small">
+                            <ion-icon name="open-outline"></ion-icon>
                         </span>
                     </span>
                 </a>
