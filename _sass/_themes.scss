@@ -7,14 +7,15 @@ $d-info: findDarkColor($info);
 :root {
     --theme-color: #{$primary};
 
-    --bg-color: #{$white};
-    --bg-navbar-color: #{$white};
+    --bg-color: #{$gray-0};
+    --bg-navbar-color: #{$gray-0};
     --bg-hover-color: #{$gray-1};
-    --bg-code-color: #{$gray-0};
-    --bg-strip-table-color: #{$gray-0};
-    --bg-card-color: #{$gray-0};
+    --bg-code-color: #{$white};
+    --bg-strip-table-color: #{$gray-1};
+    --bg-card-color: #{$white};
     --bg-tablet-navbar-color: #{$gray-0};
-    --bg-blockquote-color: #{$gray-0};
+    --bg-message-color: #{$white};
+    --bg-button : #{$gray-0};
 
     --font-heading-color: #{$gray-8};
     --font-text-color: #{$gray-7};
@@ -30,6 +31,9 @@ $d-info: findDarkColor($info);
     --success: #{$success};
     --warning: #{$warning};
     --danger: #{$danger};
+
+    --scrollbar-color: #{$gray-4};
+    --scrollbar-track: #{$gray-3};
 
     .fa-moon {
         display: none;
@@ -54,7 +58,8 @@ html[data-theme='dark'] {
     --bg-strip-table-color: #{$gray-9};
     --bg-card-color: #{$gray-9};
     --bg-tablet-navbar-color: #{$gray-8};
-    --bg-blockquote-color: #{$gray-9};
+    --bg-message-color: #{$gray-9};
+    --bg-button : #{$gray-9};
 
     --font-heading-color: #{$white};
     --font-text-color: #{$gray-2};
@@ -64,13 +69,15 @@ html[data-theme='dark'] {
     --hover-color: #{$d-primary};
     --icon-color: #{$gray-1};
     --divider-color: #{$gray-7};
-    --tag-color: #{$gray-9};
+    --tag-color: #{$gray-8};
 
     --primary: #{$d-primary};
     --success: #{$d-success};
-    --warning: #{$warning};
     --danger: #{$d-danger};
     --info: #{$d-info};
+
+    --scrollbar-color: #{$gray-65};
+    --scrollbar-track: #{$gray-7};
 
     .fa-moon {
         display: block;
@@ -85,7 +92,7 @@ html[data-theme='dark'] {
     }
 
     .message {
-        background-color: $gray-9;    
+        background-color: $gray-9;
     }
 
     code.language-plaintext {

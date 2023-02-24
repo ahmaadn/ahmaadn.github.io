@@ -1,7 +1,7 @@
 #-------------
 # Site Setting
 #-------------
-title: Ahmad Blog
+title: Ahmaadn
 first_name: Ahmad
 middle_name: Nur
 last_name: 
@@ -16,7 +16,6 @@ profile_picture: profile_pict.jpg
 baseurl: ""
 url: "ahmaadn.github.io"
 
-latest_update: true
 sosial_navbar: True
 icon: logo.svg
 permalink: /blog/:year/:month/:day/:title/

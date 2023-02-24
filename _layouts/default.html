@@ -14,8 +14,10 @@
 		<!-- Content -->
 		{{ content }}
 
+		{% unless page.title == "404" %}
 		<!-- Footer -->
 		{% include footer.html %}
+		{% endunless %}
 
 		<!-- JavaScripts -->
 		{% include scripts/jquery.html %}
