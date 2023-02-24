@@ -35,11 +35,11 @@ $d-info: findDarkColor($info);
     --scrollbar-color: #{$gray-4};
     --scrollbar-track: #{$gray-3};
 
-    .fa-moon {
+    ion-icon[name='moon-outline'] {
         display: none;
     }
 
-    .fa-sun {
+    ion-icon[name='sunny-outline'] {
         display: block;
     }
 
@@ -79,11 +79,11 @@ html[data-theme='dark'] {
     --scrollbar-color: #{$gray-65};
     --scrollbar-track: #{$gray-7};
 
-    .fa-moon {
+    ion-icon[name='moon-outline'] {
         display: block;
     }
 
-    .fa-sun {
+    ion-icon[name='sunny-outline'] {
         display: none;
     }
 
