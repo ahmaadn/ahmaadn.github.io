@@ -6,14 +6,14 @@
     {% endif %}
     <div class="card-content">
         <div class="content">
-            <span class="date">
-                {{ project.date | date: '%b %-d, %Y' }} 
+            <span class="year">
+                {{ project.year }}
             </span>
-            <h3 class="title is-size-4 mt-0" >
+            <h3 class="title is-size-4 mt-0 mb-3">
                 {{ project.title }}
             </h3>
-            <p class="subtitle is-size-6 mt-0">
-                {{ project.subtitle }}
+            <p class="description is-size-6 mt-0 mb-5">
+                {{ project.description }}
             </p>
             {% if project.links %}
             <div class="buttons are-small mt-4">

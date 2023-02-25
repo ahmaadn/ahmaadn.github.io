@@ -59,11 +59,11 @@ html[data-theme='dark'] {
     --bg-card-color: #{$gray-9};
     --bg-tablet-navbar-color: #{$gray-8};
     --bg-message-color: #{$gray-9};
-    --bg-button : #{$gray-9};
+    --bg-button : #{$gray-8};
 
     --font-heading-color: #{$white};
     --font-text-color: #{$gray-2};
-    --font-text-color-muted: #{$gray-3};
+    --font-text-color-muted: #{$gray-4};
     --font-date-color: #{$gray-3};
 
     --hover-color: #{$d-primary};
@@ -101,5 +101,9 @@ html[data-theme='dark'] {
 
     .code-title {
         background-color: #161616;
+    }
+
+    .year {
+        color: var(--success);
     }
 }

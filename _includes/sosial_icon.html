@@ -16,3 +16,8 @@
 </a>
 {% endif %}
 
+{% if site.email %}
+<a href="mailto:{{ site.email | encode_email }}" title="email" class="icon">
+    <ion-icon name="mail-outline" size="{{ include.size }}"></ion-icon>
+</a>
+{% endif %}

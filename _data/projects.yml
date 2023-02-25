@@ -1,29 +1,7 @@
 - title : "Youtube-Downloader"
-  description: "aaaaaaaaaaaaaaaaaaaaaaaaa"
-  date : 2022-12-14 06:02:18 +0700
-  image: home-bg.jpg
+  description: >
+    Sebuah Aplikasi dekstop sederhana menggunakan python.
+  year : 2022
   links :
     - name : github
       url  : ahmaadn/Youtube-Downloader
-    - name : article
-      url  : 2022/12/23/contoh-layout/
-
-- title : "Youtube-Downloader 1"
-  description: "aaaaaaaaaaaaaaaaaaaaaaaaa"
-  date : 2022-12-14 06:02:18 +0700
-  image: home-bg.jpg
-  links :
-    - name : github
-      url  : ahmaadn/Youtube-Downloader
-    - name : article
-      url  : 
-
-- title : "Youtube-Downloader 1"
-  description: "aaaaaaaaaaaaaaaaaaaaaaaaa"
-  date : 2022-12-14 06:02:18 +0700
-  image: home-bg.jpg
-  links :
-    - name : github
-      url  : ahmaadn/Youtube-Downloader
-    - name : article
-      url  : 
