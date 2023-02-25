@@ -1,23 +1,26 @@
-#-------------
-# Site Setting
-#-------------
 title: Ahmaadn
 first_name: Ahmad
-middle_name: Nur
-last_name: 
+middle_name: nur
+last_name: sahid
 email: ahmadnursahid12345@gmail.com
-description:
-home_title:
+description: 
+home_title: >
   Hello 👋 <br> 
   I'm <span>Ahmad nur</span> <br> 
   Mahasiswa Institut Teknologi Garut
+footer_text: >
+  <p> ©2023 Ahmad nur. All rights reserved.</p>
 profile_picture: profile_pict.jpg
 
-baseurl: ""
+keywords: blog, tutorial, ahmmadn, ahmadnur
+
+lang: id
+icon: logo.svg
+
 url: "ahmaadn.github.io"
+baseurl: ""
 
 sosial_navbar: True
-icon: logo.svg
 permalink: /blog/:year/:month/:day/:title/
 
 # Sosial
