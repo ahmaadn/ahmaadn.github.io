@@ -4,13 +4,15 @@ middle_name: nur
 last_name: sahid
 email: ahmadnursahid12345@gmail.com
 description: Inspirasi dan wawasan untuk hidup yang lebih baik.
-home_title: >
+home_text: >
   Hello 👋 <br> 
   I'm <span>Ahmad nur</span> <br> 
   Selamat datang di blog
 footer_text: >
-  <p> ©2023 Ahmad nur. All rights reserved.</p>
+  Powered by <a href="https://jekyllrb.com/" target="_blank"> Jekyll </a> • Hosted by <a herf='https://www.netlify.com/' target='_blank'>Netlify</a>
+
 profile_picture: profile_pict.jpg
+
 
 keywords: blog, tutorial, ahmmadn, ahmadnur
 
