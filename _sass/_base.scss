@@ -132,7 +132,7 @@ code.language-plaintext {
 		margin-right: 2px;
 		margin-left: 2px;
 	}
-	}
+}
 
 .icon {
 	color: var(--icon-color);
@@ -163,8 +163,8 @@ code.language-plaintext {
 
 a.icon {
 	&:hover, &:focus {
-	color: var(--hover-color);
-}
+		color: var(--hover-color);
+	}
 }
 
 ul.task-list {
@@ -266,7 +266,7 @@ article.content {
 		a:hover {
 			text-decoration: underline 2px solid var(--hover-color);
 		}
-    }
+	}
 }
 
 // Button
@@ -364,10 +364,13 @@ a.tag:hover {
 
 		img {
 			width: 80%;
+		}
+	}
+	&.is-rounded {
+		picture img {
 			border-radius: 100%;
 		}
 	}
-
 }
 
 @media screen and (max-width: 1024px) {
@@ -982,7 +985,7 @@ a.navbar-item {
 	a {
 		font-weight: 500;
 		color: var(--font-text-color);
-		border-bottom-color: var(--divider-color);
+		border-bottom-color: var(--divider-color) !important;
 		&:hover {
 			background-color: var(--bg-hover-color) !important;
 			color: inherit;

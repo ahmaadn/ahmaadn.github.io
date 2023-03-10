@@ -1,39 +1,41 @@
 ---
 layout: page
 ---
-<div class="container" id="about">
+<div id="about">
     {% include intro-heading.html %}
 
-    <div class="columns is-desktop is-multiline mt-3 is-flex">
-        <div class="column is-8-desktop main">
-            <article class="content">
-                {{ content }}
-            </article>
-        </div>
-        <div class="column is-4-desktop sidebar mt-0">
-            <div class="container">
-                {% capture card-content %}
-                <div class="profile is-flex-touch is-justify-content-center"> 
-                    <figure>
-                        {% if page.profile_picture %}
-                        {% picture headshot {{ page.profile_picture }} %}
-                        {% else %}
-                        {% picture headshot {{ site.profile_picture }} %}
-                        {% endif %}
-                        
-                        {% if page.show_name %}
-                        <figcaption>
-                            {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}
-                        </figcaption>
-                        {% endif %}
-                    </figure>
+    <div class="container">
+        <div class="columns is-desktop is-multiline mt-3 is-flex">
+            <div class="column is-8-desktop main">
+                <article class="content">
+                    {{ content }}
+                </article>
+            </div>
+            <div class="column is-4-desktop sidebar mt-0">
+                <div class="container">
+                    <div class="profile is-rounded is-flex is-justify-content-center is-flex-direction-column"> 
+                        <figure>
+                            {% if page.profile_picture %}
+                            {% picture headshot {{ page.profile_picture }} %}
+                            {% else %}
+                            {% picture headshot {{ site.profile_picture }} %}
+                            {% endif %}
+                            <figcaption class="has-text-centered">
+                                <h3 class="title is-4">
+                                    {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}
+                                </h3>
+                                <h5 class="subtitle is-6 mb-2">
+                                    ini Subtitle
+                                    {{ page.short_text }}
+                                </h5>
+                            </figcaption>
+                        </figure>
+                        <div class="icons is-gapless are-medium is-justify-content-center">
+                            {% include sosial_icon.html %}
+                        </div>
+                    </div>
                 </div>
-                <p class="subtitle">
-                    {{ page.short_text }}
-                </p>
-                {% endcapture %}
-                {% include card.html class="me" title="ME" content=card-content %}
             </div>
         </div>
-    </div>
+</div>
 </div>
