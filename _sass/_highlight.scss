@@ -163,7 +163,7 @@ figure.highlight {
         background: var(--bg-code-color);
         font-size: 1rem;
         padding: 1em;
-        font-family: $family-monospace;
+        font-family: $family-code;
     }
 
     tbody td {
@@ -173,7 +173,7 @@ figure.highlight {
         > pre {
             padding: 0;
             span {
-                font-family: $family-monospace;
+                font-family: $family-code;
             }            
         }
     }

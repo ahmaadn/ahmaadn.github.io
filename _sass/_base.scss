@@ -80,7 +80,7 @@ hr {
 }
 
 .date, .year {
-    font-family: Menlo,"IBM Plex Mono",Menlo,monospace;
+    font-family: $family-monospace;
     color: var(--font-date-color);
     font-size: .9rem;
     font-weight: 500;
@@ -90,7 +90,7 @@ hr {
 }
 
 code.language-plaintext {
-    font-family: $family-monospace;
+    font-family: $family-code;
 	background-color: findLightColor($primary);
     color: var(--theme-color);
     padding: 3px 3px;
@@ -144,7 +144,6 @@ code.language-plaintext {
 		padding: 0;
 	}
 }
-
 
 .icons.are-small > .icon ion-icon,
 .icon.is-small ion-icon {
@@ -257,6 +256,7 @@ article.content {
 	}
 
 }
+
 .footer {
 	margin-top: 2rem;
 	padding: 2rem;
@@ -522,15 +522,12 @@ a.navbar-item {
 }
 
 .navbar-brand {
-	font-family: $font-navbar;
 	padding: 0;
 
 	h1 {
 		color: var(--font-heading-color);
-		position: relative;
-		top: 2px;
 		font-weight: 700;
-		font-size: 1.5rem;
+		font-size: 28px;
 	}
 
 	img {
@@ -836,9 +833,10 @@ a.navbar-item {
 	.post:before {
 		align-self: center;
 		content: "0" counter(my-counter-reset);
-		font-size: 2rem;
+		font-size: 2.1rem;
 		line-height: 1;
 		margin-right: 12px;
+		font-weight: bold;
 	}
 
 }
