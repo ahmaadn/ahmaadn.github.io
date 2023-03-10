@@ -665,13 +665,14 @@ a.navbar-item {
 	}
 }
 
-// .page-heading:not(.style-text), .post-heading {
-// 	.hero .hero-body {
-// 		padding: 10rem 108px;
-// 	}
-// }
+.page-heading:not(.style-text) {
+	.hero .hero-body {
+		padding: 10rem 108px;
+	}
+}
 
 .post-heading {
+	margin-bottom: 3rem;
 	&.style-text .hero .hero-body {
 		padding-top: 2rem;
 		padding-bottom: 1rem;
@@ -698,16 +699,6 @@ a.navbar-item {
 .page-heading {
 	&:not(.style-text) {
 		text-align: center;
-	}
-}
-
-// -----------
-// sidebar
-// -----------
-
-@media screen and (min-width: 1024px) {
-	.sidebar {
-		margin-top: 5rem;
 	}
 }
 
@@ -853,6 +844,16 @@ a.navbar-item {
 // Post List
 // -----------
 
+.posts-list {
+	border-block: 1px solid var(--divider-color);
+	position: relative;
+	
+	.post {
+		padding: 2.5rem 0px;
+		border-block: 1px solid var(--divider-color);
+	}
+}
+
 .post-preview a {
 	text-decoration: none;
 	&:hover {
@@ -867,6 +868,7 @@ a.navbar-item {
 	font-style: italic;
 	font-weight: 400;
 	margin-bottom: 4px;
+	padding: 1rem 0px;
 	&:hover {
 		color: var(--hover-color);
 	}
@@ -929,6 +931,7 @@ a.navbar-item {
 
 .pagination {
 	font-size: 14px;
+	margin-top: 2rem;
 
 	.is-disabled {
 		pointer-events: none !important;

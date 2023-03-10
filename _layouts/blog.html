@@ -2,13 +2,35 @@
 layout: page
 ---
 
+{% assign subtitle = page.subtitle %}
+{% assign first = '' %}
+
+{% unless page.title == 'Blog' %}
+{% assign first = "subtitle" %}
+{% if page.posts.size %}
+{%- assign subtitle = '<span>' | append: page.posts.size | append: '</span>' -%}
+    {% if page.type == 'tag' %}
+    {%- assign subtitle = subtitle | append: ' tags as: ' -%}
+    {% else %}
+    {%- assign subtitle = subtitle | append: ' categorized as: ' -%}
+    {% endif %}
+{% endif %}
+{% endunless %}
+
+{% include intro-heading.html first=first subtitle=subtitle %}
+
 <div class="container">
-    <div class="columns is-desktop is-multiline mt-3">
+    <div class="columns is-desktop is-multiline">
+        {% if page.no_sidebar %}
+        <div class="column is-12-desktop postlist main">
+            {{ content }}
+        </div>
+        {% else %}
         <div class="column is-8-desktop postlist main">
             {{ content }}
         </div>
         <div class="column is-4-desktop sidebar">
-            <div class="container ">
+            <div class="container">
                 {% if site.categories %}
                 {% capture cap_category %}
                 {% for category in site.categories %}
@@ -37,5 +59,6 @@ layout: page
                 {% endif %}
             </div>
         </div>
+        {% endif %}
     </div>
 </div>

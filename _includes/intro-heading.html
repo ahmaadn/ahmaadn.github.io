@@ -1,10 +1,12 @@
 {% if page.header-img %}
 <style type="text/css">
     .intro-heading {
-        background-image: url('{{ page.header-img | relative_url }}');
+        background-image: url('{{ "/assets/img/" | append: page.header-img | relative_url }}');
         background-color: lightgray;
     }
-    
+    html[data-theme='dark'] .intro-heading {
+        background-color: #2c2c2c;
+    }
 </style>
 {% endif %}
 
@@ -48,25 +50,27 @@
 {% else %}
 <header class="intro-heading page-heading">
 {% endunless %}
-    <div class="hero">
-        <div class="hero-body">
-            
-            {% if include.first == 'subtitle' %}
-            <h3 class="subtitle is-size-4-tablet is-size-5-mobile mb-3">
-                {% if include.subtitle  %} {{ include.subtitle }} {% else %} {{ page.subtitle }} {% endif %}
-            </h3>
-            {% endif %}
+    <div class="container">
+        <div class="hero">
+            <div class="hero-body">
+                
+                {% if include.first == 'subtitle' %}
+                <h3 class="subtitle is-size-4-tablet is-size-5-mobile mb-3">
+                    {% if include.subtitle  %} {{ include.subtitle }} {% else %} {{ page.subtitle }} {% endif %}
+                </h3>
+                {% endif %}
 
-            <h2 class="title is-size-1-tablet is-size-2-mobile">
-                {% if include.title  %} {{ include.title }} {% else %} {{ page.title }} {% endif %}
-            </h2>
+                <h2 class="title is-size-1-tablet is-size-2-mobile">
+                    {% if include.title  %} {{ include.title }} {% else %} {{ page.title }} {% endif %}
+                </h2>
 
-            {% unless include.first %}
-            <h3 class="subtitle is-size-4-tablet is-size-5-mobile">
-                {% if include.subtitle  %} {{ include.subtitle }} {% else %} {{ page.subtitle }} {% endif %}
-            </h3>
-            {% endunless %}
+                {% unless include.first == 'subtitle' %}
+                <h3 class="subtitle is-size-4-tablet is-size-5-mobile">
+                    {% if include.subtitle %} {{ include.subtitle }} {% else %} {{ page.subtitle }} {% endif %}
+                </h3>
+                {% endunless %}
 
+            </div>
         </div>
     </div>
 </header>

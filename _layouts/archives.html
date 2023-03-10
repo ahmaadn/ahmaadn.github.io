@@ -2,19 +2,6 @@
 layout: blog
 ---
 
-{% assign subtitle ='' %}
-
-{% if page.posts.size %}
-{%- assign subtitle = '<span>' | append: page.posts.size | append: '</span>' -%}
-    {% if page.type == 'tag' %}
-    {%- assign subtitle = subtitle | append: ' tags as: ' -%}
-    {% else %}
-    {%- assign subtitle = subtitle | append: ' categorized as: ' -%}
-    {% endif %}
-{% endif %}
-
-{% include intro-heading.html first='subtitle' subtitle=subtitle %}
-
 <!-- Post -->
 {% if page.posts %}
 {%- assign _sorted_list = page.posts -%}

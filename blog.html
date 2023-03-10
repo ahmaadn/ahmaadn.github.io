@@ -1,6 +1,8 @@
 ---
 layout : blog
 title : Blog
+subtitle: ''
+no_sidebar: True
 pagination:
     enabled: true
     collection: posts
@@ -14,67 +16,64 @@ pagination:
         after: 1
 ---
 
-
-{% include intro-heading.html %}
-
-<hr>
+<ul class="posts-list">
 {% for post in paginator.posts %}
-<article class="post mb-3">
-
-    <div class="post-preview">
-        <a href="{{ post.url | relative_url }}">
-            <h2 class="title is-size-3">{{ post.title }}</h2>
-            <h3 class="subtitle is-size-5" > {{ post.subtitle }} </h3>
-            <div class="post-preview-content"> 
-                {{ post.content | strip_html | truncate:300  }} 
-            </div>
-        </a>
-    </div>
-
-    <ul class="post-meta mb-1">
-        <li class="icon-text">
-            <span class="icon">
-                <ion-icon name="calendar-outline" size="small"></ion-icon>
-            </span>
-            <span class="date">
+<li class="post">
+    <article class="columns is-desktop">
+        <div class="column is-3-desktop py-0">
+            <span class="date is-size-6">
                 {{ post.date | date: '%b %-d, %Y' }} 
             </span>
-        </li>
-
-        {% unless post.categories == empty %}
-        <li class="is-inline-flex">
-            <span>&nbsp; · &nbsp;</span>
-            {% for category in post.categories %}
-            <a class="icon-text" href="{{ '/categories/' | append : category | relative_url }}">
-                <span class="icon mr-0">
-                    <ion-icon src="/assets/img/sell.svg" size="small"></ion-icon>
-                </span>
-                <span>
-                    {{ category }}
-                </span>
-            </a>
-            {% endfor %}
-        </li>
-        {% endunless %}
-
-        {% unless post.tags == empty %}
-        <li class="is-inline-flex">
-            <span>&nbsp; · &nbsp;</span>
-            {% for tag in post.tags %}
-            <a class="icon-text" href="{{ '/tags/' | append : tag | relative_url }}">
-                <span class="icon mr-0">
-                    <ion-icon src="/assets/img/tag.svg" size="small"></ion-icon>
-                </span>
-                <span>
-                    {{ tag }}
-                </span>
-            </a>
-            {% endfor %}
-        </li>
-        {% endunless %}
-    </ul>
-</article>
-<hr>
+        </div>
+        <div class="column is-9-desktop py-0">
+            <div class="post-preview">
+                <a href="{{ post.url | relative_url }}">
+                    <h2 class="title is-size-3">{{ post.title }}</h2>
+                    <h3 class="subtitle is-size-5" > {{ post.subtitle }} </h3>
+                    <div class="post-preview-content"> 
+                        {{ post.content | strip_html | truncate:200  }} 
+                    </div>
+                </a>
+            </div>
+        
+            <ul class="post-meta mb-1">
+                {% unless post.categories == empty %}
+                <li class="is-inline-flex">
+                    {% for category in post.categories %}
+                    <a class="icon-text" href="{{ '/categories/' | append : category | relative_url }}">
+                        <span class="icon mr-0">
+                            <ion-icon src="/assets/img/sell.svg" size="small"></ion-icon>
+                        </span>
+                        <span>
+                            {{ category }}
+                        </span>
+                    </a>
+                    {% endfor %}
+                    {% unless post.tags == empty %}
+                    <span>&nbsp; ·</span>
+                    {% endunless %}
+                </li>
+                {% endunless %}
+        
+                {% unless post.tags == empty %}
+                <li class="is-inline-flex">
+                    {% for tag in post.tags %}
+                    <a class="icon-text" href="{{ '/tags/' | append : tag | relative_url }}">
+                        <span class="icon mr-0">
+                            <ion-icon src="/assets/img/tag.svg" size="small"></ion-icon>
+                        </span>
+                        <span>
+                            {{ tag }}
+                        </span>
+                    </a>
+                    {% endfor %}
+                </li>
+                {% endunless %}
+            </ul>
+        </div>
+    </article>
+</li>
 {% endfor %}
+</ul>
 
 {% include pagination.html %}
