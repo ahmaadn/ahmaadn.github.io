@@ -23,7 +23,7 @@ url: "ahmaadn.github.io"
 baseurl: ""
 
 sosial_navbar: True
-permalink: /blog/:year/:month/:day/:title/
+permalink: /blog/:title/
 
 # Sosial
 sosial:
@@ -90,3 +90,21 @@ sass:
 picture:
   source: "assets/img"
   output: "assets/img/generated"
+
+
+comments:
+  # 'disqus' / 'giscus' / 'utterances' are available
+  provider: giscus
+
+
+giscus:
+  repo:                "ahmaadn/ahmaadn.github.io"
+  repo-id:             "R_kgDOIrGDhg"
+  category:            "Comments"
+  category-id:         "DIC_kwDOIrGDhs4CUyFB"
+  mapping:             "pathname"
+  reaction-enabled:    "1"
+  data-emit-metadata:  "0"
+  theme:               "light"
+  data-lang:           "en"
+  crossorigin:         "anonymous"

@@ -1,0 +1,46 @@
+{% assign provider = site.comments.provider | default:"disqus" %}
+{% if provider == "disqus" %}
+    {% assign disqus = site.disqus | default:site.disqus_shortname %}
+    {% if disqus %}
+        <!-- original disqus codes -->
+    {% endif %}
+{% elsif provider == "utterances" %}
+    {% assign utterances = site.utterances %}
+    {% if utterances.repo %}
+        <script src="https://utteranc.es/client.js"
+                repo={{ utterances.repo }}
+                issue-term={{ include.issue-term | default: utterances.issue-term | default: 'pathname' }}
+                {%- if include.label or utterances.label -%}
+                label="{{ include.label | default: utterances.label }}"
+                {%- endif -%}
+                theme={{ utterances.theme }}
+                crossorigin= "anonymous"
+                async>
+        </script>
+    {% endif %}
+{% elsif provider == "giscus" %}
+    {% assign giscus = site.giscus %}
+    {% if giscus.repo %}
+    <script>
+        let giscusTheme = localStorage.getItem("theme");
+        let giscusAttributes = {
+            "src": "https://giscus.app/client.js",
+            "data-repo": "{{ giscus.repo }}",
+            "data-repo-id": "={{ giscus.repo-id }}",
+            "data-category": "{{ giscus.category }}",
+            "data-category-id": "{{ giscus.category-id }}",
+            "data-mapping": "{{ giscus.mapping }}",
+            "data-reactions-enabled": "{{ giscus.reactions-enabled }}",
+            "data-emit-metadata": "{{ giscus.data-emit-metadata }}",
+            "data-theme": giscusTheme,
+            "data-lang": "en",
+            "data-loading": "lazy",
+            "crossorigin": "anonymous",
+            "async": "",
+        };
+        let giscusScript = document.createElement("script");
+        Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
+        document.querySelector('#comments').appendChild(giscusScript);
+    </script>
+    {% endif %}
+{% endif %}

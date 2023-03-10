@@ -10,6 +10,16 @@ layout : page
             <article class="content">
                 {{ content }}
             </article>
+
+            {% unless page.disable_comments %}
+            <div class="comments mt-6 pt-4" id="comments">
+                <h3 class="title is-3">
+                    Comments
+                </h3>
+                {% include comments.html %}
+            </div>
+            {% endunless %}
+
         </div>
         <div class="column is-3-desktop is-3-tablet is-hidden-mobile sidebar catalog">
             {% include catalog-sidebar.html %}

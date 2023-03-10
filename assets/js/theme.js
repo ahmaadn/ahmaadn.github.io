@@ -15,7 +15,7 @@ let setTheme = (theme) => {
         document.documentElement.removeAttribute("data-theme");
     }
     localStorage.setItem("theme", theme);
-
+    changeGiscusTheme();
 };
 
 let initTheme = (theme) => {
@@ -39,3 +39,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+function changeGiscusTheme() {
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ?  'dark_dimmed' : 'light'
+    function sendMessage(message) {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+    }
+
+    sendMessage({
+        setConfig: {
+            theme: theme
+        }
+    });
+}
