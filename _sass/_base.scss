@@ -117,26 +117,54 @@ code.language-plaintext {
     }
 }
 
+// Icons
+
+.icons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	&.is-gapless > .icon {
+		margin-right: 6px;
+		margin-left: 6px;
+	}
+
+	> .icon {
+		margin-right: 2px;
+		margin-left: 2px;
+	}
+	}
 
 .icon {
 	color: var(--icon-color);
-	&.is-small ion-icon {
-		font-size: 14px;
-	}
-	&.is-medium ion-icon {
-		font-size: 32px;
-	}
-	&.is-large ion-icon {
-		font-size: 64px;
-	}
-
+	width: auto;
 	ion-icon {
 		font-size: 24px;
 	}
+	&.is-paddingless {
+		padding: 0;
+	}
 }
 
-a.icon:hover{
+
+.icons.are-small > .icon ion-icon,
+.icon.is-small ion-icon {
+	font-size: 16px !important;
+}
+
+.icons.are-medium > .icon ion-icon,
+.icon.is-medium ion-icon {
+	font-size: 32px !important;
+}
+
+.icons.are-large > .icon ion-icon,
+.icon.is-large ion-icon {
+	font-size: 48px !important;
+}
+
+a.icon {
+	&:hover, &:focus {
 	color: var(--hover-color);
+}
 }
 
 ul.task-list {
@@ -230,12 +258,14 @@ article.content {
 
 }
 .footer {
-	padding: 1.5rem;
+	margin-top: 2rem;
+	padding: 2rem;
     background-color: var(--bg-color);
-
-    .icon {
-        font-size: 1.5rem;
-        width: 2.5rem;
+	.content {
+		color: var(--font-text-color-muted);
+		a:hover {
+			text-decoration: underline 2px solid var(--hover-color);
+		}
     }
 }
 
@@ -599,6 +629,9 @@ a.navbar-item {
 
 		.icon {
 			color: $white;
+			&:hover {
+				color: var(--hover-color);
+			}
 		}
 	}
 }
